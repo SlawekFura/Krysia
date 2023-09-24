@@ -215,6 +215,7 @@ int picovoice_main(int argc, char *argv[]) {
     double total_processed_time_usec = 0;
     int32_t frame_index = 0;
 
+    uint32_t loop_counter = 0;
     while ((int32_t) drwav_read_pcm_frames_s16(&f, pv_rhino_frame_length_func(), pcm) == pv_rhino_frame_length_func()) {
         struct timeval before;
         gettimeofday(&before, NULL);
@@ -279,10 +280,12 @@ int picovoice_main(int argc, char *argv[]) {
                 (double) (after.tv_sec - before.tv_sec) * 1e6 + (double) (after.tv_usec - before.tv_usec);
         total_processed_time_usec += (pv_rhino_frame_length_func() * 1e6) / pv_sample_rate_func();
         frame_index++;
+        loop_counter++;
     }
 
     const double real_time_factor = total_cpu_time_usec / total_processed_time_usec;
     fprintf(stdout, "real time factor : %.3f\n", real_time_factor);
+    fprintf(stdout, "loopcounter : %ld\n", loop_counter);
 
     free(pcm);
     drwav_uninit(&f);
