@@ -18,3 +18,4 @@ add_executable(
         main
         main.c)
 target_include_directories(main PRIVATE dr_libs)
+target_link_libraries(main dl)
