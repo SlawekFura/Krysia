@@ -15,72 +15,17 @@
 #include <stdlib.h>
 #include <string.h>
 
-#if defined(_WIN32) || defined(_WIN64)
-
-#include <windows.h>
-
-#else
-
 #include <dlfcn.h>
-
-#endif
 
 #include "pv_recorder.h"
 #include "pv_rhino.h"
 
 static volatile bool is_interrupted = false;
 
-static void *open_dl(const char *dl_path) {
-
-#if defined(_WIN32) || defined(_WIN64)
-
-    return LoadLibrary(dl_path);
-
-#else
-
-    return dlopen(dl_path, RTLD_NOW);
-
-#endif
-}
-
-static void *load_symbol(void *handle, const char *symbol) {
-
-#if defined(_WIN32) || defined(_WIN64)
-
-    return GetProcAddress((HMODULE) handle, symbol);
-
-#else
-
-    return dlsym(handle, symbol);
-
-#endif
-}
-
-static void close_dl(void *handle) {
-
-#if defined(_WIN32) || defined(_WIN64)
-
-    FreeLibrary((HMODULE) handle);
-
-#else
-
-    dlclose(handle);
-
-#endif
-}
-
-static void print_dl_error(const char *message) {
-
-#if defined(_WIN32) || defined(_WIN64)
-
-    fprintf(stderr, "%s with code '%lu'.\n", message, GetLastError());
-
-#else
-
-    fprintf(stderr, "%s with '%s'.\n", message, dlerror());
-
-#endif
-}
+static void *open_dl(const char *dl_path) {    return dlopen(dl_path, RTLD_NOW);}
+static void *load_symbol(void *handle, const char *symbol) { return dlsym(handle, symbol);}
+static void close_dl(void *handle) { dlclose(handle);}
+static void print_dl_error(const char *message) { fprintf(stderr, "%s with '%s'.\n", message, dlerror());}
 
 static struct option long_options[] = {
         {"access_key",            required_argument, NULL, 'a'},
@@ -409,45 +354,8 @@ int picovoice_main(int argc, char *argv[]) {
     return 0;
 }
 
-int main(int argc, char *argv[]) {
-
-#if defined(_WIN32) || defined(_WIN64)
-
-#define UTF8_COMPOSITION_FLAG (0)
-#define NULL_TERMINATED       (-1)
-
-    LPWSTR *wargv = CommandLineToArgvW(GetCommandLineW(), &argc);
-    if (wargv == NULL) {
-        fprintf(stderr, "CommandLineToArgvW failed\n");
-        exit(1);
-    }
-
-    char *utf8_argv[argc];
-
-    for (int i = 0; i < argc; ++i) {
-        // WideCharToMultiByte: https://docs.microsoft.com/en-us/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte
-        int arg_chars_num = WideCharToMultiByte(CP_UTF8, UTF8_COMPOSITION_FLAG, wargv[i], NULL_TERMINATED, NULL, 0, NULL, NULL);
-        utf8_argv[i] = (char *) malloc(arg_chars_num * sizeof(char));
-        if (!utf8_argv[i]) {
-            fprintf(stderr, "failed to to allocate memory for converting args");
-        }
-        WideCharToMultiByte(CP_UTF8, UTF8_COMPOSITION_FLAG, wargv[i], NULL_TERMINATED, utf8_argv[i], arg_chars_num, NULL, NULL);
-    }
-
-    LocalFree(wargv);
-    argv = utf8_argv;
-
-#endif
-
+int main(int argc, char *argv[])
+{
     int result = picovoice_main(argc, argv);
-
-#if defined(_WIN32) || defined(_WIN64)
-
-    for (int i = 0; i < argc; ++i) {
-        free(utf8_argv[i]);
-    }
-
-#endif
-
     return result;
 }
