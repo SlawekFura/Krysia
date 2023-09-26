@@ -13,9 +13,10 @@ message(PROJECT_SOURCE_DIR="${PROJECT_SOURCE_DIR}")
 include_directories("${PROJECT_SOURCE_DIR}/../rhino/include")
 include_directories("${PROJECT_SOURCE_DIR}/../rhino/demo/c/dr_libs")
 include_directories("${PROJECT_SOURCE_DIR}/../rhino/demo/c")
+include_directories("${PROJECT_SOURCE_DIR}/../rhino/demo/c/pvrecorder/include")
 
 add_executable(
         main
-        main.c)
+        main_demo_mic.c)
 target_include_directories(main PRIVATE dr_libs)
 target_link_libraries(main dl)
