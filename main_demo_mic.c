@@ -12,6 +12,7 @@
 
 #include "intent_mgr.h"
 #include "mic.h"
+#include "dbus_mgr.h"
 
 
 extern volatile bool is_interrupted;
@@ -19,6 +20,7 @@ extern volatile bool is_interrupted;
 int main(int argc, char *argv[])
 {
     setup_microphone(argc, argv);
+    setup_gdbus();
 
     char mic_string[MAX_STR_INTENT_SIZE] = {0};
     while (!is_interrupted)
