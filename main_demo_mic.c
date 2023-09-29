@@ -19,11 +19,13 @@ extern volatile bool is_interrupted;
 
 int main(int argc, char *argv[])
 {
+    int status = 0;
     setup_microphone(argc, argv);
-    setup_gdbus();
+    status = setup_gdbus();
+    printf("Line %d in file %s\n", __LINE__, __FILE__);
 
     char mic_string[MAX_STR_INTENT_SIZE] = {0};
-    while (!is_interrupted)
+    while (!is_interrupted && !status)
     {
         retrieve_mic_string(mic_string);
         if (mic_string[0] != '\0')

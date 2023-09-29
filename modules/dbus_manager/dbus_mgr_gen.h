@@ -14,77 +14,77 @@ G_BEGIN_DECLS
 
 
 /* ------------------------------------------------------------------------ */
-/* Declarations for test.signal.ObjectManager.My_Object */
+/* Declarations for org.gtk.GDBus.Examples.ObjectManager.MyObject */
 
-#define EXAMPLE_TYPE_MY__OBJECT (example_my__object_get_type ())
-#define EXAMPLE_MY__OBJECT(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), EXAMPLE_TYPE_MY__OBJECT, ExampleMy_Object))
-#define EXAMPLE_IS_MY__OBJECT(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), EXAMPLE_TYPE_MY__OBJECT))
-#define EXAMPLE_MY__OBJECT_GET_IFACE(o) (G_TYPE_INSTANCE_GET_INTERFACE ((o), EXAMPLE_TYPE_MY__OBJECT, ExampleMy_ObjectIface))
+#define MY_NAMESPACE_TYPE_MY_OBJECT (my_namespace_my_object_get_type ())
+#define MY_NAMESPACE_MY_OBJECT(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), MY_NAMESPACE_TYPE_MY_OBJECT, MyNamespaceMyObject))
+#define MY_NAMESPACE_IS_MY_OBJECT(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), MY_NAMESPACE_TYPE_MY_OBJECT))
+#define MY_NAMESPACE_MY_OBJECT_GET_IFACE(o) (G_TYPE_INSTANCE_GET_INTERFACE ((o), MY_NAMESPACE_TYPE_MY_OBJECT, MyNamespaceMyObjectIface))
 
-struct _ExampleMy_Object;
-typedef struct _ExampleMy_Object ExampleMy_Object;
-typedef struct _ExampleMy_ObjectIface ExampleMy_ObjectIface;
+struct _MyNamespaceMyObject;
+typedef struct _MyNamespaceMyObject MyNamespaceMyObject;
+typedef struct _MyNamespaceMyObjectIface MyNamespaceMyObjectIface;
 
-struct _ExampleMy_ObjectIface
+struct _MyNamespaceMyObjectIface
 {
   GTypeInterface parent_iface;
 
 
 
   gboolean (*handle_math_op) (
-    ExampleMy_Object *object,
+    MyNamespaceMyObject *object,
     GDBusMethodInvocation *invocation,
     gboolean arg_increment,
     gboolean arg_decrement);
 
-  const gchar * (*get_description) (ExampleMy_Object *object);
+  const gchar * (*get_description) (MyNamespaceMyObject *object);
 
-  const gchar * (*get_foo) (ExampleMy_Object *object);
+  const gchar * (*get_foo) (MyNamespaceMyObject *object);
 
   void (*inform_about_intent) (
-    ExampleMy_Object *object,
+    MyNamespaceMyObject *object,
     const gchar *arg_info);
 
-  const gchar * (*get_bar) (ExampleMy_Object *object);
+  const gchar * (*get_bar) (MyNamespaceMyObject *object);
 
 };
 
-GType example_my__object_get_type (void) G_GNUC_CONST;
+GType my_namespace_my_object_get_type (void) G_GNUC_CONST;
 
-GDBusInterfaceInfo *example_my__object_interface_info (void);
-guint example_my__object_override_properties (GObjectClass *klass, guint property_id_begin);
+GDBusInterfaceInfo *my_namespace_my_object_interface_info (void);
+guint my_namespace_my_object_override_properties (GObjectClass *klass, guint property_id_begin);
 
 
 /* D-Bus method call completion functions: */
-void example_my__object_complete_math_op (
-    ExampleMy_Object *object,
+void my_namespace_my_object_complete_math_op (
+    MyNamespaceMyObject *object,
     GDBusMethodInvocation *invocation);
 
 
 
 /* D-Bus signal emissions functions: */
-void example_my__object_emit_inform_about_intent (
-    ExampleMy_Object *object,
+void my_namespace_my_object_emit_inform_about_intent (
+    MyNamespaceMyObject *object,
     const gchar *arg_info);
 
 
 
 /* D-Bus method calls: */
-void example_my__object_call_math_op (
-    ExampleMy_Object *proxy,
+void my_namespace_my_object_call_math_op (
+    MyNamespaceMyObject *proxy,
     gboolean arg_increment,
     gboolean arg_decrement,
     GCancellable *cancellable,
     GAsyncReadyCallback callback,
     gpointer user_data);
 
-gboolean example_my__object_call_math_op_finish (
-    ExampleMy_Object *proxy,
+gboolean my_namespace_my_object_call_math_op_finish (
+    MyNamespaceMyObject *proxy,
     GAsyncResult *res,
     GError **error);
 
-gboolean example_my__object_call_math_op_sync (
-    ExampleMy_Object *proxy,
+gboolean my_namespace_my_object_call_math_op_sync (
+    MyNamespaceMyObject *proxy,
     gboolean arg_increment,
     gboolean arg_decrement,
     GCancellable *cancellable,
@@ -93,51 +93,51 @@ gboolean example_my__object_call_math_op_sync (
 
 
 /* D-Bus property accessors: */
-const gchar *example_my__object_get_description (ExampleMy_Object *object);
-gchar *example_my__object_dup_description (ExampleMy_Object *object);
-void example_my__object_set_description (ExampleMy_Object *object, const gchar *value);
+const gchar *my_namespace_my_object_get_description (MyNamespaceMyObject *object);
+gchar *my_namespace_my_object_dup_description (MyNamespaceMyObject *object);
+void my_namespace_my_object_set_description (MyNamespaceMyObject *object, const gchar *value);
 
-const gchar *example_my__object_get_foo (ExampleMy_Object *object);
-gchar *example_my__object_dup_foo (ExampleMy_Object *object);
-void example_my__object_set_foo (ExampleMy_Object *object, const gchar *value);
+const gchar *my_namespace_my_object_get_foo (MyNamespaceMyObject *object);
+gchar *my_namespace_my_object_dup_foo (MyNamespaceMyObject *object);
+void my_namespace_my_object_set_foo (MyNamespaceMyObject *object, const gchar *value);
 
-const gchar *example_my__object_get_bar (ExampleMy_Object *object);
-gchar *example_my__object_dup_bar (ExampleMy_Object *object);
-void example_my__object_set_bar (ExampleMy_Object *object, const gchar *value);
+const gchar *my_namespace_my_object_get_bar (MyNamespaceMyObject *object);
+gchar *my_namespace_my_object_dup_bar (MyNamespaceMyObject *object);
+void my_namespace_my_object_set_bar (MyNamespaceMyObject *object, const gchar *value);
 
 
 /* ---- */
 
-#define EXAMPLE_TYPE_MY__OBJECT_PROXY (example_my__object_proxy_get_type ())
-#define EXAMPLE_MY__OBJECT_PROXY(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), EXAMPLE_TYPE_MY__OBJECT_PROXY, ExampleMy_ObjectProxy))
-#define EXAMPLE_MY__OBJECT_PROXY_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), EXAMPLE_TYPE_MY__OBJECT_PROXY, ExampleMy_ObjectProxyClass))
-#define EXAMPLE_MY__OBJECT_PROXY_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), EXAMPLE_TYPE_MY__OBJECT_PROXY, ExampleMy_ObjectProxyClass))
-#define EXAMPLE_IS_MY__OBJECT_PROXY(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), EXAMPLE_TYPE_MY__OBJECT_PROXY))
-#define EXAMPLE_IS_MY__OBJECT_PROXY_CLASS(k) (G_TYPE_CHECK_CLASS_TYPE ((k), EXAMPLE_TYPE_MY__OBJECT_PROXY))
+#define MY_NAMESPACE_TYPE_MY_OBJECT_PROXY (my_namespace_my_object_proxy_get_type ())
+#define MY_NAMESPACE_MY_OBJECT_PROXY(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), MY_NAMESPACE_TYPE_MY_OBJECT_PROXY, MyNamespaceMyObjectProxy))
+#define MY_NAMESPACE_MY_OBJECT_PROXY_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), MY_NAMESPACE_TYPE_MY_OBJECT_PROXY, MyNamespaceMyObjectProxyClass))
+#define MY_NAMESPACE_MY_OBJECT_PROXY_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), MY_NAMESPACE_TYPE_MY_OBJECT_PROXY, MyNamespaceMyObjectProxyClass))
+#define MY_NAMESPACE_IS_MY_OBJECT_PROXY(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), MY_NAMESPACE_TYPE_MY_OBJECT_PROXY))
+#define MY_NAMESPACE_IS_MY_OBJECT_PROXY_CLASS(k) (G_TYPE_CHECK_CLASS_TYPE ((k), MY_NAMESPACE_TYPE_MY_OBJECT_PROXY))
 
-typedef struct _ExampleMy_ObjectProxy ExampleMy_ObjectProxy;
-typedef struct _ExampleMy_ObjectProxyClass ExampleMy_ObjectProxyClass;
-typedef struct _ExampleMy_ObjectProxyPrivate ExampleMy_ObjectProxyPrivate;
+typedef struct _MyNamespaceMyObjectProxy MyNamespaceMyObjectProxy;
+typedef struct _MyNamespaceMyObjectProxyClass MyNamespaceMyObjectProxyClass;
+typedef struct _MyNamespaceMyObjectProxyPrivate MyNamespaceMyObjectProxyPrivate;
 
-struct _ExampleMy_ObjectProxy
+struct _MyNamespaceMyObjectProxy
 {
   /*< private >*/
   GDBusProxy parent_instance;
-  ExampleMy_ObjectProxyPrivate *priv;
+  MyNamespaceMyObjectProxyPrivate *priv;
 };
 
-struct _ExampleMy_ObjectProxyClass
+struct _MyNamespaceMyObjectProxyClass
 {
   GDBusProxyClass parent_class;
 };
 
-GType example_my__object_proxy_get_type (void) G_GNUC_CONST;
+GType my_namespace_my_object_proxy_get_type (void) G_GNUC_CONST;
 
 #if GLIB_CHECK_VERSION(2, 44, 0)
-G_DEFINE_AUTOPTR_CLEANUP_FUNC (ExampleMy_ObjectProxy, g_object_unref)
+G_DEFINE_AUTOPTR_CLEANUP_FUNC (MyNamespaceMyObjectProxy, g_object_unref)
 #endif
 
-void example_my__object_proxy_new (
+void my_namespace_my_object_proxy_new (
     GDBusConnection     *connection,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -145,10 +145,10 @@ void example_my__object_proxy_new (
     GCancellable        *cancellable,
     GAsyncReadyCallback  callback,
     gpointer             user_data);
-ExampleMy_Object *example_my__object_proxy_new_finish (
+MyNamespaceMyObject *my_namespace_my_object_proxy_new_finish (
     GAsyncResult        *res,
     GError             **error);
-ExampleMy_Object *example_my__object_proxy_new_sync (
+MyNamespaceMyObject *my_namespace_my_object_proxy_new_sync (
     GDBusConnection     *connection,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -156,7 +156,7 @@ ExampleMy_Object *example_my__object_proxy_new_sync (
     GCancellable        *cancellable,
     GError             **error);
 
-void example_my__object_proxy_new_for_bus (
+void my_namespace_my_object_proxy_new_for_bus (
     GBusType             bus_type,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -164,10 +164,10 @@ void example_my__object_proxy_new_for_bus (
     GCancellable        *cancellable,
     GAsyncReadyCallback  callback,
     gpointer             user_data);
-ExampleMy_Object *example_my__object_proxy_new_for_bus_finish (
+MyNamespaceMyObject *my_namespace_my_object_proxy_new_for_bus_finish (
     GAsyncResult        *res,
     GError             **error);
-ExampleMy_Object *example_my__object_proxy_new_for_bus_sync (
+MyNamespaceMyObject *my_namespace_my_object_proxy_new_for_bus_sync (
     GBusType             bus_type,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -178,93 +178,93 @@ ExampleMy_Object *example_my__object_proxy_new_for_bus_sync (
 
 /* ---- */
 
-#define EXAMPLE_TYPE_MY__OBJECT_SKELETON (example_my__object_skeleton_get_type ())
-#define EXAMPLE_MY__OBJECT_SKELETON(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), EXAMPLE_TYPE_MY__OBJECT_SKELETON, ExampleMy_ObjectSkeleton))
-#define EXAMPLE_MY__OBJECT_SKELETON_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), EXAMPLE_TYPE_MY__OBJECT_SKELETON, ExampleMy_ObjectSkeletonClass))
-#define EXAMPLE_MY__OBJECT_SKELETON_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), EXAMPLE_TYPE_MY__OBJECT_SKELETON, ExampleMy_ObjectSkeletonClass))
-#define EXAMPLE_IS_MY__OBJECT_SKELETON(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), EXAMPLE_TYPE_MY__OBJECT_SKELETON))
-#define EXAMPLE_IS_MY__OBJECT_SKELETON_CLASS(k) (G_TYPE_CHECK_CLASS_TYPE ((k), EXAMPLE_TYPE_MY__OBJECT_SKELETON))
+#define MY_NAMESPACE_TYPE_MY_OBJECT_SKELETON (my_namespace_my_object_skeleton_get_type ())
+#define MY_NAMESPACE_MY_OBJECT_SKELETON(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), MY_NAMESPACE_TYPE_MY_OBJECT_SKELETON, MyNamespaceMyObjectSkeleton))
+#define MY_NAMESPACE_MY_OBJECT_SKELETON_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), MY_NAMESPACE_TYPE_MY_OBJECT_SKELETON, MyNamespaceMyObjectSkeletonClass))
+#define MY_NAMESPACE_MY_OBJECT_SKELETON_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), MY_NAMESPACE_TYPE_MY_OBJECT_SKELETON, MyNamespaceMyObjectSkeletonClass))
+#define MY_NAMESPACE_IS_MY_OBJECT_SKELETON(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), MY_NAMESPACE_TYPE_MY_OBJECT_SKELETON))
+#define MY_NAMESPACE_IS_MY_OBJECT_SKELETON_CLASS(k) (G_TYPE_CHECK_CLASS_TYPE ((k), MY_NAMESPACE_TYPE_MY_OBJECT_SKELETON))
 
-typedef struct _ExampleMy_ObjectSkeleton ExampleMy_ObjectSkeleton;
-typedef struct _ExampleMy_ObjectSkeletonClass ExampleMy_ObjectSkeletonClass;
-typedef struct _ExampleMy_ObjectSkeletonPrivate ExampleMy_ObjectSkeletonPrivate;
+typedef struct _MyNamespaceMyObjectSkeleton MyNamespaceMyObjectSkeleton;
+typedef struct _MyNamespaceMyObjectSkeletonClass MyNamespaceMyObjectSkeletonClass;
+typedef struct _MyNamespaceMyObjectSkeletonPrivate MyNamespaceMyObjectSkeletonPrivate;
 
-struct _ExampleMy_ObjectSkeleton
+struct _MyNamespaceMyObjectSkeleton
 {
   /*< private >*/
   GDBusInterfaceSkeleton parent_instance;
-  ExampleMy_ObjectSkeletonPrivate *priv;
+  MyNamespaceMyObjectSkeletonPrivate *priv;
 };
 
-struct _ExampleMy_ObjectSkeletonClass
+struct _MyNamespaceMyObjectSkeletonClass
 {
   GDBusInterfaceSkeletonClass parent_class;
 };
 
-GType example_my__object_skeleton_get_type (void) G_GNUC_CONST;
+GType my_namespace_my_object_skeleton_get_type (void) G_GNUC_CONST;
 
 #if GLIB_CHECK_VERSION(2, 44, 0)
-G_DEFINE_AUTOPTR_CLEANUP_FUNC (ExampleMy_ObjectSkeleton, g_object_unref)
+G_DEFINE_AUTOPTR_CLEANUP_FUNC (MyNamespaceMyObjectSkeleton, g_object_unref)
 #endif
 
-ExampleMy_Object *example_my__object_skeleton_new (void);
+MyNamespaceMyObject *my_namespace_my_object_skeleton_new (void);
 
 
 /* ------------------------------------------------------------------------ */
-/* Declarations for test.signal.ObjectManager.Another */
+/* Declarations for org.gtk.GDBus.Examples.ObjectManager.Another */
 
-#define EXAMPLE_TYPE_ANOTHER (example_another_get_type ())
-#define EXAMPLE_ANOTHER(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), EXAMPLE_TYPE_ANOTHER, ExampleAnother))
-#define EXAMPLE_IS_ANOTHER(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), EXAMPLE_TYPE_ANOTHER))
-#define EXAMPLE_ANOTHER_GET_IFACE(o) (G_TYPE_INSTANCE_GET_INTERFACE ((o), EXAMPLE_TYPE_ANOTHER, ExampleAnotherIface))
+#define MY_NAMESPACE_TYPE_ANOTHER (my_namespace_another_get_type ())
+#define MY_NAMESPACE_ANOTHER(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), MY_NAMESPACE_TYPE_ANOTHER, MyNamespaceAnother))
+#define MY_NAMESPACE_IS_ANOTHER(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), MY_NAMESPACE_TYPE_ANOTHER))
+#define MY_NAMESPACE_ANOTHER_GET_IFACE(o) (G_TYPE_INSTANCE_GET_INTERFACE ((o), MY_NAMESPACE_TYPE_ANOTHER, MyNamespaceAnotherIface))
 
-struct _ExampleAnother;
-typedef struct _ExampleAnother ExampleAnother;
-typedef struct _ExampleAnotherIface ExampleAnotherIface;
+struct _MyNamespaceAnother;
+typedef struct _MyNamespaceAnother MyNamespaceAnother;
+typedef struct _MyNamespaceAnotherIface MyNamespaceAnotherIface;
 
-struct _ExampleAnotherIface
+struct _MyNamespaceAnotherIface
 {
   GTypeInterface parent_iface;
 };
 
-GType example_another_get_type (void) G_GNUC_CONST;
+GType my_namespace_another_get_type (void) G_GNUC_CONST;
 
-GDBusInterfaceInfo *example_another_interface_info (void);
-guint example_another_override_properties (GObjectClass *klass, guint property_id_begin);
+GDBusInterfaceInfo *my_namespace_another_interface_info (void);
+guint my_namespace_another_override_properties (GObjectClass *klass, guint property_id_begin);
 
 
 /* ---- */
 
-#define EXAMPLE_TYPE_ANOTHER_PROXY (example_another_proxy_get_type ())
-#define EXAMPLE_ANOTHER_PROXY(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), EXAMPLE_TYPE_ANOTHER_PROXY, ExampleAnotherProxy))
-#define EXAMPLE_ANOTHER_PROXY_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), EXAMPLE_TYPE_ANOTHER_PROXY, ExampleAnotherProxyClass))
-#define EXAMPLE_ANOTHER_PROXY_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), EXAMPLE_TYPE_ANOTHER_PROXY, ExampleAnotherProxyClass))
-#define EXAMPLE_IS_ANOTHER_PROXY(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), EXAMPLE_TYPE_ANOTHER_PROXY))
-#define EXAMPLE_IS_ANOTHER_PROXY_CLASS(k) (G_TYPE_CHECK_CLASS_TYPE ((k), EXAMPLE_TYPE_ANOTHER_PROXY))
+#define MY_NAMESPACE_TYPE_ANOTHER_PROXY (my_namespace_another_proxy_get_type ())
+#define MY_NAMESPACE_ANOTHER_PROXY(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), MY_NAMESPACE_TYPE_ANOTHER_PROXY, MyNamespaceAnotherProxy))
+#define MY_NAMESPACE_ANOTHER_PROXY_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), MY_NAMESPACE_TYPE_ANOTHER_PROXY, MyNamespaceAnotherProxyClass))
+#define MY_NAMESPACE_ANOTHER_PROXY_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), MY_NAMESPACE_TYPE_ANOTHER_PROXY, MyNamespaceAnotherProxyClass))
+#define MY_NAMESPACE_IS_ANOTHER_PROXY(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), MY_NAMESPACE_TYPE_ANOTHER_PROXY))
+#define MY_NAMESPACE_IS_ANOTHER_PROXY_CLASS(k) (G_TYPE_CHECK_CLASS_TYPE ((k), MY_NAMESPACE_TYPE_ANOTHER_PROXY))
 
-typedef struct _ExampleAnotherProxy ExampleAnotherProxy;
-typedef struct _ExampleAnotherProxyClass ExampleAnotherProxyClass;
-typedef struct _ExampleAnotherProxyPrivate ExampleAnotherProxyPrivate;
+typedef struct _MyNamespaceAnotherProxy MyNamespaceAnotherProxy;
+typedef struct _MyNamespaceAnotherProxyClass MyNamespaceAnotherProxyClass;
+typedef struct _MyNamespaceAnotherProxyPrivate MyNamespaceAnotherProxyPrivate;
 
-struct _ExampleAnotherProxy
+struct _MyNamespaceAnotherProxy
 {
   /*< private >*/
   GDBusProxy parent_instance;
-  ExampleAnotherProxyPrivate *priv;
+  MyNamespaceAnotherProxyPrivate *priv;
 };
 
-struct _ExampleAnotherProxyClass
+struct _MyNamespaceAnotherProxyClass
 {
   GDBusProxyClass parent_class;
 };
 
-GType example_another_proxy_get_type (void) G_GNUC_CONST;
+GType my_namespace_another_proxy_get_type (void) G_GNUC_CONST;
 
 #if GLIB_CHECK_VERSION(2, 44, 0)
-G_DEFINE_AUTOPTR_CLEANUP_FUNC (ExampleAnotherProxy, g_object_unref)
+G_DEFINE_AUTOPTR_CLEANUP_FUNC (MyNamespaceAnotherProxy, g_object_unref)
 #endif
 
-void example_another_proxy_new (
+void my_namespace_another_proxy_new (
     GDBusConnection     *connection,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -272,10 +272,10 @@ void example_another_proxy_new (
     GCancellable        *cancellable,
     GAsyncReadyCallback  callback,
     gpointer             user_data);
-ExampleAnother *example_another_proxy_new_finish (
+MyNamespaceAnother *my_namespace_another_proxy_new_finish (
     GAsyncResult        *res,
     GError             **error);
-ExampleAnother *example_another_proxy_new_sync (
+MyNamespaceAnother *my_namespace_another_proxy_new_sync (
     GDBusConnection     *connection,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -283,7 +283,7 @@ ExampleAnother *example_another_proxy_new_sync (
     GCancellable        *cancellable,
     GError             **error);
 
-void example_another_proxy_new_for_bus (
+void my_namespace_another_proxy_new_for_bus (
     GBusType             bus_type,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -291,10 +291,10 @@ void example_another_proxy_new_for_bus (
     GCancellable        *cancellable,
     GAsyncReadyCallback  callback,
     gpointer             user_data);
-ExampleAnother *example_another_proxy_new_for_bus_finish (
+MyNamespaceAnother *my_namespace_another_proxy_new_for_bus_finish (
     GAsyncResult        *res,
     GError             **error);
-ExampleAnother *example_another_proxy_new_for_bus_sync (
+MyNamespaceAnother *my_namespace_another_proxy_new_for_bus_sync (
     GBusType             bus_type,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -305,159 +305,159 @@ ExampleAnother *example_another_proxy_new_for_bus_sync (
 
 /* ---- */
 
-#define EXAMPLE_TYPE_ANOTHER_SKELETON (example_another_skeleton_get_type ())
-#define EXAMPLE_ANOTHER_SKELETON(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), EXAMPLE_TYPE_ANOTHER_SKELETON, ExampleAnotherSkeleton))
-#define EXAMPLE_ANOTHER_SKELETON_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), EXAMPLE_TYPE_ANOTHER_SKELETON, ExampleAnotherSkeletonClass))
-#define EXAMPLE_ANOTHER_SKELETON_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), EXAMPLE_TYPE_ANOTHER_SKELETON, ExampleAnotherSkeletonClass))
-#define EXAMPLE_IS_ANOTHER_SKELETON(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), EXAMPLE_TYPE_ANOTHER_SKELETON))
-#define EXAMPLE_IS_ANOTHER_SKELETON_CLASS(k) (G_TYPE_CHECK_CLASS_TYPE ((k), EXAMPLE_TYPE_ANOTHER_SKELETON))
+#define MY_NAMESPACE_TYPE_ANOTHER_SKELETON (my_namespace_another_skeleton_get_type ())
+#define MY_NAMESPACE_ANOTHER_SKELETON(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), MY_NAMESPACE_TYPE_ANOTHER_SKELETON, MyNamespaceAnotherSkeleton))
+#define MY_NAMESPACE_ANOTHER_SKELETON_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), MY_NAMESPACE_TYPE_ANOTHER_SKELETON, MyNamespaceAnotherSkeletonClass))
+#define MY_NAMESPACE_ANOTHER_SKELETON_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), MY_NAMESPACE_TYPE_ANOTHER_SKELETON, MyNamespaceAnotherSkeletonClass))
+#define MY_NAMESPACE_IS_ANOTHER_SKELETON(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), MY_NAMESPACE_TYPE_ANOTHER_SKELETON))
+#define MY_NAMESPACE_IS_ANOTHER_SKELETON_CLASS(k) (G_TYPE_CHECK_CLASS_TYPE ((k), MY_NAMESPACE_TYPE_ANOTHER_SKELETON))
 
-typedef struct _ExampleAnotherSkeleton ExampleAnotherSkeleton;
-typedef struct _ExampleAnotherSkeletonClass ExampleAnotherSkeletonClass;
-typedef struct _ExampleAnotherSkeletonPrivate ExampleAnotherSkeletonPrivate;
+typedef struct _MyNamespaceAnotherSkeleton MyNamespaceAnotherSkeleton;
+typedef struct _MyNamespaceAnotherSkeletonClass MyNamespaceAnotherSkeletonClass;
+typedef struct _MyNamespaceAnotherSkeletonPrivate MyNamespaceAnotherSkeletonPrivate;
 
-struct _ExampleAnotherSkeleton
+struct _MyNamespaceAnotherSkeleton
 {
   /*< private >*/
   GDBusInterfaceSkeleton parent_instance;
-  ExampleAnotherSkeletonPrivate *priv;
+  MyNamespaceAnotherSkeletonPrivate *priv;
 };
 
-struct _ExampleAnotherSkeletonClass
+struct _MyNamespaceAnotherSkeletonClass
 {
   GDBusInterfaceSkeletonClass parent_class;
 };
 
-GType example_another_skeleton_get_type (void) G_GNUC_CONST;
+GType my_namespace_another_skeleton_get_type (void) G_GNUC_CONST;
 
 #if GLIB_CHECK_VERSION(2, 44, 0)
-G_DEFINE_AUTOPTR_CLEANUP_FUNC (ExampleAnotherSkeleton, g_object_unref)
+G_DEFINE_AUTOPTR_CLEANUP_FUNC (MyNamespaceAnotherSkeleton, g_object_unref)
 #endif
 
-ExampleAnother *example_another_skeleton_new (void);
+MyNamespaceAnother *my_namespace_another_skeleton_new (void);
 
 
 /* ---- */
 
-#define EXAMPLE_TYPE_OBJECT (example_object_get_type ())
-#define EXAMPLE_OBJECT(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), EXAMPLE_TYPE_OBJECT, ExampleObject))
-#define EXAMPLE_IS_OBJECT(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), EXAMPLE_TYPE_OBJECT))
-#define EXAMPLE_OBJECT_GET_IFACE(o) (G_TYPE_INSTANCE_GET_INTERFACE ((o), EXAMPLE_TYPE_OBJECT, ExampleObject))
+#define MY_NAMESPACE_TYPE_OBJECT (my_namespace_object_get_type ())
+#define MY_NAMESPACE_OBJECT(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), MY_NAMESPACE_TYPE_OBJECT, MyNamespaceObject))
+#define MY_NAMESPACE_IS_OBJECT(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), MY_NAMESPACE_TYPE_OBJECT))
+#define MY_NAMESPACE_OBJECT_GET_IFACE(o) (G_TYPE_INSTANCE_GET_INTERFACE ((o), MY_NAMESPACE_TYPE_OBJECT, MyNamespaceObject))
 
-struct _ExampleObject;
-typedef struct _ExampleObject ExampleObject;
-typedef struct _ExampleObjectIface ExampleObjectIface;
+struct _MyNamespaceObject;
+typedef struct _MyNamespaceObject MyNamespaceObject;
+typedef struct _MyNamespaceObjectIface MyNamespaceObjectIface;
 
-struct _ExampleObjectIface
+struct _MyNamespaceObjectIface
 {
   GTypeInterface parent_iface;
 };
 
-GType example_object_get_type (void) G_GNUC_CONST;
+GType my_namespace_object_get_type (void) G_GNUC_CONST;
 
-ExampleMy_Object *example_object_get_my__object (ExampleObject *object);
-ExampleAnother *example_object_get_another (ExampleObject *object);
-ExampleMy_Object *example_object_peek_my__object (ExampleObject *object);
-ExampleAnother *example_object_peek_another (ExampleObject *object);
+MyNamespaceMyObject *my_namespace_object_get_my_object (MyNamespaceObject *object);
+MyNamespaceAnother *my_namespace_object_get_another (MyNamespaceObject *object);
+MyNamespaceMyObject *my_namespace_object_peek_my_object (MyNamespaceObject *object);
+MyNamespaceAnother *my_namespace_object_peek_another (MyNamespaceObject *object);
 
-#define EXAMPLE_TYPE_OBJECT_PROXY (example_object_proxy_get_type ())
-#define EXAMPLE_OBJECT_PROXY(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), EXAMPLE_TYPE_OBJECT_PROXY, ExampleObjectProxy))
-#define EXAMPLE_OBJECT_PROXY_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), EXAMPLE_TYPE_OBJECT_PROXY, ExampleObjectProxyClass))
-#define EXAMPLE_OBJECT_PROXY_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), EXAMPLE_TYPE_OBJECT_PROXY, ExampleObjectProxyClass))
-#define EXAMPLE_IS_OBJECT_PROXY(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), EXAMPLE_TYPE_OBJECT_PROXY))
-#define EXAMPLE_IS_OBJECT_PROXY_CLASS(k) (G_TYPE_CHECK_CLASS_TYPE ((k), EXAMPLE_TYPE_OBJECT_PROXY))
+#define MY_NAMESPACE_TYPE_OBJECT_PROXY (my_namespace_object_proxy_get_type ())
+#define MY_NAMESPACE_OBJECT_PROXY(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), MY_NAMESPACE_TYPE_OBJECT_PROXY, MyNamespaceObjectProxy))
+#define MY_NAMESPACE_OBJECT_PROXY_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), MY_NAMESPACE_TYPE_OBJECT_PROXY, MyNamespaceObjectProxyClass))
+#define MY_NAMESPACE_OBJECT_PROXY_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), MY_NAMESPACE_TYPE_OBJECT_PROXY, MyNamespaceObjectProxyClass))
+#define MY_NAMESPACE_IS_OBJECT_PROXY(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), MY_NAMESPACE_TYPE_OBJECT_PROXY))
+#define MY_NAMESPACE_IS_OBJECT_PROXY_CLASS(k) (G_TYPE_CHECK_CLASS_TYPE ((k), MY_NAMESPACE_TYPE_OBJECT_PROXY))
 
-typedef struct _ExampleObjectProxy ExampleObjectProxy;
-typedef struct _ExampleObjectProxyClass ExampleObjectProxyClass;
-typedef struct _ExampleObjectProxyPrivate ExampleObjectProxyPrivate;
+typedef struct _MyNamespaceObjectProxy MyNamespaceObjectProxy;
+typedef struct _MyNamespaceObjectProxyClass MyNamespaceObjectProxyClass;
+typedef struct _MyNamespaceObjectProxyPrivate MyNamespaceObjectProxyPrivate;
 
-struct _ExampleObjectProxy
+struct _MyNamespaceObjectProxy
 {
   /*< private >*/
   GDBusObjectProxy parent_instance;
-  ExampleObjectProxyPrivate *priv;
+  MyNamespaceObjectProxyPrivate *priv;
 };
 
-struct _ExampleObjectProxyClass
+struct _MyNamespaceObjectProxyClass
 {
   GDBusObjectProxyClass parent_class;
 };
 
-GType example_object_proxy_get_type (void) G_GNUC_CONST;
+GType my_namespace_object_proxy_get_type (void) G_GNUC_CONST;
 
 #if GLIB_CHECK_VERSION(2, 44, 0)
-G_DEFINE_AUTOPTR_CLEANUP_FUNC (ExampleObjectProxy, g_object_unref)
+G_DEFINE_AUTOPTR_CLEANUP_FUNC (MyNamespaceObjectProxy, g_object_unref)
 #endif
 
-ExampleObjectProxy *example_object_proxy_new (GDBusConnection *connection, const gchar *object_path);
+MyNamespaceObjectProxy *my_namespace_object_proxy_new (GDBusConnection *connection, const gchar *object_path);
 
-#define EXAMPLE_TYPE_OBJECT_SKELETON (example_object_skeleton_get_type ())
-#define EXAMPLE_OBJECT_SKELETON(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), EXAMPLE_TYPE_OBJECT_SKELETON, ExampleObjectSkeleton))
-#define EXAMPLE_OBJECT_SKELETON_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), EXAMPLE_TYPE_OBJECT_SKELETON, ExampleObjectSkeletonClass))
-#define EXAMPLE_OBJECT_SKELETON_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), EXAMPLE_TYPE_OBJECT_SKELETON, ExampleObjectSkeletonClass))
-#define EXAMPLE_IS_OBJECT_SKELETON(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), EXAMPLE_TYPE_OBJECT_SKELETON))
-#define EXAMPLE_IS_OBJECT_SKELETON_CLASS(k) (G_TYPE_CHECK_CLASS_TYPE ((k), EXAMPLE_TYPE_OBJECT_SKELETON))
+#define MY_NAMESPACE_TYPE_OBJECT_SKELETON (my_namespace_object_skeleton_get_type ())
+#define MY_NAMESPACE_OBJECT_SKELETON(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), MY_NAMESPACE_TYPE_OBJECT_SKELETON, MyNamespaceObjectSkeleton))
+#define MY_NAMESPACE_OBJECT_SKELETON_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), MY_NAMESPACE_TYPE_OBJECT_SKELETON, MyNamespaceObjectSkeletonClass))
+#define MY_NAMESPACE_OBJECT_SKELETON_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), MY_NAMESPACE_TYPE_OBJECT_SKELETON, MyNamespaceObjectSkeletonClass))
+#define MY_NAMESPACE_IS_OBJECT_SKELETON(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), MY_NAMESPACE_TYPE_OBJECT_SKELETON))
+#define MY_NAMESPACE_IS_OBJECT_SKELETON_CLASS(k) (G_TYPE_CHECK_CLASS_TYPE ((k), MY_NAMESPACE_TYPE_OBJECT_SKELETON))
 
-typedef struct _ExampleObjectSkeleton ExampleObjectSkeleton;
-typedef struct _ExampleObjectSkeletonClass ExampleObjectSkeletonClass;
-typedef struct _ExampleObjectSkeletonPrivate ExampleObjectSkeletonPrivate;
+typedef struct _MyNamespaceObjectSkeleton MyNamespaceObjectSkeleton;
+typedef struct _MyNamespaceObjectSkeletonClass MyNamespaceObjectSkeletonClass;
+typedef struct _MyNamespaceObjectSkeletonPrivate MyNamespaceObjectSkeletonPrivate;
 
-struct _ExampleObjectSkeleton
+struct _MyNamespaceObjectSkeleton
 {
   /*< private >*/
   GDBusObjectSkeleton parent_instance;
-  ExampleObjectSkeletonPrivate *priv;
+  MyNamespaceObjectSkeletonPrivate *priv;
 };
 
-struct _ExampleObjectSkeletonClass
+struct _MyNamespaceObjectSkeletonClass
 {
   GDBusObjectSkeletonClass parent_class;
 };
 
-GType example_object_skeleton_get_type (void) G_GNUC_CONST;
+GType my_namespace_object_skeleton_get_type (void) G_GNUC_CONST;
 
 #if GLIB_CHECK_VERSION(2, 44, 0)
-G_DEFINE_AUTOPTR_CLEANUP_FUNC (ExampleObjectSkeleton, g_object_unref)
+G_DEFINE_AUTOPTR_CLEANUP_FUNC (MyNamespaceObjectSkeleton, g_object_unref)
 #endif
 
-ExampleObjectSkeleton *example_object_skeleton_new (const gchar *object_path);
-void example_object_skeleton_set_my__object (ExampleObjectSkeleton *object, ExampleMy_Object *interface_);
-void example_object_skeleton_set_another (ExampleObjectSkeleton *object, ExampleAnother *interface_);
+MyNamespaceObjectSkeleton *my_namespace_object_skeleton_new (const gchar *object_path);
+void my_namespace_object_skeleton_set_my_object (MyNamespaceObjectSkeleton *object, MyNamespaceMyObject *interface_);
+void my_namespace_object_skeleton_set_another (MyNamespaceObjectSkeleton *object, MyNamespaceAnother *interface_);
 
 /* ---- */
 
-#define EXAMPLE_TYPE_OBJECT_MANAGER_CLIENT (example_object_manager_client_get_type ())
-#define EXAMPLE_OBJECT_MANAGER_CLIENT(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), EXAMPLE_TYPE_OBJECT_MANAGER_CLIENT, ExampleObjectManagerClient))
-#define EXAMPLE_OBJECT_MANAGER_CLIENT_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), EXAMPLE_TYPE_OBJECT_MANAGER_CLIENT, ExampleObjectManagerClientClass))
-#define EXAMPLE_OBJECT_MANAGER_CLIENT_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), EXAMPLE_TYPE_OBJECT_MANAGER_CLIENT, ExampleObjectManagerClientClass))
-#define EXAMPLE_IS_OBJECT_MANAGER_CLIENT(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), EXAMPLE_TYPE_OBJECT_MANAGER_CLIENT))
-#define EXAMPLE_IS_OBJECT_MANAGER_CLIENT_CLASS(k) (G_TYPE_CHECK_CLASS_TYPE ((k), EXAMPLE_TYPE_OBJECT_MANAGER_CLIENT))
+#define MY_NAMESPACE_TYPE_OBJECT_MANAGER_CLIENT (my_namespace_object_manager_client_get_type ())
+#define MY_NAMESPACE_OBJECT_MANAGER_CLIENT(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), MY_NAMESPACE_TYPE_OBJECT_MANAGER_CLIENT, MyNamespaceObjectManagerClient))
+#define MY_NAMESPACE_OBJECT_MANAGER_CLIENT_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), MY_NAMESPACE_TYPE_OBJECT_MANAGER_CLIENT, MyNamespaceObjectManagerClientClass))
+#define MY_NAMESPACE_OBJECT_MANAGER_CLIENT_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), MY_NAMESPACE_TYPE_OBJECT_MANAGER_CLIENT, MyNamespaceObjectManagerClientClass))
+#define MY_NAMESPACE_IS_OBJECT_MANAGER_CLIENT(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), MY_NAMESPACE_TYPE_OBJECT_MANAGER_CLIENT))
+#define MY_NAMESPACE_IS_OBJECT_MANAGER_CLIENT_CLASS(k) (G_TYPE_CHECK_CLASS_TYPE ((k), MY_NAMESPACE_TYPE_OBJECT_MANAGER_CLIENT))
 
-typedef struct _ExampleObjectManagerClient ExampleObjectManagerClient;
-typedef struct _ExampleObjectManagerClientClass ExampleObjectManagerClientClass;
-typedef struct _ExampleObjectManagerClientPrivate ExampleObjectManagerClientPrivate;
+typedef struct _MyNamespaceObjectManagerClient MyNamespaceObjectManagerClient;
+typedef struct _MyNamespaceObjectManagerClientClass MyNamespaceObjectManagerClientClass;
+typedef struct _MyNamespaceObjectManagerClientPrivate MyNamespaceObjectManagerClientPrivate;
 
-struct _ExampleObjectManagerClient
+struct _MyNamespaceObjectManagerClient
 {
   /*< private >*/
   GDBusObjectManagerClient parent_instance;
-  ExampleObjectManagerClientPrivate *priv;
+  MyNamespaceObjectManagerClientPrivate *priv;
 };
 
-struct _ExampleObjectManagerClientClass
+struct _MyNamespaceObjectManagerClientClass
 {
   GDBusObjectManagerClientClass parent_class;
 };
 
 #if GLIB_CHECK_VERSION(2, 44, 0)
-G_DEFINE_AUTOPTR_CLEANUP_FUNC (ExampleObjectManagerClient, g_object_unref)
+G_DEFINE_AUTOPTR_CLEANUP_FUNC (MyNamespaceObjectManagerClient, g_object_unref)
 #endif
 
-GType example_object_manager_client_get_type (void) G_GNUC_CONST;
+GType my_namespace_object_manager_client_get_type (void) G_GNUC_CONST;
 
-GType example_object_manager_client_get_proxy_type (GDBusObjectManagerClient *manager, const gchar *object_path, const gchar *interface_name, gpointer user_data);
+GType my_namespace_object_manager_client_get_proxy_type (GDBusObjectManagerClient *manager, const gchar *object_path, const gchar *interface_name, gpointer user_data);
 
-void example_object_manager_client_new (
+void my_namespace_object_manager_client_new (
     GDBusConnection        *connection,
     GDBusObjectManagerClientFlags  flags,
     const gchar            *name,
@@ -465,10 +465,10 @@ void example_object_manager_client_new (
     GCancellable           *cancellable,
     GAsyncReadyCallback     callback,
     gpointer                user_data);
-GDBusObjectManager *example_object_manager_client_new_finish (
+GDBusObjectManager *my_namespace_object_manager_client_new_finish (
     GAsyncResult        *res,
     GError             **error);
-GDBusObjectManager *example_object_manager_client_new_sync (
+GDBusObjectManager *my_namespace_object_manager_client_new_sync (
     GDBusConnection        *connection,
     GDBusObjectManagerClientFlags  flags,
     const gchar            *name,
@@ -476,7 +476,7 @@ GDBusObjectManager *example_object_manager_client_new_sync (
     GCancellable           *cancellable,
     GError                **error);
 
-void example_object_manager_client_new_for_bus (
+void my_namespace_object_manager_client_new_for_bus (
     GBusType                bus_type,
     GDBusObjectManagerClientFlags  flags,
     const gchar            *name,
@@ -484,10 +484,10 @@ void example_object_manager_client_new_for_bus (
     GCancellable           *cancellable,
     GAsyncReadyCallback     callback,
     gpointer                user_data);
-GDBusObjectManager *example_object_manager_client_new_for_bus_finish (
+GDBusObjectManager *my_namespace_object_manager_client_new_for_bus_finish (
     GAsyncResult        *res,
     GError             **error);
-GDBusObjectManager *example_object_manager_client_new_for_bus_sync (
+GDBusObjectManager *my_namespace_object_manager_client_new_for_bus_sync (
     GBusType                bus_type,
     GDBusObjectManagerClientFlags  flags,
     const gchar            *name,

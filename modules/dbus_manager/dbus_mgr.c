@@ -10,7 +10,7 @@ print_objects (GDBusObjectManager *manager)
   objects = g_dbus_object_manager_get_objects (manager);
   for (l = objects; l != NULL; l = l->next)
     {
-      ExampleObject *object = EXAMPLE_OBJECT (l->data);
+      MyNamespaceObject *object = MY_NAMESPACE_MY_OBJECT(l->data);
       GList *interfaces;
       GList *ll;
       g_print (" - Object at %s\n", g_dbus_object_get_object_path (G_DBUS_OBJECT (object)));
@@ -103,8 +103,9 @@ on_interface_proxy_properties_changed (GDBusObjectManagerClient *manager,
     }
 }
 
-void setup_gdbus()
+int setup_gdbus()
 {
+    printf("Line %d in file %s\n", __LINE__, __FILE__);
     GDBusObjectManager *manager;
     GMainLoop *loop;
     GError *error;
@@ -115,13 +116,15 @@ void setup_gdbus()
 
     loop = g_main_loop_new(NULL, FALSE);
 
+    printf("Line %d in file %s\n", __LINE__, __FILE__);
     error = NULL;
-    manager = example_object_manager_client_new_for_bus_sync (G_BUS_TYPE_SESSION,
+    manager = my_namespace_object_manager_client_new_for_bus_sync(G_BUS_TYPE_SESSION,
                                                               G_DBUS_OBJECT_MANAGER_CLIENT_FLAGS_NONE,
-                                                              "test.signal.ObjectManager",
-                                                              "My_Object",
+                                                              "org.gtk.GDBus.Examples.ObjectManager",
+                                                              "/ex/MyObject",
                                                               NULL, /* GCancellable */
                                                               &error);
+    printf("Line %d in file %s\n", __LINE__, __FILE__);
     if (manager == NULL)
     {
         g_printerr ("Error getting object manager client: %s", error->message);
@@ -134,8 +137,17 @@ void setup_gdbus()
         return -1;
     }
 
-    name_owner = g_dbus_object_manager_client_get_name_owner (G_DBUS_OBJECT_MANAGER_CLIENT (manager));
+    name_owner = g_dbus_object_manager_client_get_name_owner(G_DBUS_OBJECT_MANAGER_CLIENT(manager));
+    //if (name_owner == NULL)
+    //{
+    //    printf("Name is NULL, error: %d\n", error);
+    //    g_object_unref (manager);
+    //    g_main_loop_unref (loop);
+    //    return -1;
+    //}
+
     g_print ("name-owner: %s\n", name_owner);
+
     g_free (name_owner);
 
     print_objects (manager);
@@ -157,7 +169,7 @@ void setup_gdbus()
                       G_CALLBACK (on_interface_proxy_properties_changed),
                       NULL);
 
-    g_main_loop_run(loop);
+    //g_main_loop_run(loop); we do not want to start endless loop, consider g_main_context_iteration
 
     return 0;
 }

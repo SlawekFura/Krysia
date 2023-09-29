@@ -150,21 +150,21 @@ _g_value_equal (const GValue *a, const GValue *b)
 }
 
 /* ------------------------------------------------------------------------
- * Code for interface test.signal.ObjectManager.My_Object
+ * Code for interface org.gtk.GDBus.Examples.ObjectManager.MyObject
  * ------------------------------------------------------------------------
  */
 
 /**
- * SECTION:ExampleMy_Object
- * @title: ExampleMy_Object
- * @short_description: Generated C code for the test.signal.ObjectManager.My_Object D-Bus interface
+ * SECTION:MyNamespaceMyObject
+ * @title: MyNamespaceMyObject
+ * @short_description: Generated C code for the org.gtk.GDBus.Examples.ObjectManager.MyObject D-Bus interface
  *
- * This section contains code for working with the <link linkend="gdbus-interface-test-signal-ObjectManager-My_Object.top_of_page">test.signal.ObjectManager.My_Object</link> D-Bus interface in C.
+ * This section contains code for working with the <link linkend="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-MyObject.top_of_page">org.gtk.GDBus.Examples.ObjectManager.MyObject</link> D-Bus interface in C.
  */
 
-/* ---- Introspection data for test.signal.ObjectManager.My_Object ---- */
+/* ---- Introspection data for org.gtk.GDBus.Examples.ObjectManager.MyObject ---- */
 
-static const _ExtendedGDBusArgInfo _example_my__object_method_info_math_op_IN_ARG_increment =
+static const _ExtendedGDBusArgInfo _my_namespace_my_object_method_info_math_op_IN_ARG_increment =
 {
   {
     -1,
@@ -175,7 +175,7 @@ static const _ExtendedGDBusArgInfo _example_my__object_method_info_math_op_IN_AR
   FALSE
 };
 
-static const _ExtendedGDBusArgInfo _example_my__object_method_info_math_op_IN_ARG_decrement =
+static const _ExtendedGDBusArgInfo _my_namespace_my_object_method_info_math_op_IN_ARG_decrement =
 {
   {
     -1,
@@ -186,19 +186,19 @@ static const _ExtendedGDBusArgInfo _example_my__object_method_info_math_op_IN_AR
   FALSE
 };
 
-static const GDBusArgInfo * const _example_my__object_method_info_math_op_IN_ARG_pointers[] =
+static const GDBusArgInfo * const _my_namespace_my_object_method_info_math_op_IN_ARG_pointers[] =
 {
-  &_example_my__object_method_info_math_op_IN_ARG_increment.parent_struct,
-  &_example_my__object_method_info_math_op_IN_ARG_decrement.parent_struct,
+  &_my_namespace_my_object_method_info_math_op_IN_ARG_increment.parent_struct,
+  &_my_namespace_my_object_method_info_math_op_IN_ARG_decrement.parent_struct,
   NULL
 };
 
-static const _ExtendedGDBusMethodInfo _example_my__object_method_info_math_op =
+static const _ExtendedGDBusMethodInfo _my_namespace_my_object_method_info_math_op =
 {
   {
     -1,
     (gchar *) "MathOp",
-    (GDBusArgInfo **) &_example_my__object_method_info_math_op_IN_ARG_pointers,
+    (GDBusArgInfo **) &_my_namespace_my_object_method_info_math_op_IN_ARG_pointers,
     NULL,
     NULL
   },
@@ -206,13 +206,13 @@ static const _ExtendedGDBusMethodInfo _example_my__object_method_info_math_op =
   FALSE
 };
 
-static const GDBusMethodInfo * const _example_my__object_method_info_pointers[] =
+static const GDBusMethodInfo * const _my_namespace_my_object_method_info_pointers[] =
 {
-  &_example_my__object_method_info_math_op.parent_struct,
+  &_my_namespace_my_object_method_info_math_op.parent_struct,
   NULL
 };
 
-static const _ExtendedGDBusArgInfo _example_my__object_signal_info_inform_about_intent_ARG_info =
+static const _ExtendedGDBusArgInfo _my_namespace_my_object_signal_info_inform_about_intent_ARG_info =
 {
   {
     -1,
@@ -223,30 +223,30 @@ static const _ExtendedGDBusArgInfo _example_my__object_signal_info_inform_about_
   FALSE
 };
 
-static const GDBusArgInfo * const _example_my__object_signal_info_inform_about_intent_ARG_pointers[] =
+static const GDBusArgInfo * const _my_namespace_my_object_signal_info_inform_about_intent_ARG_pointers[] =
 {
-  &_example_my__object_signal_info_inform_about_intent_ARG_info.parent_struct,
+  &_my_namespace_my_object_signal_info_inform_about_intent_ARG_info.parent_struct,
   NULL
 };
 
-static const _ExtendedGDBusSignalInfo _example_my__object_signal_info_inform_about_intent =
+static const _ExtendedGDBusSignalInfo _my_namespace_my_object_signal_info_inform_about_intent =
 {
   {
     -1,
     (gchar *) "Inform_about_intent",
-    (GDBusArgInfo **) &_example_my__object_signal_info_inform_about_intent_ARG_pointers,
+    (GDBusArgInfo **) &_my_namespace_my_object_signal_info_inform_about_intent_ARG_pointers,
     NULL
   },
   "inform-about-intent"
 };
 
-static const GDBusSignalInfo * const _example_my__object_signal_info_pointers[] =
+static const GDBusSignalInfo * const _my_namespace_my_object_signal_info_pointers[] =
 {
-  &_example_my__object_signal_info_inform_about_intent.parent_struct,
+  &_my_namespace_my_object_signal_info_inform_about_intent.parent_struct,
   NULL
 };
 
-static const _ExtendedGDBusPropertyInfo _example_my__object_property_info_description =
+static const _ExtendedGDBusPropertyInfo _my_namespace_my_object_property_info_description =
 {
   {
     -1,
@@ -259,7 +259,7 @@ static const _ExtendedGDBusPropertyInfo _example_my__object_property_info_descri
   FALSE
 };
 
-static const _ExtendedGDBusPropertyInfo _example_my__object_property_info_foo =
+static const _ExtendedGDBusPropertyInfo _my_namespace_my_object_property_info_foo =
 {
   {
     -1,
@@ -272,7 +272,7 @@ static const _ExtendedGDBusPropertyInfo _example_my__object_property_info_foo =
   FALSE
 };
 
-static const _ExtendedGDBusPropertyInfo _example_my__object_property_info_bar =
+static const _ExtendedGDBusPropertyInfo _my_namespace_my_object_property_info_bar =
 {
   {
     -1,
@@ -285,53 +285,53 @@ static const _ExtendedGDBusPropertyInfo _example_my__object_property_info_bar =
   FALSE
 };
 
-static const GDBusPropertyInfo * const _example_my__object_property_info_pointers[] =
+static const GDBusPropertyInfo * const _my_namespace_my_object_property_info_pointers[] =
 {
-  &_example_my__object_property_info_description.parent_struct,
-  &_example_my__object_property_info_foo.parent_struct,
-  &_example_my__object_property_info_bar.parent_struct,
+  &_my_namespace_my_object_property_info_description.parent_struct,
+  &_my_namespace_my_object_property_info_foo.parent_struct,
+  &_my_namespace_my_object_property_info_bar.parent_struct,
   NULL
 };
 
-static const _ExtendedGDBusInterfaceInfo _example_my__object_interface_info =
+static const _ExtendedGDBusInterfaceInfo _my_namespace_my_object_interface_info =
 {
   {
     -1,
-    (gchar *) "test.signal.ObjectManager.My_Object",
-    (GDBusMethodInfo **) &_example_my__object_method_info_pointers,
-    (GDBusSignalInfo **) &_example_my__object_signal_info_pointers,
-    (GDBusPropertyInfo **) &_example_my__object_property_info_pointers,
+    (gchar *) "org.gtk.GDBus.Examples.ObjectManager.MyObject",
+    (GDBusMethodInfo **) &_my_namespace_my_object_method_info_pointers,
+    (GDBusSignalInfo **) &_my_namespace_my_object_signal_info_pointers,
+    (GDBusPropertyInfo **) &_my_namespace_my_object_property_info_pointers,
     NULL
   },
-  "my--object",
+  "my-object",
 };
 
 
 /**
- * example_my__object_interface_info:
+ * my_namespace_my_object_interface_info:
  *
- * Gets a machine-readable description of the <link linkend="gdbus-interface-test-signal-ObjectManager-My_Object.top_of_page">test.signal.ObjectManager.My_Object</link> D-Bus interface.
+ * Gets a machine-readable description of the <link linkend="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-MyObject.top_of_page">org.gtk.GDBus.Examples.ObjectManager.MyObject</link> D-Bus interface.
  *
  * Returns: (transfer none): A #GDBusInterfaceInfo. Do not free.
  */
 GDBusInterfaceInfo *
-example_my__object_interface_info (void)
+my_namespace_my_object_interface_info (void)
 {
-  return (GDBusInterfaceInfo *) &_example_my__object_interface_info.parent_struct;
+  return (GDBusInterfaceInfo *) &_my_namespace_my_object_interface_info.parent_struct;
 }
 
 /**
- * example_my__object_override_properties:
+ * my_namespace_my_object_override_properties:
  * @klass: The class structure for a #GObject derived class.
  * @property_id_begin: The property id to assign to the first overridden property.
  *
- * Overrides all #GObject properties in the #ExampleMy_Object interface for a concrete class.
+ * Overrides all #GObject properties in the #MyNamespaceMyObject interface for a concrete class.
  * The properties are overridden in the order they are defined.
  *
  * Returns: The last property id.
  */
 guint
-example_my__object_override_properties (GObjectClass *klass, guint property_id_begin)
+my_namespace_my_object_override_properties (GObjectClass *klass, guint property_id_begin)
 {
   g_object_class_override_property (klass, property_id_begin++, "description");
   g_object_class_override_property (klass, property_id_begin++, "foo");
@@ -342,47 +342,47 @@ example_my__object_override_properties (GObjectClass *klass, guint property_id_b
 
 
 /**
- * ExampleMy_Object:
+ * MyNamespaceMyObject:
  *
- * Abstract interface type for the D-Bus interface <link linkend="gdbus-interface-test-signal-ObjectManager-My_Object.top_of_page">test.signal.ObjectManager.My_Object</link>.
+ * Abstract interface type for the D-Bus interface <link linkend="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-MyObject.top_of_page">org.gtk.GDBus.Examples.ObjectManager.MyObject</link>.
  */
 
 /**
- * ExampleMy_ObjectIface:
+ * MyNamespaceMyObjectIface:
  * @parent_iface: The parent interface.
- * @handle_math_op: Handler for the #ExampleMy_Object::handle-math-op signal.
- * @get_description: Getter for the #ExampleMy_Object:description property.
- * @get_foo: Getter for the #ExampleMy_Object:foo property.
- * @inform_about_intent: Handler for the #ExampleMy_Object::inform-about-intent signal.
- * @get_bar: Getter for the #ExampleMy_Object:bar property.
+ * @handle_math_op: Handler for the #MyNamespaceMyObject::handle-math-op signal.
+ * @get_description: Getter for the #MyNamespaceMyObject:description property.
+ * @get_foo: Getter for the #MyNamespaceMyObject:foo property.
+ * @inform_about_intent: Handler for the #MyNamespaceMyObject::inform-about-intent signal.
+ * @get_bar: Getter for the #MyNamespaceMyObject:bar property.
  *
- * Virtual table for the D-Bus interface <link linkend="gdbus-interface-test-signal-ObjectManager-My_Object.top_of_page">test.signal.ObjectManager.My_Object</link>.
+ * Virtual table for the D-Bus interface <link linkend="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-MyObject.top_of_page">org.gtk.GDBus.Examples.ObjectManager.MyObject</link>.
  */
 
-typedef ExampleMy_ObjectIface ExampleMy_ObjectInterface;
-G_DEFINE_INTERFACE (ExampleMy_Object, example_my__object, G_TYPE_OBJECT)
+typedef MyNamespaceMyObjectIface MyNamespaceMyObjectInterface;
+G_DEFINE_INTERFACE (MyNamespaceMyObject, my_namespace_my_object, G_TYPE_OBJECT)
 
 static void
-example_my__object_default_init (ExampleMy_ObjectIface *iface)
+my_namespace_my_object_default_init (MyNamespaceMyObjectIface *iface)
 {
   /* GObject signals for incoming D-Bus method calls: */
   /**
-   * ExampleMy_Object::handle-math-op:
-   * @object: A #ExampleMy_Object.
+   * MyNamespaceMyObject::handle-math-op:
+   * @object: A #MyNamespaceMyObject.
    * @invocation: A #GDBusMethodInvocation.
    * @arg_increment: Argument passed by remote caller.
    * @arg_decrement: Argument passed by remote caller.
    *
-   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-test-signal-ObjectManager-My_Object.MathOp">MathOp()</link> D-Bus method.
+   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org-gtk-GDBus-Examples-ObjectManager-MyObject.MathOp">MathOp()</link> D-Bus method.
    *
-   * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call example_my__object_complete_math_op() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
+   * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call my_namespace_my_object_complete_math_op() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
    * Returns: %TRUE if the invocation was handled, %FALSE to let other signal handlers run.
    */
   g_signal_new ("handle-math-op",
     G_TYPE_FROM_INTERFACE (iface),
     G_SIGNAL_RUN_LAST,
-    G_STRUCT_OFFSET (ExampleMy_ObjectIface, handle_math_op),
+    G_STRUCT_OFFSET (MyNamespaceMyObjectIface, handle_math_op),
     g_signal_accumulator_true_handled,
     NULL,
     g_cclosure_marshal_generic,
@@ -392,18 +392,18 @@ example_my__object_default_init (ExampleMy_ObjectIface *iface)
 
   /* GObject signals for received D-Bus signals: */
   /**
-   * ExampleMy_Object::inform-about-intent:
-   * @object: A #ExampleMy_Object.
+   * MyNamespaceMyObject::inform-about-intent:
+   * @object: A #MyNamespaceMyObject.
    * @arg_info: Argument.
    *
-   * On the client-side, this signal is emitted whenever the D-Bus signal <link linkend="gdbus-signal-test-signal-ObjectManager-My_Object.Inform_about_intent">"Inform_about_intent"</link> is received.
+   * On the client-side, this signal is emitted whenever the D-Bus signal <link linkend="gdbus-signal-org-gtk-GDBus-Examples-ObjectManager-MyObject.Inform_about_intent">"Inform_about_intent"</link> is received.
    *
    * On the service-side, this signal can be used with e.g. g_signal_emit_by_name() to make the object emit the D-Bus signal.
    */
   g_signal_new ("inform-about-intent",
     G_TYPE_FROM_INTERFACE (iface),
     G_SIGNAL_RUN_LAST,
-    G_STRUCT_OFFSET (ExampleMy_ObjectIface, inform_about_intent),
+    G_STRUCT_OFFSET (MyNamespaceMyObjectIface, inform_about_intent),
     NULL,
     NULL,
     g_cclosure_marshal_generic,
@@ -412,27 +412,27 @@ example_my__object_default_init (ExampleMy_ObjectIface *iface)
 
   /* GObject properties for D-Bus properties: */
   /**
-   * ExampleMy_Object:description:
+   * MyNamespaceMyObject:description:
    *
-   * Represents the D-Bus property <link linkend="gdbus-property-test-signal-ObjectManager-My_Object.description">"description"</link>.
+   * Represents the D-Bus property <link linkend="gdbus-property-org-gtk-GDBus-Examples-ObjectManager-MyObject.description">"description"</link>.
    *
    * Since the D-Bus property for this #GObject property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.
    */
   g_object_interface_install_property (iface,
     g_param_spec_string ("description", "description", "description", NULL, G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
   /**
-   * ExampleMy_Object:foo:
+   * MyNamespaceMyObject:foo:
    *
-   * Represents the D-Bus property <link linkend="gdbus-property-test-signal-ObjectManager-My_Object.Foo">"Foo"</link>.
+   * Represents the D-Bus property <link linkend="gdbus-property-org-gtk-GDBus-Examples-ObjectManager-MyObject.Foo">"Foo"</link>.
    *
    * Since the D-Bus property for this #GObject property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.
    */
   g_object_interface_install_property (iface,
     g_param_spec_string ("foo", "Foo", "Foo", NULL, G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
   /**
-   * ExampleMy_Object:bar:
+   * MyNamespaceMyObject:bar:
    *
-   * Represents the D-Bus property <link linkend="gdbus-property-test-signal-ObjectManager-My_Object.Bar">"Bar"</link>.
+   * Represents the D-Bus property <link linkend="gdbus-property-org-gtk-GDBus-Examples-ObjectManager-MyObject.Bar">"Bar"</link>.
    *
    * Since the D-Bus property for this #GObject property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.
    *
@@ -443,35 +443,35 @@ example_my__object_default_init (ExampleMy_ObjectIface *iface)
 }
 
 /**
- * example_my__object_get_description: (skip)
- * @object: A #ExampleMy_Object.
+ * my_namespace_my_object_get_description: (skip)
+ * @object: A #MyNamespaceMyObject.
  *
- * Gets the value of the <link linkend="gdbus-property-test-signal-ObjectManager-My_Object.description">"description"</link> D-Bus property.
+ * Gets the value of the <link linkend="gdbus-property-org-gtk-GDBus-Examples-ObjectManager-MyObject.description">"description"</link> D-Bus property.
  *
  * Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.
  *
- * <warning>The returned value is only valid until the property changes so on the client-side it is only safe to use this function on the thread where @object was constructed. Use example_my__object_dup_description() if on another thread.</warning>
+ * <warning>The returned value is only valid until the property changes so on the client-side it is only safe to use this function on the thread where @object was constructed. Use my_namespace_my_object_dup_description() if on another thread.</warning>
  *
  * Returns: (transfer none): The property value or %NULL if the property is not set. Do not free the returned value, it belongs to @object.
  */
 const gchar *
-example_my__object_get_description (ExampleMy_Object *object)
+my_namespace_my_object_get_description (MyNamespaceMyObject *object)
 {
-  return EXAMPLE_MY__OBJECT_GET_IFACE (object)->get_description (object);
+  return MY_NAMESPACE_MY_OBJECT_GET_IFACE (object)->get_description (object);
 }
 
 /**
- * example_my__object_dup_description: (skip)
- * @object: A #ExampleMy_Object.
+ * my_namespace_my_object_dup_description: (skip)
+ * @object: A #MyNamespaceMyObject.
  *
- * Gets a copy of the <link linkend="gdbus-property-test-signal-ObjectManager-My_Object.description">"description"</link> D-Bus property.
+ * Gets a copy of the <link linkend="gdbus-property-org-gtk-GDBus-Examples-ObjectManager-MyObject.description">"description"</link> D-Bus property.
  *
  * Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.
  *
  * Returns: (transfer full): The property value or %NULL if the property is not set. The returned value should be freed with g_free().
  */
 gchar *
-example_my__object_dup_description (ExampleMy_Object *object)
+my_namespace_my_object_dup_description (MyNamespaceMyObject *object)
 {
   gchar *value;
   g_object_get (G_OBJECT (object), "description", &value, NULL);
@@ -479,50 +479,50 @@ example_my__object_dup_description (ExampleMy_Object *object)
 }
 
 /**
- * example_my__object_set_description: (skip)
- * @object: A #ExampleMy_Object.
+ * my_namespace_my_object_set_description: (skip)
+ * @object: A #MyNamespaceMyObject.
  * @value: The value to set.
  *
- * Sets the <link linkend="gdbus-property-test-signal-ObjectManager-My_Object.description">"description"</link> D-Bus property to @value.
+ * Sets the <link linkend="gdbus-property-org-gtk-GDBus-Examples-ObjectManager-MyObject.description">"description"</link> D-Bus property to @value.
  *
  * Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.
  */
 void
-example_my__object_set_description (ExampleMy_Object *object, const gchar *value)
+my_namespace_my_object_set_description (MyNamespaceMyObject *object, const gchar *value)
 {
   g_object_set (G_OBJECT (object), "description", value, NULL);
 }
 
 /**
- * example_my__object_get_foo: (skip)
- * @object: A #ExampleMy_Object.
+ * my_namespace_my_object_get_foo: (skip)
+ * @object: A #MyNamespaceMyObject.
  *
- * Gets the value of the <link linkend="gdbus-property-test-signal-ObjectManager-My_Object.Foo">"Foo"</link> D-Bus property.
+ * Gets the value of the <link linkend="gdbus-property-org-gtk-GDBus-Examples-ObjectManager-MyObject.Foo">"Foo"</link> D-Bus property.
  *
  * Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.
  *
- * <warning>The returned value is only valid until the property changes so on the client-side it is only safe to use this function on the thread where @object was constructed. Use example_my__object_dup_foo() if on another thread.</warning>
+ * <warning>The returned value is only valid until the property changes so on the client-side it is only safe to use this function on the thread where @object was constructed. Use my_namespace_my_object_dup_foo() if on another thread.</warning>
  *
  * Returns: (transfer none): The property value or %NULL if the property is not set. Do not free the returned value, it belongs to @object.
  */
 const gchar *
-example_my__object_get_foo (ExampleMy_Object *object)
+my_namespace_my_object_get_foo (MyNamespaceMyObject *object)
 {
-  return EXAMPLE_MY__OBJECT_GET_IFACE (object)->get_foo (object);
+  return MY_NAMESPACE_MY_OBJECT_GET_IFACE (object)->get_foo (object);
 }
 
 /**
- * example_my__object_dup_foo: (skip)
- * @object: A #ExampleMy_Object.
+ * my_namespace_my_object_dup_foo: (skip)
+ * @object: A #MyNamespaceMyObject.
  *
- * Gets a copy of the <link linkend="gdbus-property-test-signal-ObjectManager-My_Object.Foo">"Foo"</link> D-Bus property.
+ * Gets a copy of the <link linkend="gdbus-property-org-gtk-GDBus-Examples-ObjectManager-MyObject.Foo">"Foo"</link> D-Bus property.
  *
  * Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.
  *
  * Returns: (transfer full): The property value or %NULL if the property is not set. The returned value should be freed with g_free().
  */
 gchar *
-example_my__object_dup_foo (ExampleMy_Object *object)
+my_namespace_my_object_dup_foo (MyNamespaceMyObject *object)
 {
   gchar *value;
   g_object_get (G_OBJECT (object), "foo", &value, NULL);
@@ -530,45 +530,45 @@ example_my__object_dup_foo (ExampleMy_Object *object)
 }
 
 /**
- * example_my__object_set_foo: (skip)
- * @object: A #ExampleMy_Object.
+ * my_namespace_my_object_set_foo: (skip)
+ * @object: A #MyNamespaceMyObject.
  * @value: The value to set.
  *
- * Sets the <link linkend="gdbus-property-test-signal-ObjectManager-My_Object.Foo">"Foo"</link> D-Bus property to @value.
+ * Sets the <link linkend="gdbus-property-org-gtk-GDBus-Examples-ObjectManager-MyObject.Foo">"Foo"</link> D-Bus property to @value.
  *
  * Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.
  */
 void
-example_my__object_set_foo (ExampleMy_Object *object, const gchar *value)
+my_namespace_my_object_set_foo (MyNamespaceMyObject *object, const gchar *value)
 {
   g_object_set (G_OBJECT (object), "foo", value, NULL);
 }
 
 /**
- * example_my__object_get_bar: (skip)
- * @object: A #ExampleMy_Object.
+ * my_namespace_my_object_get_bar: (skip)
+ * @object: A #MyNamespaceMyObject.
  *
- * Gets the value of the <link linkend="gdbus-property-test-signal-ObjectManager-My_Object.Bar">"Bar"</link> D-Bus property.
+ * Gets the value of the <link linkend="gdbus-property-org-gtk-GDBus-Examples-ObjectManager-MyObject.Bar">"Bar"</link> D-Bus property.
  *
  * Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.
  *
- * <warning>The returned value is only valid until the property changes so on the client-side it is only safe to use this function on the thread where @object was constructed. Use example_my__object_dup_bar() if on another thread.</warning>
+ * <warning>The returned value is only valid until the property changes so on the client-side it is only safe to use this function on the thread where @object was constructed. Use my_namespace_my_object_dup_bar() if on another thread.</warning>
  *
  * Returns: (transfer none): The property value or %NULL if the property is not set. Do not free the returned value, it belongs to @object.
  *
  * Since: 2.36
  */
 const gchar *
-example_my__object_get_bar (ExampleMy_Object *object)
+my_namespace_my_object_get_bar (MyNamespaceMyObject *object)
 {
-  return EXAMPLE_MY__OBJECT_GET_IFACE (object)->get_bar (object);
+  return MY_NAMESPACE_MY_OBJECT_GET_IFACE (object)->get_bar (object);
 }
 
 /**
- * example_my__object_dup_bar: (skip)
- * @object: A #ExampleMy_Object.
+ * my_namespace_my_object_dup_bar: (skip)
+ * @object: A #MyNamespaceMyObject.
  *
- * Gets a copy of the <link linkend="gdbus-property-test-signal-ObjectManager-My_Object.Bar">"Bar"</link> D-Bus property.
+ * Gets a copy of the <link linkend="gdbus-property-org-gtk-GDBus-Examples-ObjectManager-MyObject.Bar">"Bar"</link> D-Bus property.
  *
  * Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.
  *
@@ -577,7 +577,7 @@ example_my__object_get_bar (ExampleMy_Object *object)
  * Since: 2.36
  */
 gchar *
-example_my__object_dup_bar (ExampleMy_Object *object)
+my_namespace_my_object_dup_bar (MyNamespaceMyObject *object)
 {
   gchar *value;
   g_object_get (G_OBJECT (object), "bar", &value, NULL);
@@ -585,55 +585,55 @@ example_my__object_dup_bar (ExampleMy_Object *object)
 }
 
 /**
- * example_my__object_set_bar: (skip)
- * @object: A #ExampleMy_Object.
+ * my_namespace_my_object_set_bar: (skip)
+ * @object: A #MyNamespaceMyObject.
  * @value: The value to set.
  *
- * Sets the <link linkend="gdbus-property-test-signal-ObjectManager-My_Object.Bar">"Bar"</link> D-Bus property to @value.
+ * Sets the <link linkend="gdbus-property-org-gtk-GDBus-Examples-ObjectManager-MyObject.Bar">"Bar"</link> D-Bus property to @value.
  *
  * Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.
  *
  * Since: 2.36
  */
 void
-example_my__object_set_bar (ExampleMy_Object *object, const gchar *value)
+my_namespace_my_object_set_bar (MyNamespaceMyObject *object, const gchar *value)
 {
   g_object_set (G_OBJECT (object), "bar", value, NULL);
 }
 
 /**
- * example_my__object_emit_inform_about_intent:
- * @object: A #ExampleMy_Object.
+ * my_namespace_my_object_emit_inform_about_intent:
+ * @object: A #MyNamespaceMyObject.
  * @arg_info: Argument to pass with the signal.
  *
- * Emits the <link linkend="gdbus-signal-test-signal-ObjectManager-My_Object.Inform_about_intent">"Inform_about_intent"</link> D-Bus signal.
+ * Emits the <link linkend="gdbus-signal-org-gtk-GDBus-Examples-ObjectManager-MyObject.Inform_about_intent">"Inform_about_intent"</link> D-Bus signal.
  */
 void
-example_my__object_emit_inform_about_intent (
-    ExampleMy_Object *object,
+my_namespace_my_object_emit_inform_about_intent (
+    MyNamespaceMyObject *object,
     const gchar *arg_info)
 {
   g_signal_emit_by_name (object, "inform-about-intent", arg_info);
 }
 
 /**
- * example_my__object_call_math_op:
- * @proxy: A #ExampleMy_ObjectProxy.
+ * my_namespace_my_object_call_math_op:
+ * @proxy: A #MyNamespaceMyObjectProxy.
  * @arg_increment: Argument to pass with the method invocation.
  * @arg_decrement: Argument to pass with the method invocation.
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied or %NULL.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously invokes the <link linkend="gdbus-method-test-signal-ObjectManager-My_Object.MathOp">MathOp()</link> D-Bus method on @proxy.
+ * Asynchronously invokes the <link linkend="gdbus-method-org-gtk-GDBus-Examples-ObjectManager-MyObject.MathOp">MathOp()</link> D-Bus method on @proxy.
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
- * You can then call example_my__object_call_math_op_finish() to get the result of the operation.
+ * You can then call my_namespace_my_object_call_math_op_finish() to get the result of the operation.
  *
- * See example_my__object_call_math_op_sync() for the synchronous, blocking version of this method.
+ * See my_namespace_my_object_call_math_op_sync() for the synchronous, blocking version of this method.
  */
 void
-example_my__object_call_math_op (
-    ExampleMy_Object *proxy,
+my_namespace_my_object_call_math_op (
+    MyNamespaceMyObject *proxy,
     gboolean arg_increment,
     gboolean arg_decrement,
     GCancellable *cancellable,
@@ -653,18 +653,18 @@ example_my__object_call_math_op (
 }
 
 /**
- * example_my__object_call_math_op_finish:
- * @proxy: A #ExampleMy_ObjectProxy.
- * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to example_my__object_call_math_op().
+ * my_namespace_my_object_call_math_op_finish:
+ * @proxy: A #MyNamespaceMyObjectProxy.
+ * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to my_namespace_my_object_call_math_op().
  * @error: Return location for error or %NULL.
  *
- * Finishes an operation started with example_my__object_call_math_op().
+ * Finishes an operation started with my_namespace_my_object_call_math_op().
  *
  * Returns: (skip): %TRUE if the call succeded, %FALSE if @error is set.
  */
 gboolean
-example_my__object_call_math_op_finish (
-    ExampleMy_Object *proxy,
+my_namespace_my_object_call_math_op_finish (
+    MyNamespaceMyObject *proxy,
     GAsyncResult *res,
     GError **error)
 {
@@ -680,22 +680,22 @@ _out:
 }
 
 /**
- * example_my__object_call_math_op_sync:
- * @proxy: A #ExampleMy_ObjectProxy.
+ * my_namespace_my_object_call_math_op_sync:
+ * @proxy: A #MyNamespaceMyObjectProxy.
  * @arg_increment: Argument to pass with the method invocation.
  * @arg_decrement: Argument to pass with the method invocation.
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL.
  *
- * Synchronously invokes the <link linkend="gdbus-method-test-signal-ObjectManager-My_Object.MathOp">MathOp()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
+ * Synchronously invokes the <link linkend="gdbus-method-org-gtk-GDBus-Examples-ObjectManager-MyObject.MathOp">MathOp()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
  *
- * See example_my__object_call_math_op() for the asynchronous version of this method.
+ * See my_namespace_my_object_call_math_op() for the asynchronous version of this method.
  *
  * Returns: (skip): %TRUE if the call succeded, %FALSE if @error is set.
  */
 gboolean
-example_my__object_call_math_op_sync (
-    ExampleMy_Object *proxy,
+my_namespace_my_object_call_math_op_sync (
+    MyNamespaceMyObject *proxy,
     gboolean arg_increment,
     gboolean arg_decrement,
     GCancellable *cancellable,
@@ -721,17 +721,17 @@ _out:
 }
 
 /**
- * example_my__object_complete_math_op:
- * @object: A #ExampleMy_Object.
+ * my_namespace_my_object_complete_math_op:
+ * @object: A #MyNamespaceMyObject.
  * @invocation: (transfer full): A #GDBusMethodInvocation.
  *
- * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-test-signal-ObjectManager-My_Object.MathOp">MathOp()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
+ * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org-gtk-GDBus-Examples-ObjectManager-MyObject.MathOp">MathOp()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
  *
  * This method will free @invocation, you cannot use it afterwards.
  */
 void
-example_my__object_complete_math_op (
-    ExampleMy_Object *object,
+my_namespace_my_object_complete_math_op (
+    MyNamespaceMyObject *object,
     GDBusMethodInvocation *invocation)
 {
   g_dbus_method_invocation_return_value (invocation,
@@ -741,45 +741,45 @@ example_my__object_complete_math_op (
 /* ------------------------------------------------------------------------ */
 
 /**
- * ExampleMy_ObjectProxy:
+ * MyNamespaceMyObjectProxy:
  *
- * The #ExampleMy_ObjectProxy structure contains only private data and should only be accessed using the provided API.
+ * The #MyNamespaceMyObjectProxy structure contains only private data and should only be accessed using the provided API.
  */
 
 /**
- * ExampleMy_ObjectProxyClass:
+ * MyNamespaceMyObjectProxyClass:
  * @parent_class: The parent class.
  *
- * Class structure for #ExampleMy_ObjectProxy.
+ * Class structure for #MyNamespaceMyObjectProxy.
  */
 
-struct _ExampleMy_ObjectProxyPrivate
+struct _MyNamespaceMyObjectProxyPrivate
 {
   GData *qdata;
 };
 
-static void example_my__object_proxy_iface_init (ExampleMy_ObjectIface *iface);
+static void my_namespace_my_object_proxy_iface_init (MyNamespaceMyObjectIface *iface);
 
 #if GLIB_VERSION_MAX_ALLOWED >= GLIB_VERSION_2_38
-G_DEFINE_TYPE_WITH_CODE (ExampleMy_ObjectProxy, example_my__object_proxy, G_TYPE_DBUS_PROXY,
-                         G_ADD_PRIVATE (ExampleMy_ObjectProxy)
-                         G_IMPLEMENT_INTERFACE (EXAMPLE_TYPE_MY__OBJECT, example_my__object_proxy_iface_init))
+G_DEFINE_TYPE_WITH_CODE (MyNamespaceMyObjectProxy, my_namespace_my_object_proxy, G_TYPE_DBUS_PROXY,
+                         G_ADD_PRIVATE (MyNamespaceMyObjectProxy)
+                         G_IMPLEMENT_INTERFACE (MY_NAMESPACE_TYPE_MY_OBJECT, my_namespace_my_object_proxy_iface_init))
 
 #else
-G_DEFINE_TYPE_WITH_CODE (ExampleMy_ObjectProxy, example_my__object_proxy, G_TYPE_DBUS_PROXY,
-                         G_IMPLEMENT_INTERFACE (EXAMPLE_TYPE_MY__OBJECT, example_my__object_proxy_iface_init))
+G_DEFINE_TYPE_WITH_CODE (MyNamespaceMyObjectProxy, my_namespace_my_object_proxy, G_TYPE_DBUS_PROXY,
+                         G_IMPLEMENT_INTERFACE (MY_NAMESPACE_TYPE_MY_OBJECT, my_namespace_my_object_proxy_iface_init))
 
 #endif
 static void
-example_my__object_proxy_finalize (GObject *object)
+my_namespace_my_object_proxy_finalize (GObject *object)
 {
-  ExampleMy_ObjectProxy *proxy = EXAMPLE_MY__OBJECT_PROXY (object);
+  MyNamespaceMyObjectProxy *proxy = MY_NAMESPACE_MY_OBJECT_PROXY (object);
   g_datalist_clear (&proxy->priv->qdata);
-  G_OBJECT_CLASS (example_my__object_proxy_parent_class)->finalize (object);
+  G_OBJECT_CLASS (my_namespace_my_object_proxy_parent_class)->finalize (object);
 }
 
 static void
-example_my__object_proxy_get_property (GObject      *object,
+my_namespace_my_object_proxy_get_property (GObject      *object,
   guint         prop_id,
   GValue       *value,
   GParamSpec   *pspec G_GNUC_UNUSED)
@@ -787,7 +787,7 @@ example_my__object_proxy_get_property (GObject      *object,
   const _ExtendedGDBusPropertyInfo *info;
   GVariant *variant;
   g_assert (prop_id != 0 && prop_id - 1 < 3);
-  info = (const _ExtendedGDBusPropertyInfo *) _example_my__object_property_info_pointers[prop_id - 1];
+  info = (const _ExtendedGDBusPropertyInfo *) _my_namespace_my_object_property_info_pointers[prop_id - 1];
   variant = g_dbus_proxy_get_cached_property (G_DBUS_PROXY (object), info->parent_struct.name);
   if (info->use_gvariant)
     {
@@ -803,7 +803,7 @@ example_my__object_proxy_get_property (GObject      *object,
 }
 
 static void
-example_my__object_proxy_set_property_cb (GDBusProxy *proxy,
+my_namespace_my_object_proxy_set_property_cb (GDBusProxy *proxy,
   GAsyncResult *res,
   gpointer      user_data)
 {
@@ -814,7 +814,7 @@ example_my__object_proxy_set_property_cb (GDBusProxy *proxy,
   _ret = g_dbus_proxy_call_finish (proxy, res, &error);
   if (!_ret)
     {
-      g_warning ("Error setting property '%s' on interface test.signal.ObjectManager.My_Object: %s (%s, %d)",
+      g_warning ("Error setting property '%s' on interface org.gtk.GDBus.Examples.ObjectManager.MyObject: %s (%s, %d)",
                  info->parent_struct.name, 
                  error->message, g_quark_to_string (error->domain), error->code);
       g_error_free (error);
@@ -826,7 +826,7 @@ example_my__object_proxy_set_property_cb (GDBusProxy *proxy,
 }
 
 static void
-example_my__object_proxy_set_property (GObject      *object,
+my_namespace_my_object_proxy_set_property (GObject      *object,
   guint         prop_id,
   const GValue *value,
   GParamSpec   *pspec G_GNUC_UNUSED)
@@ -834,19 +834,19 @@ example_my__object_proxy_set_property (GObject      *object,
   const _ExtendedGDBusPropertyInfo *info;
   GVariant *variant;
   g_assert (prop_id != 0 && prop_id - 1 < 3);
-  info = (const _ExtendedGDBusPropertyInfo *) _example_my__object_property_info_pointers[prop_id - 1];
+  info = (const _ExtendedGDBusPropertyInfo *) _my_namespace_my_object_property_info_pointers[prop_id - 1];
   variant = g_dbus_gvalue_to_gvariant (value, G_VARIANT_TYPE (info->parent_struct.signature));
   g_dbus_proxy_call (G_DBUS_PROXY (object),
     "org.freedesktop.DBus.Properties.Set",
-    g_variant_new ("(ssv)", "test.signal.ObjectManager.My_Object", info->parent_struct.name, variant),
+    g_variant_new ("(ssv)", "org.gtk.GDBus.Examples.ObjectManager.MyObject", info->parent_struct.name, variant),
     G_DBUS_CALL_FLAGS_NONE,
     -1,
-    NULL, (GAsyncReadyCallback) example_my__object_proxy_set_property_cb, (GDBusPropertyInfo *) &info->parent_struct);
+    NULL, (GAsyncReadyCallback) my_namespace_my_object_proxy_set_property_cb, (GDBusPropertyInfo *) &info->parent_struct);
   g_variant_unref (variant);
 }
 
 static void
-example_my__object_proxy_g_signal (GDBusProxy *proxy,
+my_namespace_my_object_proxy_g_signal (GDBusProxy *proxy,
   const gchar *sender_name G_GNUC_UNUSED,
   const gchar *signal_name,
   GVariant *parameters)
@@ -858,12 +858,12 @@ example_my__object_proxy_g_signal (GDBusProxy *proxy,
   gsize num_params;
   gsize n;
   guint signal_id;
-  info = (_ExtendedGDBusSignalInfo *) g_dbus_interface_info_lookup_signal ((GDBusInterfaceInfo *) &_example_my__object_interface_info.parent_struct, signal_name);
+  info = (_ExtendedGDBusSignalInfo *) g_dbus_interface_info_lookup_signal ((GDBusInterfaceInfo *) &_my_namespace_my_object_interface_info.parent_struct, signal_name);
   if (info == NULL)
     return;
   num_params = g_variant_n_children (parameters);
   paramv = g_new0 (GValue, num_params + 1);
-  g_value_init (&paramv[0], EXAMPLE_TYPE_MY__OBJECT);
+  g_value_init (&paramv[0], MY_NAMESPACE_TYPE_MY_OBJECT);
   g_value_set_object (&paramv[0], proxy);
   g_variant_iter_init (&iter, parameters);
   n = 1;
@@ -880,7 +880,7 @@ example_my__object_proxy_g_signal (GDBusProxy *proxy,
         g_dbus_gvariant_to_gvalue (child, &paramv[n++]);
       g_variant_unref (child);
     }
-  signal_id = g_signal_lookup (info->signal_name, EXAMPLE_TYPE_MY__OBJECT);
+  signal_id = g_signal_lookup (info->signal_name, MY_NAMESPACE_TYPE_MY_OBJECT);
   g_signal_emitv (paramv, signal_id, 0, NULL);
   for (n = 0; n < num_params + 1; n++)
     g_value_unset (&paramv[n]);
@@ -888,11 +888,11 @@ example_my__object_proxy_g_signal (GDBusProxy *proxy,
 }
 
 static void
-example_my__object_proxy_g_properties_changed (GDBusProxy *_proxy,
+my_namespace_my_object_proxy_g_properties_changed (GDBusProxy *_proxy,
   GVariant *changed_properties,
   const gchar *const *invalidated_properties)
 {
-  ExampleMy_ObjectProxy *proxy = EXAMPLE_MY__OBJECT_PROXY (_proxy);
+  MyNamespaceMyObjectProxy *proxy = MY_NAMESPACE_MY_OBJECT_PROXY (_proxy);
   guint n;
   const gchar *key;
   GVariantIter *iter;
@@ -900,7 +900,7 @@ example_my__object_proxy_g_properties_changed (GDBusProxy *_proxy,
   g_variant_get (changed_properties, "a{sv}", &iter);
   while (g_variant_iter_next (iter, "{&sv}", &key, NULL))
     {
-      info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_example_my__object_interface_info.parent_struct, key);
+      info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_my_namespace_my_object_interface_info.parent_struct, key);
       g_datalist_remove_data (&proxy->priv->qdata, key);
       if (info != NULL)
         g_object_notify (G_OBJECT (proxy), info->hyphen_name);
@@ -908,7 +908,7 @@ example_my__object_proxy_g_properties_changed (GDBusProxy *_proxy,
   g_variant_iter_free (iter);
   for (n = 0; invalidated_properties[n] != NULL; n++)
     {
-      info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_example_my__object_interface_info.parent_struct, invalidated_properties[n]);
+      info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_my_namespace_my_object_interface_info.parent_struct, invalidated_properties[n]);
       g_datalist_remove_data (&proxy->priv->qdata, invalidated_properties[n]);
       if (info != NULL)
         g_object_notify (G_OBJECT (proxy), info->hyphen_name);
@@ -916,9 +916,9 @@ example_my__object_proxy_g_properties_changed (GDBusProxy *_proxy,
 }
 
 static const gchar *
-example_my__object_proxy_get_description (ExampleMy_Object *object)
+my_namespace_my_object_proxy_get_description (MyNamespaceMyObject *object)
 {
-  ExampleMy_ObjectProxy *proxy = EXAMPLE_MY__OBJECT_PROXY (object);
+  MyNamespaceMyObjectProxy *proxy = MY_NAMESPACE_MY_OBJECT_PROXY (object);
   GVariant *variant;
   const gchar *value = NULL;
   variant = g_dbus_proxy_get_cached_property (G_DBUS_PROXY (proxy), "description");
@@ -931,9 +931,9 @@ example_my__object_proxy_get_description (ExampleMy_Object *object)
 }
 
 static const gchar *
-example_my__object_proxy_get_foo (ExampleMy_Object *object)
+my_namespace_my_object_proxy_get_foo (MyNamespaceMyObject *object)
 {
-  ExampleMy_ObjectProxy *proxy = EXAMPLE_MY__OBJECT_PROXY (object);
+  MyNamespaceMyObjectProxy *proxy = MY_NAMESPACE_MY_OBJECT_PROXY (object);
   GVariant *variant;
   const gchar *value = NULL;
   variant = g_dbus_proxy_get_cached_property (G_DBUS_PROXY (proxy), "Foo");
@@ -946,9 +946,9 @@ example_my__object_proxy_get_foo (ExampleMy_Object *object)
 }
 
 static const gchar *
-example_my__object_proxy_get_bar (ExampleMy_Object *object)
+my_namespace_my_object_proxy_get_bar (MyNamespaceMyObject *object)
 {
-  ExampleMy_ObjectProxy *proxy = EXAMPLE_MY__OBJECT_PROXY (object);
+  MyNamespaceMyObjectProxy *proxy = MY_NAMESPACE_MY_OBJECT_PROXY (object);
   GVariant *variant;
   const gchar *value = NULL;
   variant = g_dbus_proxy_get_cached_property (G_DBUS_PROXY (proxy), "Bar");
@@ -961,49 +961,49 @@ example_my__object_proxy_get_bar (ExampleMy_Object *object)
 }
 
 static void
-example_my__object_proxy_init (ExampleMy_ObjectProxy *proxy)
+my_namespace_my_object_proxy_init (MyNamespaceMyObjectProxy *proxy)
 {
 #if GLIB_VERSION_MAX_ALLOWED >= GLIB_VERSION_2_38
-  proxy->priv = example_my__object_proxy_get_instance_private (proxy);
+  proxy->priv = my_namespace_my_object_proxy_get_instance_private (proxy);
 #else
-  proxy->priv = G_TYPE_INSTANCE_GET_PRIVATE (proxy, EXAMPLE_TYPE_MY__OBJECT_PROXY, ExampleMy_ObjectProxyPrivate);
+  proxy->priv = G_TYPE_INSTANCE_GET_PRIVATE (proxy, MY_NAMESPACE_TYPE_MY_OBJECT_PROXY, MyNamespaceMyObjectProxyPrivate);
 #endif
 
-  g_dbus_proxy_set_interface_info (G_DBUS_PROXY (proxy), example_my__object_interface_info ());
+  g_dbus_proxy_set_interface_info (G_DBUS_PROXY (proxy), my_namespace_my_object_interface_info ());
 }
 
 static void
-example_my__object_proxy_class_init (ExampleMy_ObjectProxyClass *klass)
+my_namespace_my_object_proxy_class_init (MyNamespaceMyObjectProxyClass *klass)
 {
   GObjectClass *gobject_class;
   GDBusProxyClass *proxy_class;
 
   gobject_class = G_OBJECT_CLASS (klass);
-  gobject_class->finalize     = example_my__object_proxy_finalize;
-  gobject_class->get_property = example_my__object_proxy_get_property;
-  gobject_class->set_property = example_my__object_proxy_set_property;
+  gobject_class->finalize     = my_namespace_my_object_proxy_finalize;
+  gobject_class->get_property = my_namespace_my_object_proxy_get_property;
+  gobject_class->set_property = my_namespace_my_object_proxy_set_property;
 
   proxy_class = G_DBUS_PROXY_CLASS (klass);
-  proxy_class->g_signal = example_my__object_proxy_g_signal;
-  proxy_class->g_properties_changed = example_my__object_proxy_g_properties_changed;
+  proxy_class->g_signal = my_namespace_my_object_proxy_g_signal;
+  proxy_class->g_properties_changed = my_namespace_my_object_proxy_g_properties_changed;
 
-  example_my__object_override_properties (gobject_class, 1);
+  my_namespace_my_object_override_properties (gobject_class, 1);
 
 #if GLIB_VERSION_MAX_ALLOWED < GLIB_VERSION_2_38
-  g_type_class_add_private (klass, sizeof (ExampleMy_ObjectProxyPrivate));
+  g_type_class_add_private (klass, sizeof (MyNamespaceMyObjectProxyPrivate));
 #endif
 }
 
 static void
-example_my__object_proxy_iface_init (ExampleMy_ObjectIface *iface)
+my_namespace_my_object_proxy_iface_init (MyNamespaceMyObjectIface *iface)
 {
-  iface->get_description = example_my__object_proxy_get_description;
-  iface->get_foo = example_my__object_proxy_get_foo;
-  iface->get_bar = example_my__object_proxy_get_bar;
+  iface->get_description = my_namespace_my_object_proxy_get_description;
+  iface->get_foo = my_namespace_my_object_proxy_get_foo;
+  iface->get_bar = my_namespace_my_object_proxy_get_bar;
 }
 
 /**
- * example_my__object_proxy_new:
+ * my_namespace_my_object_proxy_new:
  * @connection: A #GDBusConnection.
  * @flags: Flags from the #GDBusProxyFlags enumeration.
  * @name: (nullable): A bus name (well-known or unique) or %NULL if @connection is not a message bus connection.
@@ -1012,15 +1012,15 @@ example_my__object_proxy_iface_init (ExampleMy_ObjectIface *iface)
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously creates a proxy for the D-Bus interface <link linkend="gdbus-interface-test-signal-ObjectManager-My_Object.top_of_page">test.signal.ObjectManager.My_Object</link>. See g_dbus_proxy_new() for more details.
+ * Asynchronously creates a proxy for the D-Bus interface <link linkend="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-MyObject.top_of_page">org.gtk.GDBus.Examples.ObjectManager.MyObject</link>. See g_dbus_proxy_new() for more details.
  *
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
- * You can then call example_my__object_proxy_new_finish() to get the result of the operation.
+ * You can then call my_namespace_my_object_proxy_new_finish() to get the result of the operation.
  *
- * See example_my__object_proxy_new_sync() for the synchronous, blocking version of this constructor.
+ * See my_namespace_my_object_proxy_new_sync() for the synchronous, blocking version of this constructor.
  */
 void
-example_my__object_proxy_new (
+my_namespace_my_object_proxy_new (
     GDBusConnection     *connection,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -1029,20 +1029,20 @@ example_my__object_proxy_new (
     GAsyncReadyCallback  callback,
     gpointer             user_data)
 {
-  g_async_initable_new_async (EXAMPLE_TYPE_MY__OBJECT_PROXY, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "g-flags", flags, "g-name", name, "g-connection", connection, "g-object-path", object_path, "g-interface-name", "test.signal.ObjectManager.My_Object", NULL);
+  g_async_initable_new_async (MY_NAMESPACE_TYPE_MY_OBJECT_PROXY, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "g-flags", flags, "g-name", name, "g-connection", connection, "g-object-path", object_path, "g-interface-name", "org.gtk.GDBus.Examples.ObjectManager.MyObject", NULL);
 }
 
 /**
- * example_my__object_proxy_new_finish:
- * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to example_my__object_proxy_new().
+ * my_namespace_my_object_proxy_new_finish:
+ * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to my_namespace_my_object_proxy_new().
  * @error: Return location for error or %NULL
  *
- * Finishes an operation started with example_my__object_proxy_new().
+ * Finishes an operation started with my_namespace_my_object_proxy_new().
  *
- * Returns: (transfer full) (type ExampleMy_ObjectProxy): The constructed proxy object or %NULL if @error is set.
+ * Returns: (transfer full) (type MyNamespaceMyObjectProxy): The constructed proxy object or %NULL if @error is set.
  */
-ExampleMy_Object *
-example_my__object_proxy_new_finish (
+MyNamespaceMyObject *
+my_namespace_my_object_proxy_new_finish (
     GAsyncResult        *res,
     GError             **error)
 {
@@ -1052,13 +1052,13 @@ example_my__object_proxy_new_finish (
   ret = g_async_initable_new_finish (G_ASYNC_INITABLE (source_object), res, error);
   g_object_unref (source_object);
   if (ret != NULL)
-    return EXAMPLE_MY__OBJECT (ret);
+    return MY_NAMESPACE_MY_OBJECT (ret);
   else
     return NULL;
 }
 
 /**
- * example_my__object_proxy_new_sync:
+ * my_namespace_my_object_proxy_new_sync:
  * @connection: A #GDBusConnection.
  * @flags: Flags from the #GDBusProxyFlags enumeration.
  * @name: (nullable): A bus name (well-known or unique) or %NULL if @connection is not a message bus connection.
@@ -1066,16 +1066,16 @@ example_my__object_proxy_new_finish (
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL
  *
- * Synchronously creates a proxy for the D-Bus interface <link linkend="gdbus-interface-test-signal-ObjectManager-My_Object.top_of_page">test.signal.ObjectManager.My_Object</link>. See g_dbus_proxy_new_sync() for more details.
+ * Synchronously creates a proxy for the D-Bus interface <link linkend="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-MyObject.top_of_page">org.gtk.GDBus.Examples.ObjectManager.MyObject</link>. See g_dbus_proxy_new_sync() for more details.
  *
  * The calling thread is blocked until a reply is received.
  *
- * See example_my__object_proxy_new() for the asynchronous version of this constructor.
+ * See my_namespace_my_object_proxy_new() for the asynchronous version of this constructor.
  *
- * Returns: (transfer full) (type ExampleMy_ObjectProxy): The constructed proxy object or %NULL if @error is set.
+ * Returns: (transfer full) (type MyNamespaceMyObjectProxy): The constructed proxy object or %NULL if @error is set.
  */
-ExampleMy_Object *
-example_my__object_proxy_new_sync (
+MyNamespaceMyObject *
+my_namespace_my_object_proxy_new_sync (
     GDBusConnection     *connection,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -1084,16 +1084,16 @@ example_my__object_proxy_new_sync (
     GError             **error)
 {
   GInitable *ret;
-  ret = g_initable_new (EXAMPLE_TYPE_MY__OBJECT_PROXY, cancellable, error, "g-flags", flags, "g-name", name, "g-connection", connection, "g-object-path", object_path, "g-interface-name", "test.signal.ObjectManager.My_Object", NULL);
+  ret = g_initable_new (MY_NAMESPACE_TYPE_MY_OBJECT_PROXY, cancellable, error, "g-flags", flags, "g-name", name, "g-connection", connection, "g-object-path", object_path, "g-interface-name", "org.gtk.GDBus.Examples.ObjectManager.MyObject", NULL);
   if (ret != NULL)
-    return EXAMPLE_MY__OBJECT (ret);
+    return MY_NAMESPACE_MY_OBJECT (ret);
   else
     return NULL;
 }
 
 
 /**
- * example_my__object_proxy_new_for_bus:
+ * my_namespace_my_object_proxy_new_for_bus:
  * @bus_type: A #GBusType.
  * @flags: Flags from the #GDBusProxyFlags enumeration.
  * @name: A bus name (well-known or unique).
@@ -1102,15 +1102,15 @@ example_my__object_proxy_new_sync (
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied.
  * @user_data: User data to pass to @callback.
  *
- * Like example_my__object_proxy_new() but takes a #GBusType instead of a #GDBusConnection.
+ * Like my_namespace_my_object_proxy_new() but takes a #GBusType instead of a #GDBusConnection.
  *
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
- * You can then call example_my__object_proxy_new_for_bus_finish() to get the result of the operation.
+ * You can then call my_namespace_my_object_proxy_new_for_bus_finish() to get the result of the operation.
  *
- * See example_my__object_proxy_new_for_bus_sync() for the synchronous, blocking version of this constructor.
+ * See my_namespace_my_object_proxy_new_for_bus_sync() for the synchronous, blocking version of this constructor.
  */
 void
-example_my__object_proxy_new_for_bus (
+my_namespace_my_object_proxy_new_for_bus (
     GBusType             bus_type,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -1119,20 +1119,20 @@ example_my__object_proxy_new_for_bus (
     GAsyncReadyCallback  callback,
     gpointer             user_data)
 {
-  g_async_initable_new_async (EXAMPLE_TYPE_MY__OBJECT_PROXY, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "g-flags", flags, "g-name", name, "g-bus-type", bus_type, "g-object-path", object_path, "g-interface-name", "test.signal.ObjectManager.My_Object", NULL);
+  g_async_initable_new_async (MY_NAMESPACE_TYPE_MY_OBJECT_PROXY, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "g-flags", flags, "g-name", name, "g-bus-type", bus_type, "g-object-path", object_path, "g-interface-name", "org.gtk.GDBus.Examples.ObjectManager.MyObject", NULL);
 }
 
 /**
- * example_my__object_proxy_new_for_bus_finish:
- * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to example_my__object_proxy_new_for_bus().
+ * my_namespace_my_object_proxy_new_for_bus_finish:
+ * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to my_namespace_my_object_proxy_new_for_bus().
  * @error: Return location for error or %NULL
  *
- * Finishes an operation started with example_my__object_proxy_new_for_bus().
+ * Finishes an operation started with my_namespace_my_object_proxy_new_for_bus().
  *
- * Returns: (transfer full) (type ExampleMy_ObjectProxy): The constructed proxy object or %NULL if @error is set.
+ * Returns: (transfer full) (type MyNamespaceMyObjectProxy): The constructed proxy object or %NULL if @error is set.
  */
-ExampleMy_Object *
-example_my__object_proxy_new_for_bus_finish (
+MyNamespaceMyObject *
+my_namespace_my_object_proxy_new_for_bus_finish (
     GAsyncResult        *res,
     GError             **error)
 {
@@ -1142,13 +1142,13 @@ example_my__object_proxy_new_for_bus_finish (
   ret = g_async_initable_new_finish (G_ASYNC_INITABLE (source_object), res, error);
   g_object_unref (source_object);
   if (ret != NULL)
-    return EXAMPLE_MY__OBJECT (ret);
+    return MY_NAMESPACE_MY_OBJECT (ret);
   else
     return NULL;
 }
 
 /**
- * example_my__object_proxy_new_for_bus_sync:
+ * my_namespace_my_object_proxy_new_for_bus_sync:
  * @bus_type: A #GBusType.
  * @flags: Flags from the #GDBusProxyFlags enumeration.
  * @name: A bus name (well-known or unique).
@@ -1156,16 +1156,16 @@ example_my__object_proxy_new_for_bus_finish (
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL
  *
- * Like example_my__object_proxy_new_sync() but takes a #GBusType instead of a #GDBusConnection.
+ * Like my_namespace_my_object_proxy_new_sync() but takes a #GBusType instead of a #GDBusConnection.
  *
  * The calling thread is blocked until a reply is received.
  *
- * See example_my__object_proxy_new_for_bus() for the asynchronous version of this constructor.
+ * See my_namespace_my_object_proxy_new_for_bus() for the asynchronous version of this constructor.
  *
- * Returns: (transfer full) (type ExampleMy_ObjectProxy): The constructed proxy object or %NULL if @error is set.
+ * Returns: (transfer full) (type MyNamespaceMyObjectProxy): The constructed proxy object or %NULL if @error is set.
  */
-ExampleMy_Object *
-example_my__object_proxy_new_for_bus_sync (
+MyNamespaceMyObject *
+my_namespace_my_object_proxy_new_for_bus_sync (
     GBusType             bus_type,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -1174,9 +1174,9 @@ example_my__object_proxy_new_for_bus_sync (
     GError             **error)
 {
   GInitable *ret;
-  ret = g_initable_new (EXAMPLE_TYPE_MY__OBJECT_PROXY, cancellable, error, "g-flags", flags, "g-name", name, "g-bus-type", bus_type, "g-object-path", object_path, "g-interface-name", "test.signal.ObjectManager.My_Object", NULL);
+  ret = g_initable_new (MY_NAMESPACE_TYPE_MY_OBJECT_PROXY, cancellable, error, "g-flags", flags, "g-name", name, "g-bus-type", bus_type, "g-object-path", object_path, "g-interface-name", "org.gtk.GDBus.Examples.ObjectManager.MyObject", NULL);
   if (ret != NULL)
-    return EXAMPLE_MY__OBJECT (ret);
+    return MY_NAMESPACE_MY_OBJECT (ret);
   else
     return NULL;
 }
@@ -1185,19 +1185,19 @@ example_my__object_proxy_new_for_bus_sync (
 /* ------------------------------------------------------------------------ */
 
 /**
- * ExampleMy_ObjectSkeleton:
+ * MyNamespaceMyObjectSkeleton:
  *
- * The #ExampleMy_ObjectSkeleton structure contains only private data and should only be accessed using the provided API.
+ * The #MyNamespaceMyObjectSkeleton structure contains only private data and should only be accessed using the provided API.
  */
 
 /**
- * ExampleMy_ObjectSkeletonClass:
+ * MyNamespaceMyObjectSkeletonClass:
  * @parent_class: The parent class.
  *
- * Class structure for #ExampleMy_ObjectSkeleton.
+ * Class structure for #MyNamespaceMyObjectSkeleton.
  */
 
-struct _ExampleMy_ObjectSkeletonPrivate
+struct _MyNamespaceMyObjectSkeletonPrivate
 {
   GValue *properties;
   GList *changed_properties;
@@ -1207,7 +1207,7 @@ struct _ExampleMy_ObjectSkeletonPrivate
 };
 
 static void
-_example_my__object_skeleton_handle_method_call (
+_my_namespace_my_object_skeleton_handle_method_call (
   GDBusConnection *connection G_GNUC_UNUSED,
   const gchar *sender G_GNUC_UNUSED,
   const gchar *object_path G_GNUC_UNUSED,
@@ -1217,7 +1217,7 @@ _example_my__object_skeleton_handle_method_call (
   GDBusMethodInvocation *invocation,
   gpointer user_data)
 {
-  ExampleMy_ObjectSkeleton *skeleton = EXAMPLE_MY__OBJECT_SKELETON (user_data);
+  MyNamespaceMyObjectSkeleton *skeleton = MY_NAMESPACE_MY_OBJECT_SKELETON (user_data);
   _ExtendedGDBusMethodInfo *info;
   GVariantIter iter;
   GVariant *child;
@@ -1232,7 +1232,7 @@ _example_my__object_skeleton_handle_method_call (
   num_params = g_variant_n_children (parameters);
   num_extra = info->pass_fdlist ? 3 : 2;  paramv = g_new0 (GValue, num_params + num_extra);
   n = 0;
-  g_value_init (&paramv[n], EXAMPLE_TYPE_MY__OBJECT);
+  g_value_init (&paramv[n], MY_NAMESPACE_TYPE_MY_OBJECT);
   g_value_set_object (&paramv[n++], skeleton);
   g_value_init (&paramv[n], G_TYPE_DBUS_METHOD_INVOCATION);
   g_value_set_object (&paramv[n++], invocation);
@@ -1259,7 +1259,7 @@ _example_my__object_skeleton_handle_method_call (
         g_dbus_gvariant_to_gvalue (child, &paramv[n++]);
       g_variant_unref (child);
     }
-  signal_id = g_signal_lookup (info->signal_name, EXAMPLE_TYPE_MY__OBJECT);
+  signal_id = g_signal_lookup (info->signal_name, MY_NAMESPACE_TYPE_MY_OBJECT);
   g_value_init (&return_value, G_TYPE_BOOLEAN);
   g_signal_emitv (paramv, signal_id, 0, &return_value);
   if (!g_value_get_boolean (&return_value))
@@ -1271,7 +1271,7 @@ _example_my__object_skeleton_handle_method_call (
 }
 
 static GVariant *
-_example_my__object_skeleton_handle_get_property (
+_my_namespace_my_object_skeleton_handle_get_property (
   GDBusConnection *connection G_GNUC_UNUSED,
   const gchar *sender G_GNUC_UNUSED,
   const gchar *object_path G_GNUC_UNUSED,
@@ -1280,13 +1280,13 @@ _example_my__object_skeleton_handle_get_property (
   GError **error,
   gpointer user_data)
 {
-  ExampleMy_ObjectSkeleton *skeleton = EXAMPLE_MY__OBJECT_SKELETON (user_data);
+  MyNamespaceMyObjectSkeleton *skeleton = MY_NAMESPACE_MY_OBJECT_SKELETON (user_data);
   GValue value = G_VALUE_INIT;
   GParamSpec *pspec;
   _ExtendedGDBusPropertyInfo *info;
   GVariant *ret;
   ret = NULL;
-  info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_example_my__object_interface_info.parent_struct, property_name);
+  info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_my_namespace_my_object_interface_info.parent_struct, property_name);
   g_assert (info != NULL);
   pspec = g_object_class_find_property (G_OBJECT_GET_CLASS (skeleton), info->hyphen_name);
   if (pspec == NULL)
@@ -1304,7 +1304,7 @@ _example_my__object_skeleton_handle_get_property (
 }
 
 static gboolean
-_example_my__object_skeleton_handle_set_property (
+_my_namespace_my_object_skeleton_handle_set_property (
   GDBusConnection *connection G_GNUC_UNUSED,
   const gchar *sender G_GNUC_UNUSED,
   const gchar *object_path G_GNUC_UNUSED,
@@ -1314,13 +1314,13 @@ _example_my__object_skeleton_handle_set_property (
   GError **error,
   gpointer user_data)
 {
-  ExampleMy_ObjectSkeleton *skeleton = EXAMPLE_MY__OBJECT_SKELETON (user_data);
+  MyNamespaceMyObjectSkeleton *skeleton = MY_NAMESPACE_MY_OBJECT_SKELETON (user_data);
   GValue value = G_VALUE_INIT;
   GParamSpec *pspec;
   _ExtendedGDBusPropertyInfo *info;
   gboolean ret;
   ret = FALSE;
-  info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_example_my__object_interface_info.parent_struct, property_name);
+  info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_my_namespace_my_object_interface_info.parent_struct, property_name);
   g_assert (info != NULL);
   pspec = g_object_class_find_property (G_OBJECT_GET_CLASS (skeleton), info->hyphen_name);
   if (pspec == NULL)
@@ -1340,43 +1340,43 @@ _example_my__object_skeleton_handle_set_property (
   return ret;
 }
 
-static const GDBusInterfaceVTable _example_my__object_skeleton_vtable =
+static const GDBusInterfaceVTable _my_namespace_my_object_skeleton_vtable =
 {
-  _example_my__object_skeleton_handle_method_call,
-  _example_my__object_skeleton_handle_get_property,
-  _example_my__object_skeleton_handle_set_property,
+  _my_namespace_my_object_skeleton_handle_method_call,
+  _my_namespace_my_object_skeleton_handle_get_property,
+  _my_namespace_my_object_skeleton_handle_set_property,
   {NULL}
 };
 
 static GDBusInterfaceInfo *
-example_my__object_skeleton_dbus_interface_get_info (GDBusInterfaceSkeleton *skeleton G_GNUC_UNUSED)
+my_namespace_my_object_skeleton_dbus_interface_get_info (GDBusInterfaceSkeleton *skeleton G_GNUC_UNUSED)
 {
-  return example_my__object_interface_info ();
+  return my_namespace_my_object_interface_info ();
 }
 
 static GDBusInterfaceVTable *
-example_my__object_skeleton_dbus_interface_get_vtable (GDBusInterfaceSkeleton *skeleton G_GNUC_UNUSED)
+my_namespace_my_object_skeleton_dbus_interface_get_vtable (GDBusInterfaceSkeleton *skeleton G_GNUC_UNUSED)
 {
-  return (GDBusInterfaceVTable *) &_example_my__object_skeleton_vtable;
+  return (GDBusInterfaceVTable *) &_my_namespace_my_object_skeleton_vtable;
 }
 
 static GVariant *
-example_my__object_skeleton_dbus_interface_get_properties (GDBusInterfaceSkeleton *_skeleton)
+my_namespace_my_object_skeleton_dbus_interface_get_properties (GDBusInterfaceSkeleton *_skeleton)
 {
-  ExampleMy_ObjectSkeleton *skeleton = EXAMPLE_MY__OBJECT_SKELETON (_skeleton);
+  MyNamespaceMyObjectSkeleton *skeleton = MY_NAMESPACE_MY_OBJECT_SKELETON (_skeleton);
 
   GVariantBuilder builder;
   guint n;
   g_variant_builder_init (&builder, G_VARIANT_TYPE ("a{sv}"));
-  if (_example_my__object_interface_info.parent_struct.properties == NULL)
+  if (_my_namespace_my_object_interface_info.parent_struct.properties == NULL)
     goto out;
-  for (n = 0; _example_my__object_interface_info.parent_struct.properties[n] != NULL; n++)
+  for (n = 0; _my_namespace_my_object_interface_info.parent_struct.properties[n] != NULL; n++)
     {
-      GDBusPropertyInfo *info = _example_my__object_interface_info.parent_struct.properties[n];
+      GDBusPropertyInfo *info = _my_namespace_my_object_interface_info.parent_struct.properties[n];
       if (info->flags & G_DBUS_PROPERTY_INFO_FLAGS_READABLE)
         {
           GVariant *value;
-          value = _example_my__object_skeleton_handle_get_property (g_dbus_interface_skeleton_get_connection (G_DBUS_INTERFACE_SKELETON (skeleton)), NULL, g_dbus_interface_skeleton_get_object_path (G_DBUS_INTERFACE_SKELETON (skeleton)), "test.signal.ObjectManager.My_Object", info->name, NULL, skeleton);
+          value = _my_namespace_my_object_skeleton_handle_get_property (g_dbus_interface_skeleton_get_connection (G_DBUS_INTERFACE_SKELETON (skeleton)), NULL, g_dbus_interface_skeleton_get_object_path (G_DBUS_INTERFACE_SKELETON (skeleton)), "org.gtk.GDBus.Examples.ObjectManager.MyObject", info->name, NULL, skeleton);
           if (value != NULL)
             {
               g_variant_take_ref (value);
@@ -1389,12 +1389,12 @@ out:
   return g_variant_builder_end (&builder);
 }
 
-static gboolean _example_my__object_emit_changed (gpointer user_data);
+static gboolean _my_namespace_my_object_emit_changed (gpointer user_data);
 
 static void
-example_my__object_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton)
+my_namespace_my_object_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton)
 {
-  ExampleMy_ObjectSkeleton *skeleton = EXAMPLE_MY__OBJECT_SKELETON (_skeleton);
+  MyNamespaceMyObjectSkeleton *skeleton = MY_NAMESPACE_MY_OBJECT_SKELETON (_skeleton);
   gboolean emit_changed = FALSE;
 
   g_mutex_lock (&skeleton->priv->lock);
@@ -1407,15 +1407,15 @@ example_my__object_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skele
   g_mutex_unlock (&skeleton->priv->lock);
 
   if (emit_changed)
-    _example_my__object_emit_changed (skeleton);
+    _my_namespace_my_object_emit_changed (skeleton);
 }
 
 static void
-_example_my__object_on_signal_inform_about_intent (
-    ExampleMy_Object *object,
+_my_namespace_my_object_on_signal_inform_about_intent (
+    MyNamespaceMyObject *object,
     const gchar *arg_info)
 {
-  ExampleMy_ObjectSkeleton *skeleton = EXAMPLE_MY__OBJECT_SKELETON (object);
+  MyNamespaceMyObjectSkeleton *skeleton = MY_NAMESPACE_MY_OBJECT_SKELETON (object);
 
   GList      *connections, *l;
   GVariant   *signal_variant;
@@ -1427,28 +1427,28 @@ _example_my__object_on_signal_inform_about_intent (
     {
       GDBusConnection *connection = l->data;
       g_dbus_connection_emit_signal (connection,
-        NULL, g_dbus_interface_skeleton_get_object_path (G_DBUS_INTERFACE_SKELETON (skeleton)), "test.signal.ObjectManager.My_Object", "Inform_about_intent",
+        NULL, g_dbus_interface_skeleton_get_object_path (G_DBUS_INTERFACE_SKELETON (skeleton)), "org.gtk.GDBus.Examples.ObjectManager.MyObject", "Inform_about_intent",
         signal_variant, NULL);
     }
   g_variant_unref (signal_variant);
   g_list_free_full (connections, g_object_unref);
 }
 
-static void example_my__object_skeleton_iface_init (ExampleMy_ObjectIface *iface);
+static void my_namespace_my_object_skeleton_iface_init (MyNamespaceMyObjectIface *iface);
 #if GLIB_VERSION_MAX_ALLOWED >= GLIB_VERSION_2_38
-G_DEFINE_TYPE_WITH_CODE (ExampleMy_ObjectSkeleton, example_my__object_skeleton, G_TYPE_DBUS_INTERFACE_SKELETON,
-                         G_ADD_PRIVATE (ExampleMy_ObjectSkeleton)
-                         G_IMPLEMENT_INTERFACE (EXAMPLE_TYPE_MY__OBJECT, example_my__object_skeleton_iface_init))
+G_DEFINE_TYPE_WITH_CODE (MyNamespaceMyObjectSkeleton, my_namespace_my_object_skeleton, G_TYPE_DBUS_INTERFACE_SKELETON,
+                         G_ADD_PRIVATE (MyNamespaceMyObjectSkeleton)
+                         G_IMPLEMENT_INTERFACE (MY_NAMESPACE_TYPE_MY_OBJECT, my_namespace_my_object_skeleton_iface_init))
 
 #else
-G_DEFINE_TYPE_WITH_CODE (ExampleMy_ObjectSkeleton, example_my__object_skeleton, G_TYPE_DBUS_INTERFACE_SKELETON,
-                         G_IMPLEMENT_INTERFACE (EXAMPLE_TYPE_MY__OBJECT, example_my__object_skeleton_iface_init))
+G_DEFINE_TYPE_WITH_CODE (MyNamespaceMyObjectSkeleton, my_namespace_my_object_skeleton, G_TYPE_DBUS_INTERFACE_SKELETON,
+                         G_IMPLEMENT_INTERFACE (MY_NAMESPACE_TYPE_MY_OBJECT, my_namespace_my_object_skeleton_iface_init))
 
 #endif
 static void
-example_my__object_skeleton_finalize (GObject *object)
+my_namespace_my_object_skeleton_finalize (GObject *object)
 {
-  ExampleMy_ObjectSkeleton *skeleton = EXAMPLE_MY__OBJECT_SKELETON (object);
+  MyNamespaceMyObjectSkeleton *skeleton = MY_NAMESPACE_MY_OBJECT_SKELETON (object);
   guint n;
   for (n = 0; n < 3; n++)
     g_value_unset (&skeleton->priv->properties[n]);
@@ -1458,16 +1458,16 @@ example_my__object_skeleton_finalize (GObject *object)
     g_source_destroy (skeleton->priv->changed_properties_idle_source);
   g_main_context_unref (skeleton->priv->context);
   g_mutex_clear (&skeleton->priv->lock);
-  G_OBJECT_CLASS (example_my__object_skeleton_parent_class)->finalize (object);
+  G_OBJECT_CLASS (my_namespace_my_object_skeleton_parent_class)->finalize (object);
 }
 
 static void
-example_my__object_skeleton_get_property (GObject      *object,
+my_namespace_my_object_skeleton_get_property (GObject      *object,
   guint         prop_id,
   GValue       *value,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
-  ExampleMy_ObjectSkeleton *skeleton = EXAMPLE_MY__OBJECT_SKELETON (object);
+  MyNamespaceMyObjectSkeleton *skeleton = MY_NAMESPACE_MY_OBJECT_SKELETON (object);
   g_assert (prop_id != 0 && prop_id - 1 < 3);
   g_mutex_lock (&skeleton->priv->lock);
   g_value_copy (&skeleton->priv->properties[prop_id - 1], value);
@@ -1475,9 +1475,9 @@ example_my__object_skeleton_get_property (GObject      *object,
 }
 
 static gboolean
-_example_my__object_emit_changed (gpointer user_data)
+_my_namespace_my_object_emit_changed (gpointer user_data)
 {
-  ExampleMy_ObjectSkeleton *skeleton = EXAMPLE_MY__OBJECT_SKELETON (user_data);
+  MyNamespaceMyObjectSkeleton *skeleton = MY_NAMESPACE_MY_OBJECT_SKELETON (user_data);
   GList *l;
   GVariantBuilder builder;
   GVariantBuilder invalidated_builder;
@@ -1505,7 +1505,7 @@ _example_my__object_emit_changed (gpointer user_data)
     {
       GList *connections, *ll;
       GVariant *signal_variant;
-      signal_variant = g_variant_ref_sink (g_variant_new ("(sa{sv}as)", "test.signal.ObjectManager.My_Object",
+      signal_variant = g_variant_ref_sink (g_variant_new ("(sa{sv}as)", "org.gtk.GDBus.Examples.ObjectManager.MyObject",
                                            &builder, &invalidated_builder));
       connections = g_dbus_interface_skeleton_get_connections (G_DBUS_INTERFACE_SKELETON (skeleton));
       for (ll = connections; ll != NULL; ll = ll->next)
@@ -1535,7 +1535,7 @@ _example_my__object_emit_changed (gpointer user_data)
 }
 
 static void
-_example_my__object_schedule_emit_changed (ExampleMy_ObjectSkeleton *skeleton, const _ExtendedGDBusPropertyInfo *info, guint prop_id, const GValue *orig_value)
+_my_namespace_my_object_schedule_emit_changed (MyNamespaceMyObjectSkeleton *skeleton, const _ExtendedGDBusPropertyInfo *info, guint prop_id, const GValue *orig_value)
 {
   ChangedProperty *cp;
   GList *l;
@@ -1561,18 +1561,18 @@ _example_my__object_schedule_emit_changed (ExampleMy_ObjectSkeleton *skeleton, c
 }
 
 static void
-example_my__object_skeleton_notify (GObject      *object,
+my_namespace_my_object_skeleton_notify (GObject      *object,
   GParamSpec *pspec G_GNUC_UNUSED)
 {
-  ExampleMy_ObjectSkeleton *skeleton = EXAMPLE_MY__OBJECT_SKELETON (object);
+  MyNamespaceMyObjectSkeleton *skeleton = MY_NAMESPACE_MY_OBJECT_SKELETON (object);
   g_mutex_lock (&skeleton->priv->lock);
   if (skeleton->priv->changed_properties != NULL &&
       skeleton->priv->changed_properties_idle_source == NULL)
     {
       skeleton->priv->changed_properties_idle_source = g_idle_source_new ();
       g_source_set_priority (skeleton->priv->changed_properties_idle_source, G_PRIORITY_DEFAULT);
-      g_source_set_callback (skeleton->priv->changed_properties_idle_source, _example_my__object_emit_changed, g_object_ref (skeleton), (GDestroyNotify) g_object_unref);
-      g_source_set_name (skeleton->priv->changed_properties_idle_source, "[generated] _example_my__object_emit_changed");
+      g_source_set_callback (skeleton->priv->changed_properties_idle_source, _my_namespace_my_object_emit_changed, g_object_ref (skeleton), (GDestroyNotify) g_object_unref);
+      g_source_set_name (skeleton->priv->changed_properties_idle_source, "[generated] _my_namespace_my_object_emit_changed");
       g_source_attach (skeleton->priv->changed_properties_idle_source, skeleton->priv->context);
       g_source_unref (skeleton->priv->changed_properties_idle_source);
     }
@@ -1580,19 +1580,19 @@ example_my__object_skeleton_notify (GObject      *object,
 }
 
 static void
-example_my__object_skeleton_set_property (GObject      *object,
+my_namespace_my_object_skeleton_set_property (GObject      *object,
   guint         prop_id,
   const GValue *value,
   GParamSpec   *pspec)
 {
-  ExampleMy_ObjectSkeleton *skeleton = EXAMPLE_MY__OBJECT_SKELETON (object);
+  MyNamespaceMyObjectSkeleton *skeleton = MY_NAMESPACE_MY_OBJECT_SKELETON (object);
   g_assert (prop_id != 0 && prop_id - 1 < 3);
   g_mutex_lock (&skeleton->priv->lock);
   g_object_freeze_notify (object);
   if (!_g_value_equal (value, &skeleton->priv->properties[prop_id - 1]))
     {
       if (g_dbus_interface_skeleton_get_connection (G_DBUS_INTERFACE_SKELETON (skeleton)) != NULL)
-        _example_my__object_schedule_emit_changed (skeleton, (const _ExtendedGDBusPropertyInfo *) _example_my__object_property_info_pointers[prop_id - 1], prop_id, &skeleton->priv->properties[prop_id - 1]);
+        _my_namespace_my_object_schedule_emit_changed (skeleton, (const _ExtendedGDBusPropertyInfo *) _my_namespace_my_object_property_info_pointers[prop_id - 1], prop_id, &skeleton->priv->properties[prop_id - 1]);
       g_value_copy (value, &skeleton->priv->properties[prop_id - 1]);
       g_object_notify_by_pspec (object, pspec);
     }
@@ -1601,12 +1601,12 @@ example_my__object_skeleton_set_property (GObject      *object,
 }
 
 static void
-example_my__object_skeleton_init (ExampleMy_ObjectSkeleton *skeleton)
+my_namespace_my_object_skeleton_init (MyNamespaceMyObjectSkeleton *skeleton)
 {
 #if GLIB_VERSION_MAX_ALLOWED >= GLIB_VERSION_2_38
-  skeleton->priv = example_my__object_skeleton_get_instance_private (skeleton);
+  skeleton->priv = my_namespace_my_object_skeleton_get_instance_private (skeleton);
 #else
-  skeleton->priv = G_TYPE_INSTANCE_GET_PRIVATE (skeleton, EXAMPLE_TYPE_MY__OBJECT_SKELETON, ExampleMy_ObjectSkeletonPrivate);
+  skeleton->priv = G_TYPE_INSTANCE_GET_PRIVATE (skeleton, MY_NAMESPACE_TYPE_MY_OBJECT_SKELETON, MyNamespaceMyObjectSkeletonPrivate);
 #endif
 
   g_mutex_init (&skeleton->priv->lock);
@@ -1618,9 +1618,9 @@ example_my__object_skeleton_init (ExampleMy_ObjectSkeleton *skeleton)
 }
 
 static const gchar *
-example_my__object_skeleton_get_description (ExampleMy_Object *object)
+my_namespace_my_object_skeleton_get_description (MyNamespaceMyObject *object)
 {
-  ExampleMy_ObjectSkeleton *skeleton = EXAMPLE_MY__OBJECT_SKELETON (object);
+  MyNamespaceMyObjectSkeleton *skeleton = MY_NAMESPACE_MY_OBJECT_SKELETON (object);
   const gchar *value;
   g_mutex_lock (&skeleton->priv->lock);
   value = g_value_get_string (&(skeleton->priv->properties[0]));
@@ -1629,9 +1629,9 @@ example_my__object_skeleton_get_description (ExampleMy_Object *object)
 }
 
 static const gchar *
-example_my__object_skeleton_get_foo (ExampleMy_Object *object)
+my_namespace_my_object_skeleton_get_foo (MyNamespaceMyObject *object)
 {
-  ExampleMy_ObjectSkeleton *skeleton = EXAMPLE_MY__OBJECT_SKELETON (object);
+  MyNamespaceMyObjectSkeleton *skeleton = MY_NAMESPACE_MY_OBJECT_SKELETON (object);
   const gchar *value;
   g_mutex_lock (&skeleton->priv->lock);
   value = g_value_get_string (&(skeleton->priv->properties[1]));
@@ -1640,9 +1640,9 @@ example_my__object_skeleton_get_foo (ExampleMy_Object *object)
 }
 
 static const gchar *
-example_my__object_skeleton_get_bar (ExampleMy_Object *object)
+my_namespace_my_object_skeleton_get_bar (MyNamespaceMyObject *object)
 {
-  ExampleMy_ObjectSkeleton *skeleton = EXAMPLE_MY__OBJECT_SKELETON (object);
+  MyNamespaceMyObjectSkeleton *skeleton = MY_NAMESPACE_MY_OBJECT_SKELETON (object);
   const gchar *value;
   g_mutex_lock (&skeleton->priv->lock);
   value = g_value_get_string (&(skeleton->priv->properties[2]));
@@ -1651,73 +1651,73 @@ example_my__object_skeleton_get_bar (ExampleMy_Object *object)
 }
 
 static void
-example_my__object_skeleton_class_init (ExampleMy_ObjectSkeletonClass *klass)
+my_namespace_my_object_skeleton_class_init (MyNamespaceMyObjectSkeletonClass *klass)
 {
   GObjectClass *gobject_class;
   GDBusInterfaceSkeletonClass *skeleton_class;
 
   gobject_class = G_OBJECT_CLASS (klass);
-  gobject_class->finalize = example_my__object_skeleton_finalize;
-  gobject_class->get_property = example_my__object_skeleton_get_property;
-  gobject_class->set_property = example_my__object_skeleton_set_property;
-  gobject_class->notify       = example_my__object_skeleton_notify;
+  gobject_class->finalize = my_namespace_my_object_skeleton_finalize;
+  gobject_class->get_property = my_namespace_my_object_skeleton_get_property;
+  gobject_class->set_property = my_namespace_my_object_skeleton_set_property;
+  gobject_class->notify       = my_namespace_my_object_skeleton_notify;
 
 
-  example_my__object_override_properties (gobject_class, 1);
+  my_namespace_my_object_override_properties (gobject_class, 1);
 
   skeleton_class = G_DBUS_INTERFACE_SKELETON_CLASS (klass);
-  skeleton_class->get_info = example_my__object_skeleton_dbus_interface_get_info;
-  skeleton_class->get_properties = example_my__object_skeleton_dbus_interface_get_properties;
-  skeleton_class->flush = example_my__object_skeleton_dbus_interface_flush;
-  skeleton_class->get_vtable = example_my__object_skeleton_dbus_interface_get_vtable;
+  skeleton_class->get_info = my_namespace_my_object_skeleton_dbus_interface_get_info;
+  skeleton_class->get_properties = my_namespace_my_object_skeleton_dbus_interface_get_properties;
+  skeleton_class->flush = my_namespace_my_object_skeleton_dbus_interface_flush;
+  skeleton_class->get_vtable = my_namespace_my_object_skeleton_dbus_interface_get_vtable;
 
 #if GLIB_VERSION_MAX_ALLOWED < GLIB_VERSION_2_38
-  g_type_class_add_private (klass, sizeof (ExampleMy_ObjectSkeletonPrivate));
+  g_type_class_add_private (klass, sizeof (MyNamespaceMyObjectSkeletonPrivate));
 #endif
 }
 
 static void
-example_my__object_skeleton_iface_init (ExampleMy_ObjectIface *iface)
+my_namespace_my_object_skeleton_iface_init (MyNamespaceMyObjectIface *iface)
 {
-  iface->inform_about_intent = _example_my__object_on_signal_inform_about_intent;
-  iface->get_description = example_my__object_skeleton_get_description;
-  iface->get_foo = example_my__object_skeleton_get_foo;
-  iface->get_bar = example_my__object_skeleton_get_bar;
+  iface->inform_about_intent = _my_namespace_my_object_on_signal_inform_about_intent;
+  iface->get_description = my_namespace_my_object_skeleton_get_description;
+  iface->get_foo = my_namespace_my_object_skeleton_get_foo;
+  iface->get_bar = my_namespace_my_object_skeleton_get_bar;
 }
 
 /**
- * example_my__object_skeleton_new:
+ * my_namespace_my_object_skeleton_new:
  *
- * Creates a skeleton object for the D-Bus interface <link linkend="gdbus-interface-test-signal-ObjectManager-My_Object.top_of_page">test.signal.ObjectManager.My_Object</link>.
+ * Creates a skeleton object for the D-Bus interface <link linkend="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-MyObject.top_of_page">org.gtk.GDBus.Examples.ObjectManager.MyObject</link>.
  *
- * Returns: (transfer full) (type ExampleMy_ObjectSkeleton): The skeleton object.
+ * Returns: (transfer full) (type MyNamespaceMyObjectSkeleton): The skeleton object.
  */
-ExampleMy_Object *
-example_my__object_skeleton_new (void)
+MyNamespaceMyObject *
+my_namespace_my_object_skeleton_new (void)
 {
-  return EXAMPLE_MY__OBJECT (g_object_new (EXAMPLE_TYPE_MY__OBJECT_SKELETON, NULL));
+  return MY_NAMESPACE_MY_OBJECT (g_object_new (MY_NAMESPACE_TYPE_MY_OBJECT_SKELETON, NULL));
 }
 
 /* ------------------------------------------------------------------------
- * Code for interface test.signal.ObjectManager.Another
+ * Code for interface org.gtk.GDBus.Examples.ObjectManager.Another
  * ------------------------------------------------------------------------
  */
 
 /**
- * SECTION:ExampleAnother
- * @title: ExampleAnother
- * @short_description: Generated C code for the test.signal.ObjectManager.Another D-Bus interface
+ * SECTION:MyNamespaceAnother
+ * @title: MyNamespaceAnother
+ * @short_description: Generated C code for the org.gtk.GDBus.Examples.ObjectManager.Another D-Bus interface
  *
- * This section contains code for working with the <link linkend="gdbus-interface-test-signal-ObjectManager-Another.top_of_page">test.signal.ObjectManager.Another</link> D-Bus interface in C.
+ * This section contains code for working with the <link linkend="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-Another.top_of_page">org.gtk.GDBus.Examples.ObjectManager.Another</link> D-Bus interface in C.
  */
 
-/* ---- Introspection data for test.signal.ObjectManager.Another ---- */
+/* ---- Introspection data for org.gtk.GDBus.Examples.ObjectManager.Another ---- */
 
-static const _ExtendedGDBusInterfaceInfo _example_another_interface_info =
+static const _ExtendedGDBusInterfaceInfo _my_namespace_another_interface_info =
 {
   {
     -1,
-    (gchar *) "test.signal.ObjectManager.Another",
+    (gchar *) "org.gtk.GDBus.Examples.ObjectManager.Another",
     NULL,
     NULL,
     NULL,
@@ -1728,30 +1728,30 @@ static const _ExtendedGDBusInterfaceInfo _example_another_interface_info =
 
 
 /**
- * example_another_interface_info:
+ * my_namespace_another_interface_info:
  *
- * Gets a machine-readable description of the <link linkend="gdbus-interface-test-signal-ObjectManager-Another.top_of_page">test.signal.ObjectManager.Another</link> D-Bus interface.
+ * Gets a machine-readable description of the <link linkend="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-Another.top_of_page">org.gtk.GDBus.Examples.ObjectManager.Another</link> D-Bus interface.
  *
  * Returns: (transfer none): A #GDBusInterfaceInfo. Do not free.
  */
 GDBusInterfaceInfo *
-example_another_interface_info (void)
+my_namespace_another_interface_info (void)
 {
-  return (GDBusInterfaceInfo *) &_example_another_interface_info.parent_struct;
+  return (GDBusInterfaceInfo *) &_my_namespace_another_interface_info.parent_struct;
 }
 
 /**
- * example_another_override_properties:
+ * my_namespace_another_override_properties:
  * @klass: The class structure for a #GObject derived class.
  * @property_id_begin: The property id to assign to the first overridden property.
  *
- * Overrides all #GObject properties in the #ExampleAnother interface for a concrete class.
+ * Overrides all #GObject properties in the #MyNamespaceAnother interface for a concrete class.
  * The properties are overridden in the order they are defined.
  *
  * Returns: The last property id.
  */
 guint
-example_another_override_properties (GObjectClass *klass, guint property_id_begin)
+my_namespace_another_override_properties (GObjectClass *klass, guint property_id_begin)
 {
   return property_id_begin - 1;
 }
@@ -1759,68 +1759,68 @@ example_another_override_properties (GObjectClass *klass, guint property_id_begi
 
 
 /**
- * ExampleAnother:
+ * MyNamespaceAnother:
  *
- * Abstract interface type for the D-Bus interface <link linkend="gdbus-interface-test-signal-ObjectManager-Another.top_of_page">test.signal.ObjectManager.Another</link>.
+ * Abstract interface type for the D-Bus interface <link linkend="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-Another.top_of_page">org.gtk.GDBus.Examples.ObjectManager.Another</link>.
  */
 
 /**
- * ExampleAnotherIface:
+ * MyNamespaceAnotherIface:
  * @parent_iface: The parent interface.
  *
- * Virtual table for the D-Bus interface <link linkend="gdbus-interface-test-signal-ObjectManager-Another.top_of_page">test.signal.ObjectManager.Another</link>.
+ * Virtual table for the D-Bus interface <link linkend="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-Another.top_of_page">org.gtk.GDBus.Examples.ObjectManager.Another</link>.
  */
 
-typedef ExampleAnotherIface ExampleAnotherInterface;
-G_DEFINE_INTERFACE (ExampleAnother, example_another, G_TYPE_OBJECT)
+typedef MyNamespaceAnotherIface MyNamespaceAnotherInterface;
+G_DEFINE_INTERFACE (MyNamespaceAnother, my_namespace_another, G_TYPE_OBJECT)
 
 static void
-example_another_default_init (ExampleAnotherIface *iface)
+my_namespace_another_default_init (MyNamespaceAnotherIface *iface)
 {
 }
 
 /* ------------------------------------------------------------------------ */
 
 /**
- * ExampleAnotherProxy:
+ * MyNamespaceAnotherProxy:
  *
- * The #ExampleAnotherProxy structure contains only private data and should only be accessed using the provided API.
+ * The #MyNamespaceAnotherProxy structure contains only private data and should only be accessed using the provided API.
  */
 
 /**
- * ExampleAnotherProxyClass:
+ * MyNamespaceAnotherProxyClass:
  * @parent_class: The parent class.
  *
- * Class structure for #ExampleAnotherProxy.
+ * Class structure for #MyNamespaceAnotherProxy.
  */
 
-struct _ExampleAnotherProxyPrivate
+struct _MyNamespaceAnotherProxyPrivate
 {
   GData *qdata;
 };
 
-static void example_another_proxy_iface_init (ExampleAnotherIface *iface);
+static void my_namespace_another_proxy_iface_init (MyNamespaceAnotherIface *iface);
 
 #if GLIB_VERSION_MAX_ALLOWED >= GLIB_VERSION_2_38
-G_DEFINE_TYPE_WITH_CODE (ExampleAnotherProxy, example_another_proxy, G_TYPE_DBUS_PROXY,
-                         G_ADD_PRIVATE (ExampleAnotherProxy)
-                         G_IMPLEMENT_INTERFACE (EXAMPLE_TYPE_ANOTHER, example_another_proxy_iface_init))
+G_DEFINE_TYPE_WITH_CODE (MyNamespaceAnotherProxy, my_namespace_another_proxy, G_TYPE_DBUS_PROXY,
+                         G_ADD_PRIVATE (MyNamespaceAnotherProxy)
+                         G_IMPLEMENT_INTERFACE (MY_NAMESPACE_TYPE_ANOTHER, my_namespace_another_proxy_iface_init))
 
 #else
-G_DEFINE_TYPE_WITH_CODE (ExampleAnotherProxy, example_another_proxy, G_TYPE_DBUS_PROXY,
-                         G_IMPLEMENT_INTERFACE (EXAMPLE_TYPE_ANOTHER, example_another_proxy_iface_init))
+G_DEFINE_TYPE_WITH_CODE (MyNamespaceAnotherProxy, my_namespace_another_proxy, G_TYPE_DBUS_PROXY,
+                         G_IMPLEMENT_INTERFACE (MY_NAMESPACE_TYPE_ANOTHER, my_namespace_another_proxy_iface_init))
 
 #endif
 static void
-example_another_proxy_finalize (GObject *object)
+my_namespace_another_proxy_finalize (GObject *object)
 {
-  ExampleAnotherProxy *proxy = EXAMPLE_ANOTHER_PROXY (object);
+  MyNamespaceAnotherProxy *proxy = MY_NAMESPACE_ANOTHER_PROXY (object);
   g_datalist_clear (&proxy->priv->qdata);
-  G_OBJECT_CLASS (example_another_proxy_parent_class)->finalize (object);
+  G_OBJECT_CLASS (my_namespace_another_proxy_parent_class)->finalize (object);
 }
 
 static void
-example_another_proxy_get_property (GObject      *object,
+my_namespace_another_proxy_get_property (GObject      *object,
   guint         prop_id,
   GValue       *value,
   GParamSpec   *pspec G_GNUC_UNUSED)
@@ -1828,7 +1828,7 @@ example_another_proxy_get_property (GObject      *object,
 }
 
 static void
-example_another_proxy_set_property (GObject      *object,
+my_namespace_another_proxy_set_property (GObject      *object,
   guint         prop_id,
   const GValue *value,
   GParamSpec   *pspec G_GNUC_UNUSED)
@@ -1836,7 +1836,7 @@ example_another_proxy_set_property (GObject      *object,
 }
 
 static void
-example_another_proxy_g_signal (GDBusProxy *proxy,
+my_namespace_another_proxy_g_signal (GDBusProxy *proxy,
   const gchar *sender_name G_GNUC_UNUSED,
   const gchar *signal_name,
   GVariant *parameters)
@@ -1848,12 +1848,12 @@ example_another_proxy_g_signal (GDBusProxy *proxy,
   gsize num_params;
   gsize n;
   guint signal_id;
-  info = (_ExtendedGDBusSignalInfo *) g_dbus_interface_info_lookup_signal ((GDBusInterfaceInfo *) &_example_another_interface_info.parent_struct, signal_name);
+  info = (_ExtendedGDBusSignalInfo *) g_dbus_interface_info_lookup_signal ((GDBusInterfaceInfo *) &_my_namespace_another_interface_info.parent_struct, signal_name);
   if (info == NULL)
     return;
   num_params = g_variant_n_children (parameters);
   paramv = g_new0 (GValue, num_params + 1);
-  g_value_init (&paramv[0], EXAMPLE_TYPE_ANOTHER);
+  g_value_init (&paramv[0], MY_NAMESPACE_TYPE_ANOTHER);
   g_value_set_object (&paramv[0], proxy);
   g_variant_iter_init (&iter, parameters);
   n = 1;
@@ -1870,7 +1870,7 @@ example_another_proxy_g_signal (GDBusProxy *proxy,
         g_dbus_gvariant_to_gvalue (child, &paramv[n++]);
       g_variant_unref (child);
     }
-  signal_id = g_signal_lookup (info->signal_name, EXAMPLE_TYPE_ANOTHER);
+  signal_id = g_signal_lookup (info->signal_name, MY_NAMESPACE_TYPE_ANOTHER);
   g_signal_emitv (paramv, signal_id, 0, NULL);
   for (n = 0; n < num_params + 1; n++)
     g_value_unset (&paramv[n]);
@@ -1878,11 +1878,11 @@ example_another_proxy_g_signal (GDBusProxy *proxy,
 }
 
 static void
-example_another_proxy_g_properties_changed (GDBusProxy *_proxy,
+my_namespace_another_proxy_g_properties_changed (GDBusProxy *_proxy,
   GVariant *changed_properties,
   const gchar *const *invalidated_properties)
 {
-  ExampleAnotherProxy *proxy = EXAMPLE_ANOTHER_PROXY (_proxy);
+  MyNamespaceAnotherProxy *proxy = MY_NAMESPACE_ANOTHER_PROXY (_proxy);
   guint n;
   const gchar *key;
   GVariantIter *iter;
@@ -1890,7 +1890,7 @@ example_another_proxy_g_properties_changed (GDBusProxy *_proxy,
   g_variant_get (changed_properties, "a{sv}", &iter);
   while (g_variant_iter_next (iter, "{&sv}", &key, NULL))
     {
-      info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_example_another_interface_info.parent_struct, key);
+      info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_my_namespace_another_interface_info.parent_struct, key);
       g_datalist_remove_data (&proxy->priv->qdata, key);
       if (info != NULL)
         g_object_notify (G_OBJECT (proxy), info->hyphen_name);
@@ -1898,7 +1898,7 @@ example_another_proxy_g_properties_changed (GDBusProxy *_proxy,
   g_variant_iter_free (iter);
   for (n = 0; invalidated_properties[n] != NULL; n++)
     {
-      info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_example_another_interface_info.parent_struct, invalidated_properties[n]);
+      info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_my_namespace_another_interface_info.parent_struct, invalidated_properties[n]);
       g_datalist_remove_data (&proxy->priv->qdata, invalidated_properties[n]);
       if (info != NULL)
         g_object_notify (G_OBJECT (proxy), info->hyphen_name);
@@ -1906,44 +1906,44 @@ example_another_proxy_g_properties_changed (GDBusProxy *_proxy,
 }
 
 static void
-example_another_proxy_init (ExampleAnotherProxy *proxy)
+my_namespace_another_proxy_init (MyNamespaceAnotherProxy *proxy)
 {
 #if GLIB_VERSION_MAX_ALLOWED >= GLIB_VERSION_2_38
-  proxy->priv = example_another_proxy_get_instance_private (proxy);
+  proxy->priv = my_namespace_another_proxy_get_instance_private (proxy);
 #else
-  proxy->priv = G_TYPE_INSTANCE_GET_PRIVATE (proxy, EXAMPLE_TYPE_ANOTHER_PROXY, ExampleAnotherProxyPrivate);
+  proxy->priv = G_TYPE_INSTANCE_GET_PRIVATE (proxy, MY_NAMESPACE_TYPE_ANOTHER_PROXY, MyNamespaceAnotherProxyPrivate);
 #endif
 
-  g_dbus_proxy_set_interface_info (G_DBUS_PROXY (proxy), example_another_interface_info ());
+  g_dbus_proxy_set_interface_info (G_DBUS_PROXY (proxy), my_namespace_another_interface_info ());
 }
 
 static void
-example_another_proxy_class_init (ExampleAnotherProxyClass *klass)
+my_namespace_another_proxy_class_init (MyNamespaceAnotherProxyClass *klass)
 {
   GObjectClass *gobject_class;
   GDBusProxyClass *proxy_class;
 
   gobject_class = G_OBJECT_CLASS (klass);
-  gobject_class->finalize     = example_another_proxy_finalize;
-  gobject_class->get_property = example_another_proxy_get_property;
-  gobject_class->set_property = example_another_proxy_set_property;
+  gobject_class->finalize     = my_namespace_another_proxy_finalize;
+  gobject_class->get_property = my_namespace_another_proxy_get_property;
+  gobject_class->set_property = my_namespace_another_proxy_set_property;
 
   proxy_class = G_DBUS_PROXY_CLASS (klass);
-  proxy_class->g_signal = example_another_proxy_g_signal;
-  proxy_class->g_properties_changed = example_another_proxy_g_properties_changed;
+  proxy_class->g_signal = my_namespace_another_proxy_g_signal;
+  proxy_class->g_properties_changed = my_namespace_another_proxy_g_properties_changed;
 
 #if GLIB_VERSION_MAX_ALLOWED < GLIB_VERSION_2_38
-  g_type_class_add_private (klass, sizeof (ExampleAnotherProxyPrivate));
+  g_type_class_add_private (klass, sizeof (MyNamespaceAnotherProxyPrivate));
 #endif
 }
 
 static void
-example_another_proxy_iface_init (ExampleAnotherIface *iface)
+my_namespace_another_proxy_iface_init (MyNamespaceAnotherIface *iface)
 {
 }
 
 /**
- * example_another_proxy_new:
+ * my_namespace_another_proxy_new:
  * @connection: A #GDBusConnection.
  * @flags: Flags from the #GDBusProxyFlags enumeration.
  * @name: (nullable): A bus name (well-known or unique) or %NULL if @connection is not a message bus connection.
@@ -1952,15 +1952,15 @@ example_another_proxy_iface_init (ExampleAnotherIface *iface)
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously creates a proxy for the D-Bus interface <link linkend="gdbus-interface-test-signal-ObjectManager-Another.top_of_page">test.signal.ObjectManager.Another</link>. See g_dbus_proxy_new() for more details.
+ * Asynchronously creates a proxy for the D-Bus interface <link linkend="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-Another.top_of_page">org.gtk.GDBus.Examples.ObjectManager.Another</link>. See g_dbus_proxy_new() for more details.
  *
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
- * You can then call example_another_proxy_new_finish() to get the result of the operation.
+ * You can then call my_namespace_another_proxy_new_finish() to get the result of the operation.
  *
- * See example_another_proxy_new_sync() for the synchronous, blocking version of this constructor.
+ * See my_namespace_another_proxy_new_sync() for the synchronous, blocking version of this constructor.
  */
 void
-example_another_proxy_new (
+my_namespace_another_proxy_new (
     GDBusConnection     *connection,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -1969,20 +1969,20 @@ example_another_proxy_new (
     GAsyncReadyCallback  callback,
     gpointer             user_data)
 {
-  g_async_initable_new_async (EXAMPLE_TYPE_ANOTHER_PROXY, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "g-flags", flags, "g-name", name, "g-connection", connection, "g-object-path", object_path, "g-interface-name", "test.signal.ObjectManager.Another", NULL);
+  g_async_initable_new_async (MY_NAMESPACE_TYPE_ANOTHER_PROXY, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "g-flags", flags, "g-name", name, "g-connection", connection, "g-object-path", object_path, "g-interface-name", "org.gtk.GDBus.Examples.ObjectManager.Another", NULL);
 }
 
 /**
- * example_another_proxy_new_finish:
- * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to example_another_proxy_new().
+ * my_namespace_another_proxy_new_finish:
+ * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to my_namespace_another_proxy_new().
  * @error: Return location for error or %NULL
  *
- * Finishes an operation started with example_another_proxy_new().
+ * Finishes an operation started with my_namespace_another_proxy_new().
  *
- * Returns: (transfer full) (type ExampleAnotherProxy): The constructed proxy object or %NULL if @error is set.
+ * Returns: (transfer full) (type MyNamespaceAnotherProxy): The constructed proxy object or %NULL if @error is set.
  */
-ExampleAnother *
-example_another_proxy_new_finish (
+MyNamespaceAnother *
+my_namespace_another_proxy_new_finish (
     GAsyncResult        *res,
     GError             **error)
 {
@@ -1992,13 +1992,13 @@ example_another_proxy_new_finish (
   ret = g_async_initable_new_finish (G_ASYNC_INITABLE (source_object), res, error);
   g_object_unref (source_object);
   if (ret != NULL)
-    return EXAMPLE_ANOTHER (ret);
+    return MY_NAMESPACE_ANOTHER (ret);
   else
     return NULL;
 }
 
 /**
- * example_another_proxy_new_sync:
+ * my_namespace_another_proxy_new_sync:
  * @connection: A #GDBusConnection.
  * @flags: Flags from the #GDBusProxyFlags enumeration.
  * @name: (nullable): A bus name (well-known or unique) or %NULL if @connection is not a message bus connection.
@@ -2006,16 +2006,16 @@ example_another_proxy_new_finish (
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL
  *
- * Synchronously creates a proxy for the D-Bus interface <link linkend="gdbus-interface-test-signal-ObjectManager-Another.top_of_page">test.signal.ObjectManager.Another</link>. See g_dbus_proxy_new_sync() for more details.
+ * Synchronously creates a proxy for the D-Bus interface <link linkend="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-Another.top_of_page">org.gtk.GDBus.Examples.ObjectManager.Another</link>. See g_dbus_proxy_new_sync() for more details.
  *
  * The calling thread is blocked until a reply is received.
  *
- * See example_another_proxy_new() for the asynchronous version of this constructor.
+ * See my_namespace_another_proxy_new() for the asynchronous version of this constructor.
  *
- * Returns: (transfer full) (type ExampleAnotherProxy): The constructed proxy object or %NULL if @error is set.
+ * Returns: (transfer full) (type MyNamespaceAnotherProxy): The constructed proxy object or %NULL if @error is set.
  */
-ExampleAnother *
-example_another_proxy_new_sync (
+MyNamespaceAnother *
+my_namespace_another_proxy_new_sync (
     GDBusConnection     *connection,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -2024,16 +2024,16 @@ example_another_proxy_new_sync (
     GError             **error)
 {
   GInitable *ret;
-  ret = g_initable_new (EXAMPLE_TYPE_ANOTHER_PROXY, cancellable, error, "g-flags", flags, "g-name", name, "g-connection", connection, "g-object-path", object_path, "g-interface-name", "test.signal.ObjectManager.Another", NULL);
+  ret = g_initable_new (MY_NAMESPACE_TYPE_ANOTHER_PROXY, cancellable, error, "g-flags", flags, "g-name", name, "g-connection", connection, "g-object-path", object_path, "g-interface-name", "org.gtk.GDBus.Examples.ObjectManager.Another", NULL);
   if (ret != NULL)
-    return EXAMPLE_ANOTHER (ret);
+    return MY_NAMESPACE_ANOTHER (ret);
   else
     return NULL;
 }
 
 
 /**
- * example_another_proxy_new_for_bus:
+ * my_namespace_another_proxy_new_for_bus:
  * @bus_type: A #GBusType.
  * @flags: Flags from the #GDBusProxyFlags enumeration.
  * @name: A bus name (well-known or unique).
@@ -2042,15 +2042,15 @@ example_another_proxy_new_sync (
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied.
  * @user_data: User data to pass to @callback.
  *
- * Like example_another_proxy_new() but takes a #GBusType instead of a #GDBusConnection.
+ * Like my_namespace_another_proxy_new() but takes a #GBusType instead of a #GDBusConnection.
  *
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
- * You can then call example_another_proxy_new_for_bus_finish() to get the result of the operation.
+ * You can then call my_namespace_another_proxy_new_for_bus_finish() to get the result of the operation.
  *
- * See example_another_proxy_new_for_bus_sync() for the synchronous, blocking version of this constructor.
+ * See my_namespace_another_proxy_new_for_bus_sync() for the synchronous, blocking version of this constructor.
  */
 void
-example_another_proxy_new_for_bus (
+my_namespace_another_proxy_new_for_bus (
     GBusType             bus_type,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -2059,20 +2059,20 @@ example_another_proxy_new_for_bus (
     GAsyncReadyCallback  callback,
     gpointer             user_data)
 {
-  g_async_initable_new_async (EXAMPLE_TYPE_ANOTHER_PROXY, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "g-flags", flags, "g-name", name, "g-bus-type", bus_type, "g-object-path", object_path, "g-interface-name", "test.signal.ObjectManager.Another", NULL);
+  g_async_initable_new_async (MY_NAMESPACE_TYPE_ANOTHER_PROXY, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "g-flags", flags, "g-name", name, "g-bus-type", bus_type, "g-object-path", object_path, "g-interface-name", "org.gtk.GDBus.Examples.ObjectManager.Another", NULL);
 }
 
 /**
- * example_another_proxy_new_for_bus_finish:
- * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to example_another_proxy_new_for_bus().
+ * my_namespace_another_proxy_new_for_bus_finish:
+ * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to my_namespace_another_proxy_new_for_bus().
  * @error: Return location for error or %NULL
  *
- * Finishes an operation started with example_another_proxy_new_for_bus().
+ * Finishes an operation started with my_namespace_another_proxy_new_for_bus().
  *
- * Returns: (transfer full) (type ExampleAnotherProxy): The constructed proxy object or %NULL if @error is set.
+ * Returns: (transfer full) (type MyNamespaceAnotherProxy): The constructed proxy object or %NULL if @error is set.
  */
-ExampleAnother *
-example_another_proxy_new_for_bus_finish (
+MyNamespaceAnother *
+my_namespace_another_proxy_new_for_bus_finish (
     GAsyncResult        *res,
     GError             **error)
 {
@@ -2082,13 +2082,13 @@ example_another_proxy_new_for_bus_finish (
   ret = g_async_initable_new_finish (G_ASYNC_INITABLE (source_object), res, error);
   g_object_unref (source_object);
   if (ret != NULL)
-    return EXAMPLE_ANOTHER (ret);
+    return MY_NAMESPACE_ANOTHER (ret);
   else
     return NULL;
 }
 
 /**
- * example_another_proxy_new_for_bus_sync:
+ * my_namespace_another_proxy_new_for_bus_sync:
  * @bus_type: A #GBusType.
  * @flags: Flags from the #GDBusProxyFlags enumeration.
  * @name: A bus name (well-known or unique).
@@ -2096,16 +2096,16 @@ example_another_proxy_new_for_bus_finish (
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL
  *
- * Like example_another_proxy_new_sync() but takes a #GBusType instead of a #GDBusConnection.
+ * Like my_namespace_another_proxy_new_sync() but takes a #GBusType instead of a #GDBusConnection.
  *
  * The calling thread is blocked until a reply is received.
  *
- * See example_another_proxy_new_for_bus() for the asynchronous version of this constructor.
+ * See my_namespace_another_proxy_new_for_bus() for the asynchronous version of this constructor.
  *
- * Returns: (transfer full) (type ExampleAnotherProxy): The constructed proxy object or %NULL if @error is set.
+ * Returns: (transfer full) (type MyNamespaceAnotherProxy): The constructed proxy object or %NULL if @error is set.
  */
-ExampleAnother *
-example_another_proxy_new_for_bus_sync (
+MyNamespaceAnother *
+my_namespace_another_proxy_new_for_bus_sync (
     GBusType             bus_type,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -2114,9 +2114,9 @@ example_another_proxy_new_for_bus_sync (
     GError             **error)
 {
   GInitable *ret;
-  ret = g_initable_new (EXAMPLE_TYPE_ANOTHER_PROXY, cancellable, error, "g-flags", flags, "g-name", name, "g-bus-type", bus_type, "g-object-path", object_path, "g-interface-name", "test.signal.ObjectManager.Another", NULL);
+  ret = g_initable_new (MY_NAMESPACE_TYPE_ANOTHER_PROXY, cancellable, error, "g-flags", flags, "g-name", name, "g-bus-type", bus_type, "g-object-path", object_path, "g-interface-name", "org.gtk.GDBus.Examples.ObjectManager.Another", NULL);
   if (ret != NULL)
-    return EXAMPLE_ANOTHER (ret);
+    return MY_NAMESPACE_ANOTHER (ret);
   else
     return NULL;
 }
@@ -2125,19 +2125,19 @@ example_another_proxy_new_for_bus_sync (
 /* ------------------------------------------------------------------------ */
 
 /**
- * ExampleAnotherSkeleton:
+ * MyNamespaceAnotherSkeleton:
  *
- * The #ExampleAnotherSkeleton structure contains only private data and should only be accessed using the provided API.
+ * The #MyNamespaceAnotherSkeleton structure contains only private data and should only be accessed using the provided API.
  */
 
 /**
- * ExampleAnotherSkeletonClass:
+ * MyNamespaceAnotherSkeletonClass:
  * @parent_class: The parent class.
  *
- * Class structure for #ExampleAnotherSkeleton.
+ * Class structure for #MyNamespaceAnotherSkeleton.
  */
 
-struct _ExampleAnotherSkeletonPrivate
+struct _MyNamespaceAnotherSkeletonPrivate
 {
   GValue *properties;
   GList *changed_properties;
@@ -2147,7 +2147,7 @@ struct _ExampleAnotherSkeletonPrivate
 };
 
 static void
-_example_another_skeleton_handle_method_call (
+_my_namespace_another_skeleton_handle_method_call (
   GDBusConnection *connection G_GNUC_UNUSED,
   const gchar *sender G_GNUC_UNUSED,
   const gchar *object_path G_GNUC_UNUSED,
@@ -2157,7 +2157,7 @@ _example_another_skeleton_handle_method_call (
   GDBusMethodInvocation *invocation,
   gpointer user_data)
 {
-  ExampleAnotherSkeleton *skeleton = EXAMPLE_ANOTHER_SKELETON (user_data);
+  MyNamespaceAnotherSkeleton *skeleton = MY_NAMESPACE_ANOTHER_SKELETON (user_data);
   _ExtendedGDBusMethodInfo *info;
   GVariantIter iter;
   GVariant *child;
@@ -2172,7 +2172,7 @@ _example_another_skeleton_handle_method_call (
   num_params = g_variant_n_children (parameters);
   num_extra = info->pass_fdlist ? 3 : 2;  paramv = g_new0 (GValue, num_params + num_extra);
   n = 0;
-  g_value_init (&paramv[n], EXAMPLE_TYPE_ANOTHER);
+  g_value_init (&paramv[n], MY_NAMESPACE_TYPE_ANOTHER);
   g_value_set_object (&paramv[n++], skeleton);
   g_value_init (&paramv[n], G_TYPE_DBUS_METHOD_INVOCATION);
   g_value_set_object (&paramv[n++], invocation);
@@ -2199,7 +2199,7 @@ _example_another_skeleton_handle_method_call (
         g_dbus_gvariant_to_gvalue (child, &paramv[n++]);
       g_variant_unref (child);
     }
-  signal_id = g_signal_lookup (info->signal_name, EXAMPLE_TYPE_ANOTHER);
+  signal_id = g_signal_lookup (info->signal_name, MY_NAMESPACE_TYPE_ANOTHER);
   g_value_init (&return_value, G_TYPE_BOOLEAN);
   g_signal_emitv (paramv, signal_id, 0, &return_value);
   if (!g_value_get_boolean (&return_value))
@@ -2211,7 +2211,7 @@ _example_another_skeleton_handle_method_call (
 }
 
 static GVariant *
-_example_another_skeleton_handle_get_property (
+_my_namespace_another_skeleton_handle_get_property (
   GDBusConnection *connection G_GNUC_UNUSED,
   const gchar *sender G_GNUC_UNUSED,
   const gchar *object_path G_GNUC_UNUSED,
@@ -2220,13 +2220,13 @@ _example_another_skeleton_handle_get_property (
   GError **error,
   gpointer user_data)
 {
-  ExampleAnotherSkeleton *skeleton = EXAMPLE_ANOTHER_SKELETON (user_data);
+  MyNamespaceAnotherSkeleton *skeleton = MY_NAMESPACE_ANOTHER_SKELETON (user_data);
   GValue value = G_VALUE_INIT;
   GParamSpec *pspec;
   _ExtendedGDBusPropertyInfo *info;
   GVariant *ret;
   ret = NULL;
-  info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_example_another_interface_info.parent_struct, property_name);
+  info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_my_namespace_another_interface_info.parent_struct, property_name);
   g_assert (info != NULL);
   pspec = g_object_class_find_property (G_OBJECT_GET_CLASS (skeleton), info->hyphen_name);
   if (pspec == NULL)
@@ -2244,7 +2244,7 @@ _example_another_skeleton_handle_get_property (
 }
 
 static gboolean
-_example_another_skeleton_handle_set_property (
+_my_namespace_another_skeleton_handle_set_property (
   GDBusConnection *connection G_GNUC_UNUSED,
   const gchar *sender G_GNUC_UNUSED,
   const gchar *object_path G_GNUC_UNUSED,
@@ -2254,13 +2254,13 @@ _example_another_skeleton_handle_set_property (
   GError **error,
   gpointer user_data)
 {
-  ExampleAnotherSkeleton *skeleton = EXAMPLE_ANOTHER_SKELETON (user_data);
+  MyNamespaceAnotherSkeleton *skeleton = MY_NAMESPACE_ANOTHER_SKELETON (user_data);
   GValue value = G_VALUE_INIT;
   GParamSpec *pspec;
   _ExtendedGDBusPropertyInfo *info;
   gboolean ret;
   ret = FALSE;
-  info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_example_another_interface_info.parent_struct, property_name);
+  info = (_ExtendedGDBusPropertyInfo *) g_dbus_interface_info_lookup_property ((GDBusInterfaceInfo *) &_my_namespace_another_interface_info.parent_struct, property_name);
   g_assert (info != NULL);
   pspec = g_object_class_find_property (G_OBJECT_GET_CLASS (skeleton), info->hyphen_name);
   if (pspec == NULL)
@@ -2280,43 +2280,43 @@ _example_another_skeleton_handle_set_property (
   return ret;
 }
 
-static const GDBusInterfaceVTable _example_another_skeleton_vtable =
+static const GDBusInterfaceVTable _my_namespace_another_skeleton_vtable =
 {
-  _example_another_skeleton_handle_method_call,
-  _example_another_skeleton_handle_get_property,
-  _example_another_skeleton_handle_set_property,
+  _my_namespace_another_skeleton_handle_method_call,
+  _my_namespace_another_skeleton_handle_get_property,
+  _my_namespace_another_skeleton_handle_set_property,
   {NULL}
 };
 
 static GDBusInterfaceInfo *
-example_another_skeleton_dbus_interface_get_info (GDBusInterfaceSkeleton *skeleton G_GNUC_UNUSED)
+my_namespace_another_skeleton_dbus_interface_get_info (GDBusInterfaceSkeleton *skeleton G_GNUC_UNUSED)
 {
-  return example_another_interface_info ();
+  return my_namespace_another_interface_info ();
 }
 
 static GDBusInterfaceVTable *
-example_another_skeleton_dbus_interface_get_vtable (GDBusInterfaceSkeleton *skeleton G_GNUC_UNUSED)
+my_namespace_another_skeleton_dbus_interface_get_vtable (GDBusInterfaceSkeleton *skeleton G_GNUC_UNUSED)
 {
-  return (GDBusInterfaceVTable *) &_example_another_skeleton_vtable;
+  return (GDBusInterfaceVTable *) &_my_namespace_another_skeleton_vtable;
 }
 
 static GVariant *
-example_another_skeleton_dbus_interface_get_properties (GDBusInterfaceSkeleton *_skeleton)
+my_namespace_another_skeleton_dbus_interface_get_properties (GDBusInterfaceSkeleton *_skeleton)
 {
-  ExampleAnotherSkeleton *skeleton = EXAMPLE_ANOTHER_SKELETON (_skeleton);
+  MyNamespaceAnotherSkeleton *skeleton = MY_NAMESPACE_ANOTHER_SKELETON (_skeleton);
 
   GVariantBuilder builder;
   guint n;
   g_variant_builder_init (&builder, G_VARIANT_TYPE ("a{sv}"));
-  if (_example_another_interface_info.parent_struct.properties == NULL)
+  if (_my_namespace_another_interface_info.parent_struct.properties == NULL)
     goto out;
-  for (n = 0; _example_another_interface_info.parent_struct.properties[n] != NULL; n++)
+  for (n = 0; _my_namespace_another_interface_info.parent_struct.properties[n] != NULL; n++)
     {
-      GDBusPropertyInfo *info = _example_another_interface_info.parent_struct.properties[n];
+      GDBusPropertyInfo *info = _my_namespace_another_interface_info.parent_struct.properties[n];
       if (info->flags & G_DBUS_PROPERTY_INFO_FLAGS_READABLE)
         {
           GVariant *value;
-          value = _example_another_skeleton_handle_get_property (g_dbus_interface_skeleton_get_connection (G_DBUS_INTERFACE_SKELETON (skeleton)), NULL, g_dbus_interface_skeleton_get_object_path (G_DBUS_INTERFACE_SKELETON (skeleton)), "test.signal.ObjectManager.Another", info->name, NULL, skeleton);
+          value = _my_namespace_another_skeleton_handle_get_property (g_dbus_interface_skeleton_get_connection (G_DBUS_INTERFACE_SKELETON (skeleton)), NULL, g_dbus_interface_skeleton_get_object_path (G_DBUS_INTERFACE_SKELETON (skeleton)), "org.gtk.GDBus.Examples.ObjectManager.Another", info->name, NULL, skeleton);
           if (value != NULL)
             {
               g_variant_take_ref (value);
@@ -2330,40 +2330,40 @@ out:
 }
 
 static void
-example_another_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton)
+my_namespace_another_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton)
 {
 }
 
-static void example_another_skeleton_iface_init (ExampleAnotherIface *iface);
+static void my_namespace_another_skeleton_iface_init (MyNamespaceAnotherIface *iface);
 #if GLIB_VERSION_MAX_ALLOWED >= GLIB_VERSION_2_38
-G_DEFINE_TYPE_WITH_CODE (ExampleAnotherSkeleton, example_another_skeleton, G_TYPE_DBUS_INTERFACE_SKELETON,
-                         G_ADD_PRIVATE (ExampleAnotherSkeleton)
-                         G_IMPLEMENT_INTERFACE (EXAMPLE_TYPE_ANOTHER, example_another_skeleton_iface_init))
+G_DEFINE_TYPE_WITH_CODE (MyNamespaceAnotherSkeleton, my_namespace_another_skeleton, G_TYPE_DBUS_INTERFACE_SKELETON,
+                         G_ADD_PRIVATE (MyNamespaceAnotherSkeleton)
+                         G_IMPLEMENT_INTERFACE (MY_NAMESPACE_TYPE_ANOTHER, my_namespace_another_skeleton_iface_init))
 
 #else
-G_DEFINE_TYPE_WITH_CODE (ExampleAnotherSkeleton, example_another_skeleton, G_TYPE_DBUS_INTERFACE_SKELETON,
-                         G_IMPLEMENT_INTERFACE (EXAMPLE_TYPE_ANOTHER, example_another_skeleton_iface_init))
+G_DEFINE_TYPE_WITH_CODE (MyNamespaceAnotherSkeleton, my_namespace_another_skeleton, G_TYPE_DBUS_INTERFACE_SKELETON,
+                         G_IMPLEMENT_INTERFACE (MY_NAMESPACE_TYPE_ANOTHER, my_namespace_another_skeleton_iface_init))
 
 #endif
 static void
-example_another_skeleton_finalize (GObject *object)
+my_namespace_another_skeleton_finalize (GObject *object)
 {
-  ExampleAnotherSkeleton *skeleton = EXAMPLE_ANOTHER_SKELETON (object);
+  MyNamespaceAnotherSkeleton *skeleton = MY_NAMESPACE_ANOTHER_SKELETON (object);
   g_list_free_full (skeleton->priv->changed_properties, (GDestroyNotify) _changed_property_free);
   if (skeleton->priv->changed_properties_idle_source != NULL)
     g_source_destroy (skeleton->priv->changed_properties_idle_source);
   g_main_context_unref (skeleton->priv->context);
   g_mutex_clear (&skeleton->priv->lock);
-  G_OBJECT_CLASS (example_another_skeleton_parent_class)->finalize (object);
+  G_OBJECT_CLASS (my_namespace_another_skeleton_parent_class)->finalize (object);
 }
 
 static void
-example_another_skeleton_init (ExampleAnotherSkeleton *skeleton)
+my_namespace_another_skeleton_init (MyNamespaceAnotherSkeleton *skeleton)
 {
 #if GLIB_VERSION_MAX_ALLOWED >= GLIB_VERSION_2_38
-  skeleton->priv = example_another_skeleton_get_instance_private (skeleton);
+  skeleton->priv = my_namespace_another_skeleton_get_instance_private (skeleton);
 #else
-  skeleton->priv = G_TYPE_INSTANCE_GET_PRIVATE (skeleton, EXAMPLE_TYPE_ANOTHER_SKELETON, ExampleAnotherSkeletonPrivate);
+  skeleton->priv = G_TYPE_INSTANCE_GET_PRIVATE (skeleton, MY_NAMESPACE_TYPE_ANOTHER_SKELETON, MyNamespaceAnotherSkeletonPrivate);
 #endif
 
   g_mutex_init (&skeleton->priv->lock);
@@ -2371,41 +2371,41 @@ example_another_skeleton_init (ExampleAnotherSkeleton *skeleton)
 }
 
 static void
-example_another_skeleton_class_init (ExampleAnotherSkeletonClass *klass)
+my_namespace_another_skeleton_class_init (MyNamespaceAnotherSkeletonClass *klass)
 {
   GObjectClass *gobject_class;
   GDBusInterfaceSkeletonClass *skeleton_class;
 
   gobject_class = G_OBJECT_CLASS (klass);
-  gobject_class->finalize = example_another_skeleton_finalize;
+  gobject_class->finalize = my_namespace_another_skeleton_finalize;
 
   skeleton_class = G_DBUS_INTERFACE_SKELETON_CLASS (klass);
-  skeleton_class->get_info = example_another_skeleton_dbus_interface_get_info;
-  skeleton_class->get_properties = example_another_skeleton_dbus_interface_get_properties;
-  skeleton_class->flush = example_another_skeleton_dbus_interface_flush;
-  skeleton_class->get_vtable = example_another_skeleton_dbus_interface_get_vtable;
+  skeleton_class->get_info = my_namespace_another_skeleton_dbus_interface_get_info;
+  skeleton_class->get_properties = my_namespace_another_skeleton_dbus_interface_get_properties;
+  skeleton_class->flush = my_namespace_another_skeleton_dbus_interface_flush;
+  skeleton_class->get_vtable = my_namespace_another_skeleton_dbus_interface_get_vtable;
 
 #if GLIB_VERSION_MAX_ALLOWED < GLIB_VERSION_2_38
-  g_type_class_add_private (klass, sizeof (ExampleAnotherSkeletonPrivate));
+  g_type_class_add_private (klass, sizeof (MyNamespaceAnotherSkeletonPrivate));
 #endif
 }
 
 static void
-example_another_skeleton_iface_init (ExampleAnotherIface *iface)
+my_namespace_another_skeleton_iface_init (MyNamespaceAnotherIface *iface)
 {
 }
 
 /**
- * example_another_skeleton_new:
+ * my_namespace_another_skeleton_new:
  *
- * Creates a skeleton object for the D-Bus interface <link linkend="gdbus-interface-test-signal-ObjectManager-Another.top_of_page">test.signal.ObjectManager.Another</link>.
+ * Creates a skeleton object for the D-Bus interface <link linkend="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-Another.top_of_page">org.gtk.GDBus.Examples.ObjectManager.Another</link>.
  *
- * Returns: (transfer full) (type ExampleAnotherSkeleton): The skeleton object.
+ * Returns: (transfer full) (type MyNamespaceAnotherSkeleton): The skeleton object.
  */
-ExampleAnother *
-example_another_skeleton_new (void)
+MyNamespaceAnother *
+my_namespace_another_skeleton_new (void)
 {
-  return EXAMPLE_ANOTHER (g_object_new (EXAMPLE_TYPE_ANOTHER_SKELETON, NULL));
+  return MY_NAMESPACE_ANOTHER (g_object_new (MY_NAMESPACE_TYPE_ANOTHER_SKELETON, NULL));
 }
 
 /* ------------------------------------------------------------------------
@@ -2414,130 +2414,130 @@ example_another_skeleton_new (void)
  */
 
 /**
- * SECTION:ExampleObject
- * @title: ExampleObject
+ * SECTION:MyNamespaceObject
+ * @title: MyNamespaceObject
  * @short_description: Specialized GDBusObject types
  *
- * This section contains the #ExampleObject, #ExampleObjectProxy, and #ExampleObjectSkeleton types which make it easier to work with objects implementing generated types for D-Bus interfaces.
+ * This section contains the #MyNamespaceObject, #MyNamespaceObjectProxy, and #MyNamespaceObjectSkeleton types which make it easier to work with objects implementing generated types for D-Bus interfaces.
  */
 
 /**
- * ExampleObject:
+ * MyNamespaceObject:
  *
- * The #ExampleObject type is a specialized container of interfaces.
+ * The #MyNamespaceObject type is a specialized container of interfaces.
  */
 
 /**
- * ExampleObjectIface:
+ * MyNamespaceObjectIface:
  * @parent_iface: The parent interface.
  *
- * Virtual table for the #ExampleObject interface.
+ * Virtual table for the #MyNamespaceObject interface.
  */
 
-typedef ExampleObjectIface ExampleObjectInterface;
-G_DEFINE_INTERFACE_WITH_CODE (ExampleObject, example_object, G_TYPE_OBJECT, g_type_interface_add_prerequisite (g_define_type_id, G_TYPE_DBUS_OBJECT);)
+typedef MyNamespaceObjectIface MyNamespaceObjectInterface;
+G_DEFINE_INTERFACE_WITH_CODE (MyNamespaceObject, my_namespace_object, G_TYPE_OBJECT, g_type_interface_add_prerequisite (g_define_type_id, G_TYPE_DBUS_OBJECT);)
 
 static void
-example_object_default_init (ExampleObjectIface *iface)
+my_namespace_object_default_init (MyNamespaceObjectIface *iface)
 {
   /**
-   * ExampleObject:my--object:
+   * MyNamespaceObject:my-object:
    *
-   * The #ExampleMy_Object instance corresponding to the D-Bus interface <link linkend="gdbus-interface-test-signal-ObjectManager-My_Object.top_of_page">test.signal.ObjectManager.My_Object</link>, if any.
+   * The #MyNamespaceMyObject instance corresponding to the D-Bus interface <link linkend="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-MyObject.top_of_page">org.gtk.GDBus.Examples.ObjectManager.MyObject</link>, if any.
    *
    * Connect to the #GObject::notify signal to get informed of property changes.
    */
-  g_object_interface_install_property (iface, g_param_spec_object ("my--object", "my--object", "my--object", EXAMPLE_TYPE_MY__OBJECT, G_PARAM_READWRITE|G_PARAM_STATIC_STRINGS));
+  g_object_interface_install_property (iface, g_param_spec_object ("my-object", "my-object", "my-object", MY_NAMESPACE_TYPE_MY_OBJECT, G_PARAM_READWRITE|G_PARAM_STATIC_STRINGS));
 
   /**
-   * ExampleObject:another:
+   * MyNamespaceObject:another:
    *
-   * The #ExampleAnother instance corresponding to the D-Bus interface <link linkend="gdbus-interface-test-signal-ObjectManager-Another.top_of_page">test.signal.ObjectManager.Another</link>, if any.
+   * The #MyNamespaceAnother instance corresponding to the D-Bus interface <link linkend="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-Another.top_of_page">org.gtk.GDBus.Examples.ObjectManager.Another</link>, if any.
    *
    * Connect to the #GObject::notify signal to get informed of property changes.
    */
-  g_object_interface_install_property (iface, g_param_spec_object ("another", "another", "another", EXAMPLE_TYPE_ANOTHER, G_PARAM_READWRITE|G_PARAM_STATIC_STRINGS));
+  g_object_interface_install_property (iface, g_param_spec_object ("another", "another", "another", MY_NAMESPACE_TYPE_ANOTHER, G_PARAM_READWRITE|G_PARAM_STATIC_STRINGS));
 
 }
 
 /**
- * example_object_get_my__object:
- * @object: A #ExampleObject.
+ * my_namespace_object_get_my_object:
+ * @object: A #MyNamespaceObject.
  *
- * Gets the #ExampleMy_Object instance for the D-Bus interface <link linkend="gdbus-interface-test-signal-ObjectManager-My_Object.top_of_page">test.signal.ObjectManager.My_Object</link> on @object, if any.
+ * Gets the #MyNamespaceMyObject instance for the D-Bus interface <link linkend="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-MyObject.top_of_page">org.gtk.GDBus.Examples.ObjectManager.MyObject</link> on @object, if any.
  *
- * Returns: (transfer full): A #ExampleMy_Object that must be freed with g_object_unref() or %NULL if @object does not implement the interface.
+ * Returns: (transfer full): A #MyNamespaceMyObject that must be freed with g_object_unref() or %NULL if @object does not implement the interface.
  */
-ExampleMy_Object *example_object_get_my__object (ExampleObject *object)
+MyNamespaceMyObject *my_namespace_object_get_my_object (MyNamespaceObject *object)
 {
   GDBusInterface *ret;
-  ret = g_dbus_object_get_interface (G_DBUS_OBJECT (object), "test.signal.ObjectManager.My_Object");
+  ret = g_dbus_object_get_interface (G_DBUS_OBJECT (object), "org.gtk.GDBus.Examples.ObjectManager.MyObject");
   if (ret == NULL)
     return NULL;
-  return EXAMPLE_MY__OBJECT (ret);
+  return MY_NAMESPACE_MY_OBJECT (ret);
 }
 
 /**
- * example_object_get_another:
- * @object: A #ExampleObject.
+ * my_namespace_object_get_another:
+ * @object: A #MyNamespaceObject.
  *
- * Gets the #ExampleAnother instance for the D-Bus interface <link linkend="gdbus-interface-test-signal-ObjectManager-Another.top_of_page">test.signal.ObjectManager.Another</link> on @object, if any.
+ * Gets the #MyNamespaceAnother instance for the D-Bus interface <link linkend="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-Another.top_of_page">org.gtk.GDBus.Examples.ObjectManager.Another</link> on @object, if any.
  *
- * Returns: (transfer full): A #ExampleAnother that must be freed with g_object_unref() or %NULL if @object does not implement the interface.
+ * Returns: (transfer full): A #MyNamespaceAnother that must be freed with g_object_unref() or %NULL if @object does not implement the interface.
  */
-ExampleAnother *example_object_get_another (ExampleObject *object)
+MyNamespaceAnother *my_namespace_object_get_another (MyNamespaceObject *object)
 {
   GDBusInterface *ret;
-  ret = g_dbus_object_get_interface (G_DBUS_OBJECT (object), "test.signal.ObjectManager.Another");
+  ret = g_dbus_object_get_interface (G_DBUS_OBJECT (object), "org.gtk.GDBus.Examples.ObjectManager.Another");
   if (ret == NULL)
     return NULL;
-  return EXAMPLE_ANOTHER (ret);
+  return MY_NAMESPACE_ANOTHER (ret);
 }
 
 
 /**
- * example_object_peek_my__object: (skip)
- * @object: A #ExampleObject.
+ * my_namespace_object_peek_my_object: (skip)
+ * @object: A #MyNamespaceObject.
  *
- * Like example_object_get_my__object() but doesn't increase the reference count on the returned object.
+ * Like my_namespace_object_get_my_object() but doesn't increase the reference count on the returned object.
  *
  * <warning>It is not safe to use the returned object if you are on another thread than the one where the #GDBusObjectManagerClient or #GDBusObjectManagerServer for @object is running.</warning>
  *
- * Returns: (transfer none): A #ExampleMy_Object or %NULL if @object does not implement the interface. Do not free the returned object, it is owned by @object.
+ * Returns: (transfer none): A #MyNamespaceMyObject or %NULL if @object does not implement the interface. Do not free the returned object, it is owned by @object.
  */
-ExampleMy_Object *example_object_peek_my__object (ExampleObject *object)
+MyNamespaceMyObject *my_namespace_object_peek_my_object (MyNamespaceObject *object)
 {
   GDBusInterface *ret;
-  ret = g_dbus_object_get_interface (G_DBUS_OBJECT (object), "test.signal.ObjectManager.My_Object");
+  ret = g_dbus_object_get_interface (G_DBUS_OBJECT (object), "org.gtk.GDBus.Examples.ObjectManager.MyObject");
   if (ret == NULL)
     return NULL;
   g_object_unref (ret);
-  return EXAMPLE_MY__OBJECT (ret);
+  return MY_NAMESPACE_MY_OBJECT (ret);
 }
 
 /**
- * example_object_peek_another: (skip)
- * @object: A #ExampleObject.
+ * my_namespace_object_peek_another: (skip)
+ * @object: A #MyNamespaceObject.
  *
- * Like example_object_get_another() but doesn't increase the reference count on the returned object.
+ * Like my_namespace_object_get_another() but doesn't increase the reference count on the returned object.
  *
  * <warning>It is not safe to use the returned object if you are on another thread than the one where the #GDBusObjectManagerClient or #GDBusObjectManagerServer for @object is running.</warning>
  *
- * Returns: (transfer none): A #ExampleAnother or %NULL if @object does not implement the interface. Do not free the returned object, it is owned by @object.
+ * Returns: (transfer none): A #MyNamespaceAnother or %NULL if @object does not implement the interface. Do not free the returned object, it is owned by @object.
  */
-ExampleAnother *example_object_peek_another (ExampleObject *object)
+MyNamespaceAnother *my_namespace_object_peek_another (MyNamespaceObject *object)
 {
   GDBusInterface *ret;
-  ret = g_dbus_object_get_interface (G_DBUS_OBJECT (object), "test.signal.ObjectManager.Another");
+  ret = g_dbus_object_get_interface (G_DBUS_OBJECT (object), "org.gtk.GDBus.Examples.ObjectManager.Another");
   if (ret == NULL)
     return NULL;
   g_object_unref (ret);
-  return EXAMPLE_ANOTHER (ret);
+  return MY_NAMESPACE_ANOTHER (ret);
 }
 
 
 static void
-example_object_notify (GDBusObject *object, GDBusInterface *interface)
+my_namespace_object_notify (GDBusObject *object, GDBusInterface *interface)
 {
   _ExtendedGDBusInterfaceInfo *info = (_ExtendedGDBusInterfaceInfo *) g_dbus_interface_get_info (interface);
   /* info can be NULL if the other end is using a D-Bus interface we don't know
@@ -2548,42 +2548,42 @@ example_object_notify (GDBusObject *object, GDBusInterface *interface)
 }
 
 /**
- * ExampleObjectProxy:
+ * MyNamespaceObjectProxy:
  *
- * The #ExampleObjectProxy structure contains only private data and should only be accessed using the provided API.
+ * The #MyNamespaceObjectProxy structure contains only private data and should only be accessed using the provided API.
  */
 
 /**
- * ExampleObjectProxyClass:
+ * MyNamespaceObjectProxyClass:
  * @parent_class: The parent class.
  *
- * Class structure for #ExampleObjectProxy.
+ * Class structure for #MyNamespaceObjectProxy.
  */
 
 static void
-example_object_proxy__example_object_iface_init (ExampleObjectIface *iface G_GNUC_UNUSED)
+my_namespace_object_proxy__my_namespace_object_iface_init (MyNamespaceObjectIface *iface G_GNUC_UNUSED)
 {
 }
 
 static void
-example_object_proxy__g_dbus_object_iface_init (GDBusObjectIface *iface)
+my_namespace_object_proxy__g_dbus_object_iface_init (GDBusObjectIface *iface)
 {
-  iface->interface_added = example_object_notify;
-  iface->interface_removed = example_object_notify;
+  iface->interface_added = my_namespace_object_notify;
+  iface->interface_removed = my_namespace_object_notify;
 }
 
 
-G_DEFINE_TYPE_WITH_CODE (ExampleObjectProxy, example_object_proxy, G_TYPE_DBUS_OBJECT_PROXY,
-                         G_IMPLEMENT_INTERFACE (EXAMPLE_TYPE_OBJECT, example_object_proxy__example_object_iface_init)
-                         G_IMPLEMENT_INTERFACE (G_TYPE_DBUS_OBJECT, example_object_proxy__g_dbus_object_iface_init))
+G_DEFINE_TYPE_WITH_CODE (MyNamespaceObjectProxy, my_namespace_object_proxy, G_TYPE_DBUS_OBJECT_PROXY,
+                         G_IMPLEMENT_INTERFACE (MY_NAMESPACE_TYPE_OBJECT, my_namespace_object_proxy__my_namespace_object_iface_init)
+                         G_IMPLEMENT_INTERFACE (G_TYPE_DBUS_OBJECT, my_namespace_object_proxy__g_dbus_object_iface_init))
 
 static void
-example_object_proxy_init (ExampleObjectProxy *object G_GNUC_UNUSED)
+my_namespace_object_proxy_init (MyNamespaceObjectProxy *object G_GNUC_UNUSED)
 {
 }
 
 static void
-example_object_proxy_set_property (GObject      *gobject,
+my_namespace_object_proxy_set_property (GObject      *gobject,
   guint         prop_id,
   const GValue *value G_GNUC_UNUSED,
   GParamSpec   *pspec)
@@ -2592,23 +2592,23 @@ example_object_proxy_set_property (GObject      *gobject,
 }
 
 static void
-example_object_proxy_get_property (GObject      *gobject,
+my_namespace_object_proxy_get_property (GObject      *gobject,
   guint         prop_id,
   GValue       *value,
   GParamSpec   *pspec)
 {
-  ExampleObjectProxy *object = EXAMPLE_OBJECT_PROXY (gobject);
+  MyNamespaceObjectProxy *object = MY_NAMESPACE_OBJECT_PROXY (gobject);
   GDBusInterface *interface;
 
   switch (prop_id)
     {
     case 1:
-      interface = g_dbus_object_get_interface (G_DBUS_OBJECT (object), "test.signal.ObjectManager.My_Object");
+      interface = g_dbus_object_get_interface (G_DBUS_OBJECT (object), "org.gtk.GDBus.Examples.ObjectManager.MyObject");
       g_value_take_object (value, interface);
       break;
 
     case 2:
-      interface = g_dbus_object_get_interface (G_DBUS_OBJECT (object), "test.signal.ObjectManager.Another");
+      interface = g_dbus_object_get_interface (G_DBUS_OBJECT (object), "org.gtk.GDBus.Examples.ObjectManager.Another");
       g_value_take_object (value, interface);
       break;
 
@@ -2619,19 +2619,19 @@ example_object_proxy_get_property (GObject      *gobject,
 }
 
 static void
-example_object_proxy_class_init (ExampleObjectProxyClass *klass)
+my_namespace_object_proxy_class_init (MyNamespaceObjectProxyClass *klass)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
 
-  gobject_class->set_property = example_object_proxy_set_property;
-  gobject_class->get_property = example_object_proxy_get_property;
+  gobject_class->set_property = my_namespace_object_proxy_set_property;
+  gobject_class->get_property = my_namespace_object_proxy_get_property;
 
-  g_object_class_override_property (gobject_class, 1, "my--object");
+  g_object_class_override_property (gobject_class, 1, "my-object");
   g_object_class_override_property (gobject_class, 2, "another");
 }
 
 /**
- * example_object_proxy_new:
+ * my_namespace_object_proxy_new:
  * @connection: A #GDBusConnection.
  * @object_path: An object path.
  *
@@ -2639,57 +2639,57 @@ example_object_proxy_class_init (ExampleObjectProxyClass *klass)
  *
  * Returns: (transfer full): The proxy object.
  */
-ExampleObjectProxy *
-example_object_proxy_new (GDBusConnection *connection,
+MyNamespaceObjectProxy *
+my_namespace_object_proxy_new (GDBusConnection *connection,
   const gchar *object_path)
 {
   g_return_val_if_fail (G_IS_DBUS_CONNECTION (connection), NULL);
   g_return_val_if_fail (g_variant_is_object_path (object_path), NULL);
-  return EXAMPLE_OBJECT_PROXY (g_object_new (EXAMPLE_TYPE_OBJECT_PROXY, "g-connection", connection, "g-object-path", object_path, NULL));
+  return MY_NAMESPACE_OBJECT_PROXY (g_object_new (MY_NAMESPACE_TYPE_OBJECT_PROXY, "g-connection", connection, "g-object-path", object_path, NULL));
 }
 
 /**
- * ExampleObjectSkeleton:
+ * MyNamespaceObjectSkeleton:
  *
- * The #ExampleObjectSkeleton structure contains only private data and should only be accessed using the provided API.
+ * The #MyNamespaceObjectSkeleton structure contains only private data and should only be accessed using the provided API.
  */
 
 /**
- * ExampleObjectSkeletonClass:
+ * MyNamespaceObjectSkeletonClass:
  * @parent_class: The parent class.
  *
- * Class structure for #ExampleObjectSkeleton.
+ * Class structure for #MyNamespaceObjectSkeleton.
  */
 
 static void
-example_object_skeleton__example_object_iface_init (ExampleObjectIface *iface G_GNUC_UNUSED)
+my_namespace_object_skeleton__my_namespace_object_iface_init (MyNamespaceObjectIface *iface G_GNUC_UNUSED)
 {
 }
 
 
 static void
-example_object_skeleton__g_dbus_object_iface_init (GDBusObjectIface *iface)
+my_namespace_object_skeleton__g_dbus_object_iface_init (GDBusObjectIface *iface)
 {
-  iface->interface_added = example_object_notify;
-  iface->interface_removed = example_object_notify;
+  iface->interface_added = my_namespace_object_notify;
+  iface->interface_removed = my_namespace_object_notify;
 }
 
-G_DEFINE_TYPE_WITH_CODE (ExampleObjectSkeleton, example_object_skeleton, G_TYPE_DBUS_OBJECT_SKELETON,
-                         G_IMPLEMENT_INTERFACE (EXAMPLE_TYPE_OBJECT, example_object_skeleton__example_object_iface_init)
-                         G_IMPLEMENT_INTERFACE (G_TYPE_DBUS_OBJECT, example_object_skeleton__g_dbus_object_iface_init))
+G_DEFINE_TYPE_WITH_CODE (MyNamespaceObjectSkeleton, my_namespace_object_skeleton, G_TYPE_DBUS_OBJECT_SKELETON,
+                         G_IMPLEMENT_INTERFACE (MY_NAMESPACE_TYPE_OBJECT, my_namespace_object_skeleton__my_namespace_object_iface_init)
+                         G_IMPLEMENT_INTERFACE (G_TYPE_DBUS_OBJECT, my_namespace_object_skeleton__g_dbus_object_iface_init))
 
 static void
-example_object_skeleton_init (ExampleObjectSkeleton *object G_GNUC_UNUSED)
+my_namespace_object_skeleton_init (MyNamespaceObjectSkeleton *object G_GNUC_UNUSED)
 {
 }
 
 static void
-example_object_skeleton_set_property (GObject      *gobject,
+my_namespace_object_skeleton_set_property (GObject      *gobject,
   guint         prop_id,
   const GValue *value,
   GParamSpec   *pspec)
 {
-  ExampleObjectSkeleton *object = EXAMPLE_OBJECT_SKELETON (gobject);
+  MyNamespaceObjectSkeleton *object = MY_NAMESPACE_OBJECT_SKELETON (gobject);
   GDBusInterfaceSkeleton *interface;
 
   switch (prop_id)
@@ -2698,12 +2698,12 @@ example_object_skeleton_set_property (GObject      *gobject,
       interface = g_value_get_object (value);
       if (interface != NULL)
         {
-          g_warn_if_fail (EXAMPLE_IS_MY__OBJECT (interface));
+          g_warn_if_fail (MY_NAMESPACE_IS_MY_OBJECT (interface));
           g_dbus_object_skeleton_add_interface (G_DBUS_OBJECT_SKELETON (object), interface);
         }
       else
         {
-          g_dbus_object_skeleton_remove_interface_by_name (G_DBUS_OBJECT_SKELETON (object), "test.signal.ObjectManager.My_Object");
+          g_dbus_object_skeleton_remove_interface_by_name (G_DBUS_OBJECT_SKELETON (object), "org.gtk.GDBus.Examples.ObjectManager.MyObject");
         }
       break;
 
@@ -2711,12 +2711,12 @@ example_object_skeleton_set_property (GObject      *gobject,
       interface = g_value_get_object (value);
       if (interface != NULL)
         {
-          g_warn_if_fail (EXAMPLE_IS_ANOTHER (interface));
+          g_warn_if_fail (MY_NAMESPACE_IS_ANOTHER (interface));
           g_dbus_object_skeleton_add_interface (G_DBUS_OBJECT_SKELETON (object), interface);
         }
       else
         {
-          g_dbus_object_skeleton_remove_interface_by_name (G_DBUS_OBJECT_SKELETON (object), "test.signal.ObjectManager.Another");
+          g_dbus_object_skeleton_remove_interface_by_name (G_DBUS_OBJECT_SKELETON (object), "org.gtk.GDBus.Examples.ObjectManager.Another");
         }
       break;
 
@@ -2727,23 +2727,23 @@ example_object_skeleton_set_property (GObject      *gobject,
 }
 
 static void
-example_object_skeleton_get_property (GObject      *gobject,
+my_namespace_object_skeleton_get_property (GObject      *gobject,
   guint         prop_id,
   GValue       *value,
   GParamSpec   *pspec)
 {
-  ExampleObjectSkeleton *object = EXAMPLE_OBJECT_SKELETON (gobject);
+  MyNamespaceObjectSkeleton *object = MY_NAMESPACE_OBJECT_SKELETON (gobject);
   GDBusInterface *interface;
 
   switch (prop_id)
     {
     case 1:
-      interface = g_dbus_object_get_interface (G_DBUS_OBJECT (object), "test.signal.ObjectManager.My_Object");
+      interface = g_dbus_object_get_interface (G_DBUS_OBJECT (object), "org.gtk.GDBus.Examples.ObjectManager.MyObject");
       g_value_take_object (value, interface);
       break;
 
     case 2:
-      interface = g_dbus_object_get_interface (G_DBUS_OBJECT (object), "test.signal.ObjectManager.Another");
+      interface = g_dbus_object_get_interface (G_DBUS_OBJECT (object), "org.gtk.GDBus.Examples.ObjectManager.Another");
       g_value_take_object (value, interface);
       break;
 
@@ -2754,52 +2754,52 @@ example_object_skeleton_get_property (GObject      *gobject,
 }
 
 static void
-example_object_skeleton_class_init (ExampleObjectSkeletonClass *klass)
+my_namespace_object_skeleton_class_init (MyNamespaceObjectSkeletonClass *klass)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
 
-  gobject_class->set_property = example_object_skeleton_set_property;
-  gobject_class->get_property = example_object_skeleton_get_property;
+  gobject_class->set_property = my_namespace_object_skeleton_set_property;
+  gobject_class->get_property = my_namespace_object_skeleton_get_property;
 
-  g_object_class_override_property (gobject_class, 1, "my--object");
+  g_object_class_override_property (gobject_class, 1, "my-object");
   g_object_class_override_property (gobject_class, 2, "another");
 }
 
 /**
- * example_object_skeleton_new:
+ * my_namespace_object_skeleton_new:
  * @object_path: An object path.
  *
  * Creates a new skeleton object.
  *
  * Returns: (transfer full): The skeleton object.
  */
-ExampleObjectSkeleton *
-example_object_skeleton_new (const gchar *object_path)
+MyNamespaceObjectSkeleton *
+my_namespace_object_skeleton_new (const gchar *object_path)
 {
   g_return_val_if_fail (g_variant_is_object_path (object_path), NULL);
-  return EXAMPLE_OBJECT_SKELETON (g_object_new (EXAMPLE_TYPE_OBJECT_SKELETON, "g-object-path", object_path, NULL));
+  return MY_NAMESPACE_OBJECT_SKELETON (g_object_new (MY_NAMESPACE_TYPE_OBJECT_SKELETON, "g-object-path", object_path, NULL));
 }
 
 /**
- * example_object_skeleton_set_my__object:
- * @object: A #ExampleObjectSkeleton.
- * @interface_: (nullable): A #ExampleMy_Object or %NULL to clear the interface.
+ * my_namespace_object_skeleton_set_my_object:
+ * @object: A #MyNamespaceObjectSkeleton.
+ * @interface_: (nullable): A #MyNamespaceMyObject or %NULL to clear the interface.
  *
- * Sets the #ExampleMy_Object instance for the D-Bus interface <link linkend="gdbus-interface-test-signal-ObjectManager-My_Object.top_of_page">test.signal.ObjectManager.My_Object</link> on @object.
+ * Sets the #MyNamespaceMyObject instance for the D-Bus interface <link linkend="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-MyObject.top_of_page">org.gtk.GDBus.Examples.ObjectManager.MyObject</link> on @object.
  */
-void example_object_skeleton_set_my__object (ExampleObjectSkeleton *object, ExampleMy_Object *interface_)
+void my_namespace_object_skeleton_set_my_object (MyNamespaceObjectSkeleton *object, MyNamespaceMyObject *interface_)
 {
-  g_object_set (G_OBJECT (object), "my--object", interface_, NULL);
+  g_object_set (G_OBJECT (object), "my-object", interface_, NULL);
 }
 
 /**
- * example_object_skeleton_set_another:
- * @object: A #ExampleObjectSkeleton.
- * @interface_: (nullable): A #ExampleAnother or %NULL to clear the interface.
+ * my_namespace_object_skeleton_set_another:
+ * @object: A #MyNamespaceObjectSkeleton.
+ * @interface_: (nullable): A #MyNamespaceAnother or %NULL to clear the interface.
  *
- * Sets the #ExampleAnother instance for the D-Bus interface <link linkend="gdbus-interface-test-signal-ObjectManager-Another.top_of_page">test.signal.ObjectManager.Another</link> on @object.
+ * Sets the #MyNamespaceAnother instance for the D-Bus interface <link linkend="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-Another.top_of_page">org.gtk.GDBus.Examples.ObjectManager.Another</link> on @object.
  */
-void example_object_skeleton_set_another (ExampleObjectSkeleton *object, ExampleAnother *interface_)
+void my_namespace_object_skeleton_set_another (MyNamespaceObjectSkeleton *object, MyNamespaceAnother *interface_)
 {
   g_object_set (G_OBJECT (object), "another", interface_, NULL);
 }
@@ -2811,40 +2811,40 @@ void example_object_skeleton_set_another (ExampleObjectSkeleton *object, Example
  */
 
 /**
- * SECTION:ExampleObjectManagerClient
- * @title: ExampleObjectManagerClient
+ * SECTION:MyNamespaceObjectManagerClient
+ * @title: MyNamespaceObjectManagerClient
  * @short_description: Generated GDBusObjectManagerClient type
  *
- * This section contains a #GDBusObjectManagerClient that uses example_object_manager_client_get_proxy_type() as the #GDBusProxyTypeFunc.
+ * This section contains a #GDBusObjectManagerClient that uses my_namespace_object_manager_client_get_proxy_type() as the #GDBusProxyTypeFunc.
  */
 
 /**
- * ExampleObjectManagerClient:
+ * MyNamespaceObjectManagerClient:
  *
- * The #ExampleObjectManagerClient structure contains only private data and should only be accessed using the provided API.
+ * The #MyNamespaceObjectManagerClient structure contains only private data and should only be accessed using the provided API.
  */
 
 /**
- * ExampleObjectManagerClientClass:
+ * MyNamespaceObjectManagerClientClass:
  * @parent_class: The parent class.
  *
- * Class structure for #ExampleObjectManagerClient.
+ * Class structure for #MyNamespaceObjectManagerClient.
  */
 
-G_DEFINE_TYPE (ExampleObjectManagerClient, example_object_manager_client, G_TYPE_DBUS_OBJECT_MANAGER_CLIENT)
+G_DEFINE_TYPE (MyNamespaceObjectManagerClient, my_namespace_object_manager_client, G_TYPE_DBUS_OBJECT_MANAGER_CLIENT)
 
 static void
-example_object_manager_client_init (ExampleObjectManagerClient *manager G_GNUC_UNUSED)
+my_namespace_object_manager_client_init (MyNamespaceObjectManagerClient *manager G_GNUC_UNUSED)
 {
 }
 
 static void
-example_object_manager_client_class_init (ExampleObjectManagerClientClass *klass G_GNUC_UNUSED)
+my_namespace_object_manager_client_class_init (MyNamespaceObjectManagerClientClass *klass G_GNUC_UNUSED)
 {
 }
 
 /**
- * example_object_manager_client_get_proxy_type:
+ * my_namespace_object_manager_client_get_proxy_type:
  * @manager: A #GDBusObjectManagerClient.
  * @object_path: The object path of the remote object (unused).
  * @interface_name: (nullable): Interface name of the remote object or %NULL to get the object proxy #GType.
@@ -2852,22 +2852,22 @@ example_object_manager_client_class_init (ExampleObjectManagerClientClass *klass
  *
  * A #GDBusProxyTypeFunc that maps @interface_name to the generated #GDBusObjectProxy derived and #GDBusProxy derived types.
  *
- * Returns: A #GDBusProxy derived #GType if @interface_name is not %NULL, otherwise the #GType for #ExampleObjectProxy.
+ * Returns: A #GDBusProxy derived #GType if @interface_name is not %NULL, otherwise the #GType for #MyNamespaceObjectProxy.
  */
 GType
-example_object_manager_client_get_proxy_type (GDBusObjectManagerClient *manager G_GNUC_UNUSED, const gchar *object_path G_GNUC_UNUSED, const gchar *interface_name, gpointer user_data G_GNUC_UNUSED)
+my_namespace_object_manager_client_get_proxy_type (GDBusObjectManagerClient *manager G_GNUC_UNUSED, const gchar *object_path G_GNUC_UNUSED, const gchar *interface_name, gpointer user_data G_GNUC_UNUSED)
 {
   static gsize once_init_value = 0;
   static GHashTable *lookup_hash;
   GType ret;
 
   if (interface_name == NULL)
-    return EXAMPLE_TYPE_OBJECT_PROXY;
+    return MY_NAMESPACE_TYPE_OBJECT_PROXY;
   if (g_once_init_enter (&once_init_value))
     {
       lookup_hash = g_hash_table_new (g_str_hash, g_str_equal);
-      g_hash_table_insert (lookup_hash, (gpointer) "test.signal.ObjectManager.My_Object", GSIZE_TO_POINTER (EXAMPLE_TYPE_MY__OBJECT_PROXY));
-      g_hash_table_insert (lookup_hash, (gpointer) "test.signal.ObjectManager.Another", GSIZE_TO_POINTER (EXAMPLE_TYPE_ANOTHER_PROXY));
+      g_hash_table_insert (lookup_hash, (gpointer) "org.gtk.GDBus.Examples.ObjectManager.MyObject", GSIZE_TO_POINTER (MY_NAMESPACE_TYPE_MY_OBJECT_PROXY));
+      g_hash_table_insert (lookup_hash, (gpointer) "org.gtk.GDBus.Examples.ObjectManager.Another", GSIZE_TO_POINTER (MY_NAMESPACE_TYPE_ANOTHER_PROXY));
       g_once_init_leave (&once_init_value, 1);
     }
   ret = (GType) GPOINTER_TO_SIZE (g_hash_table_lookup (lookup_hash, interface_name));
@@ -2877,7 +2877,7 @@ example_object_manager_client_get_proxy_type (GDBusObjectManagerClient *manager 
 }
 
 /**
- * example_object_manager_client_new:
+ * my_namespace_object_manager_client_new:
  * @connection: A #GDBusConnection.
  * @flags: Flags from the #GDBusObjectManagerClientFlags enumeration.
  * @name: (nullable): A bus name (well-known or unique) or %NULL if @connection is not a message bus connection.
@@ -2886,15 +2886,15 @@ example_object_manager_client_get_proxy_type (GDBusObjectManagerClient *manager 
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously creates #GDBusObjectManagerClient using example_object_manager_client_get_proxy_type() as the #GDBusProxyTypeFunc. See g_dbus_object_manager_client_new() for more details.
+ * Asynchronously creates #GDBusObjectManagerClient using my_namespace_object_manager_client_get_proxy_type() as the #GDBusProxyTypeFunc. See g_dbus_object_manager_client_new() for more details.
  *
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
- * You can then call example_object_manager_client_new_finish() to get the result of the operation.
+ * You can then call my_namespace_object_manager_client_new_finish() to get the result of the operation.
  *
- * See example_object_manager_client_new_sync() for the synchronous, blocking version of this constructor.
+ * See my_namespace_object_manager_client_new_sync() for the synchronous, blocking version of this constructor.
  */
 void
-example_object_manager_client_new (
+my_namespace_object_manager_client_new (
     GDBusConnection        *connection,
     GDBusObjectManagerClientFlags  flags,
     const gchar            *name,
@@ -2903,20 +2903,20 @@ example_object_manager_client_new (
     GAsyncReadyCallback     callback,
     gpointer                user_data)
 {
-  g_async_initable_new_async (EXAMPLE_TYPE_OBJECT_MANAGER_CLIENT, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "flags", flags, "name", name, "connection", connection, "object-path", object_path, "get-proxy-type-func", example_object_manager_client_get_proxy_type, NULL);
+  g_async_initable_new_async (MY_NAMESPACE_TYPE_OBJECT_MANAGER_CLIENT, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "flags", flags, "name", name, "connection", connection, "object-path", object_path, "get-proxy-type-func", my_namespace_object_manager_client_get_proxy_type, NULL);
 }
 
 /**
- * example_object_manager_client_new_finish:
- * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to example_object_manager_client_new().
+ * my_namespace_object_manager_client_new_finish:
+ * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to my_namespace_object_manager_client_new().
  * @error: Return location for error or %NULL
  *
- * Finishes an operation started with example_object_manager_client_new().
+ * Finishes an operation started with my_namespace_object_manager_client_new().
  *
- * Returns: (transfer full) (type ExampleObjectManagerClient): The constructed object manager client or %NULL if @error is set.
+ * Returns: (transfer full) (type MyNamespaceObjectManagerClient): The constructed object manager client or %NULL if @error is set.
  */
 GDBusObjectManager *
-example_object_manager_client_new_finish (
+my_namespace_object_manager_client_new_finish (
     GAsyncResult        *res,
     GError             **error)
 {
@@ -2932,7 +2932,7 @@ example_object_manager_client_new_finish (
 }
 
 /**
- * example_object_manager_client_new_sync:
+ * my_namespace_object_manager_client_new_sync:
  * @connection: A #GDBusConnection.
  * @flags: Flags from the #GDBusObjectManagerClientFlags enumeration.
  * @name: (nullable): A bus name (well-known or unique) or %NULL if @connection is not a message bus connection.
@@ -2940,16 +2940,16 @@ example_object_manager_client_new_finish (
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL
  *
- * Synchronously creates #GDBusObjectManagerClient using example_object_manager_client_get_proxy_type() as the #GDBusProxyTypeFunc. See g_dbus_object_manager_client_new_sync() for more details.
+ * Synchronously creates #GDBusObjectManagerClient using my_namespace_object_manager_client_get_proxy_type() as the #GDBusProxyTypeFunc. See g_dbus_object_manager_client_new_sync() for more details.
  *
  * The calling thread is blocked until a reply is received.
  *
- * See example_object_manager_client_new() for the asynchronous version of this constructor.
+ * See my_namespace_object_manager_client_new() for the asynchronous version of this constructor.
  *
- * Returns: (transfer full) (type ExampleObjectManagerClient): The constructed object manager client or %NULL if @error is set.
+ * Returns: (transfer full) (type MyNamespaceObjectManagerClient): The constructed object manager client or %NULL if @error is set.
  */
 GDBusObjectManager *
-example_object_manager_client_new_sync (
+my_namespace_object_manager_client_new_sync (
     GDBusConnection        *connection,
     GDBusObjectManagerClientFlags  flags,
     const gchar            *name,
@@ -2958,7 +2958,7 @@ example_object_manager_client_new_sync (
     GError                **error)
 {
   GInitable *ret;
-  ret = g_initable_new (EXAMPLE_TYPE_OBJECT_MANAGER_CLIENT, cancellable, error, "flags", flags, "name", name, "connection", connection, "object-path", object_path, "get-proxy-type-func", example_object_manager_client_get_proxy_type, NULL);
+  ret = g_initable_new (MY_NAMESPACE_TYPE_OBJECT_MANAGER_CLIENT, cancellable, error, "flags", flags, "name", name, "connection", connection, "object-path", object_path, "get-proxy-type-func", my_namespace_object_manager_client_get_proxy_type, NULL);
   if (ret != NULL)
     return G_DBUS_OBJECT_MANAGER (ret);
   else
@@ -2967,7 +2967,7 @@ example_object_manager_client_new_sync (
 
 
 /**
- * example_object_manager_client_new_for_bus:
+ * my_namespace_object_manager_client_new_for_bus:
  * @bus_type: A #GBusType.
  * @flags: Flags from the #GDBusObjectManagerClientFlags enumeration.
  * @name: A bus name (well-known or unique).
@@ -2976,15 +2976,15 @@ example_object_manager_client_new_sync (
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied.
  * @user_data: User data to pass to @callback.
  *
- * Like example_object_manager_client_new() but takes a #GBusType instead of a #GDBusConnection.
+ * Like my_namespace_object_manager_client_new() but takes a #GBusType instead of a #GDBusConnection.
  *
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
- * You can then call example_object_manager_client_new_for_bus_finish() to get the result of the operation.
+ * You can then call my_namespace_object_manager_client_new_for_bus_finish() to get the result of the operation.
  *
- * See example_object_manager_client_new_for_bus_sync() for the synchronous, blocking version of this constructor.
+ * See my_namespace_object_manager_client_new_for_bus_sync() for the synchronous, blocking version of this constructor.
  */
 void
-example_object_manager_client_new_for_bus (
+my_namespace_object_manager_client_new_for_bus (
     GBusType                bus_type,
     GDBusObjectManagerClientFlags  flags,
     const gchar            *name,
@@ -2993,20 +2993,20 @@ example_object_manager_client_new_for_bus (
     GAsyncReadyCallback     callback,
     gpointer                user_data)
 {
-  g_async_initable_new_async (EXAMPLE_TYPE_OBJECT_MANAGER_CLIENT, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "flags", flags, "name", name, "bus-type", bus_type, "object-path", object_path, "get-proxy-type-func", example_object_manager_client_get_proxy_type, NULL);
+  g_async_initable_new_async (MY_NAMESPACE_TYPE_OBJECT_MANAGER_CLIENT, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "flags", flags, "name", name, "bus-type", bus_type, "object-path", object_path, "get-proxy-type-func", my_namespace_object_manager_client_get_proxy_type, NULL);
 }
 
 /**
- * example_object_manager_client_new_for_bus_finish:
- * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to example_object_manager_client_new_for_bus().
+ * my_namespace_object_manager_client_new_for_bus_finish:
+ * @res: The #GAsyncResult obtained from the #GAsyncReadyCallback passed to my_namespace_object_manager_client_new_for_bus().
  * @error: Return location for error or %NULL
  *
- * Finishes an operation started with example_object_manager_client_new_for_bus().
+ * Finishes an operation started with my_namespace_object_manager_client_new_for_bus().
  *
- * Returns: (transfer full) (type ExampleObjectManagerClient): The constructed object manager client or %NULL if @error is set.
+ * Returns: (transfer full) (type MyNamespaceObjectManagerClient): The constructed object manager client or %NULL if @error is set.
  */
 GDBusObjectManager *
-example_object_manager_client_new_for_bus_finish (
+my_namespace_object_manager_client_new_for_bus_finish (
     GAsyncResult        *res,
     GError             **error)
 {
@@ -3022,7 +3022,7 @@ example_object_manager_client_new_for_bus_finish (
 }
 
 /**
- * example_object_manager_client_new_for_bus_sync:
+ * my_namespace_object_manager_client_new_for_bus_sync:
  * @bus_type: A #GBusType.
  * @flags: Flags from the #GDBusObjectManagerClientFlags enumeration.
  * @name: A bus name (well-known or unique).
@@ -3030,16 +3030,16 @@ example_object_manager_client_new_for_bus_finish (
  * @cancellable: (nullable): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL
  *
- * Like example_object_manager_client_new_sync() but takes a #GBusType instead of a #GDBusConnection.
+ * Like my_namespace_object_manager_client_new_sync() but takes a #GBusType instead of a #GDBusConnection.
  *
  * The calling thread is blocked until a reply is received.
  *
- * See example_object_manager_client_new_for_bus() for the asynchronous version of this constructor.
+ * See my_namespace_object_manager_client_new_for_bus() for the asynchronous version of this constructor.
  *
- * Returns: (transfer full) (type ExampleObjectManagerClient): The constructed object manager client or %NULL if @error is set.
+ * Returns: (transfer full) (type MyNamespaceObjectManagerClient): The constructed object manager client or %NULL if @error is set.
  */
 GDBusObjectManager *
-example_object_manager_client_new_for_bus_sync (
+my_namespace_object_manager_client_new_for_bus_sync (
     GBusType                bus_type,
     GDBusObjectManagerClientFlags  flags,
     const gchar            *name,
@@ -3048,7 +3048,7 @@ example_object_manager_client_new_for_bus_sync (
     GError                **error)
 {
   GInitable *ret;
-  ret = g_initable_new (EXAMPLE_TYPE_OBJECT_MANAGER_CLIENT, cancellable, error, "flags", flags, "name", name, "bus-type", bus_type, "object-path", object_path, "get-proxy-type-func", example_object_manager_client_get_proxy_type, NULL);
+  ret = g_initable_new (MY_NAMESPACE_TYPE_OBJECT_MANAGER_CLIENT, cancellable, error, "flags", flags, "name", name, "bus-type", bus_type, "object-path", object_path, "get-proxy-type-func", my_namespace_object_manager_client_get_proxy_type, NULL);
   if (ret != NULL)
     return G_DBUS_OBJECT_MANAGER (ret);
   else

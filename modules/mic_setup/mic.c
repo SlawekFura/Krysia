@@ -78,6 +78,8 @@ void show_audio_devices(void) {
 void setup_microphone(int argc, char** argv)
 {
     signal(SIGINT, interrupt_handler);
+    printf("Line %d in file %s\n", __LINE__, __FILE__);
+
 
     const char *access_key = NULL;
     const char *library_path = NULL;
@@ -129,84 +131,99 @@ void setup_microphone(int argc, char** argv)
     }
 
     rhino_library = open_dl(library_path);
+    printf("Line %d in file %s\n", __LINE__, __FILE__);
+    fprintf(stderr, "rhino_library\n");
     if (!rhino_library) {
         fprintf(stderr, "failed to open library.\n");
         exit(1);
     }
 
     pv_status_to_string_func = load_symbol(rhino_library, "pv_status_to_string");
+    printf("Line %d in file %s\n", __LINE__, __FILE__);
     if (!pv_status_to_string_func) {
         print_dl_error("failed to load 'pv_status_to_string'");
         exit(1);
     }
 
     int32_t (*pv_sample_rate_func)() = load_symbol(rhino_library, "pv_sample_rate");
+    printf("Line %d in file %s\n", __LINE__, __FILE__);
     if (!pv_sample_rate_func) {
         print_dl_error("failed to load 'pv_sample_rate'");
         exit(1);
     }
 
     pv_status_t (*pv_rhino_init_func)( const char *, const char *, const char *, float, float, bool, pv_rhino_t **) = load_symbol(rhino_library, "pv_rhino_init");
+    printf("Line %d in file %s\n", __LINE__, __FILE__);
     if (!pv_rhino_init_func) {
         print_dl_error("failed to load 'pv_rhino_init'");
         exit(1);
     }
 
     pv_rhino_delete_func = load_symbol(rhino_library, "pv_rhino_delete");
+    printf("Line %d in file %s\n", __LINE__, __FILE__);
     if (!pv_rhino_delete_func) {
         print_dl_error("failed to load 'pv_rhino_delete'");
         exit(1);
     }
 
     pv_rhino_process_func = load_symbol(rhino_library, "pv_rhino_process");
+    printf("Line %d in file %s\n", __LINE__, __FILE__);
     if (!pv_rhino_process_func) {
         print_dl_error("failed to load 'pv_rhino_process'");
         exit(1);
     }
 
     pv_rhino_is_understood_func = load_symbol(rhino_library, "pv_rhino_is_understood");
+    printf("Line %d in file %s\n", __LINE__, __FILE__);
     if (!pv_rhino_is_understood_func) {
         print_dl_error("failed to load 'pv_rhino_is_understood'");
         exit(1);
     }
 
     pv_rhino_get_intent_func = load_symbol(rhino_library, "pv_rhino_get_intent");
+    printf("Line %d in file %s\n", __LINE__, __FILE__);
     if (!pv_rhino_get_intent_func) {
         print_dl_error("failed to load 'pv_rhino_get_intent'");
         exit(1);
     }
 
     pv_rhino_free_slots_and_values_func = load_symbol(rhino_library, "pv_rhino_free_slots_and_values");
+    printf("Line %d in file %s\n", __LINE__, __FILE__);
     if (!pv_rhino_free_slots_and_values_func) {
         print_dl_error("failed to load 'pv_rhino_free_slots_and_values'");
         exit(1);
     }
 
     pv_rhino_reset_func = load_symbol(rhino_library, "pv_rhino_reset");
+    printf("Line %d in file %s\n", __LINE__, __FILE__);
     if (!pv_rhino_reset_func) {
         print_dl_error("failed to load 'pv_rhino_reset'");
         exit(1);
     }
 
     pv_status_t (*pv_rhino_context_info_func)(const pv_rhino_t *, const char **) = load_symbol(rhino_library, "pv_rhino_context_info");
+    printf("Line %d in file %s\n", __LINE__, __FILE__);
     if (!pv_rhino_context_info_func) {
         print_dl_error("failed to load 'pv_rhino_context_info'");
         exit(1);
     }
 
     int32_t (*pv_rhino_frame_length_func)() = load_symbol(rhino_library, "pv_rhino_frame_length");
+    printf("Line %d in file %s\n", __LINE__, __FILE__);
     if (!pv_rhino_frame_length_func) {
         print_dl_error("failed to load 'pv_rhino_frame_length'n");
         exit(1);
     }
 
     const char *(*pv_rhino_version_func)() = load_symbol(rhino_library, "pv_rhino_version");
+    printf("Line %d in file %s\n", __LINE__, __FILE__);
     if (!pv_rhino_version_func) {
         print_dl_error("failed to load 'pv_rhino_version'");
         exit(1);
     }
 
     pv_status_t status = pv_rhino_init_func( access_key, model_path, context_path, sensitivity, endpoint_duration_sec, require_endpoint, &rhino);
+    printf("Line %d in file %s\n", __LINE__, __FILE__);
     if (status != PV_STATUS_SUCCESS) {
         fprintf(stderr, "'pv_rhino_init' failed with '%s'\n", pv_status_to_string_func(status));
         exit(1);
@@ -240,6 +257,7 @@ void setup_microphone(int argc, char** argv)
     }
 
     pcm = malloc(frame_length * sizeof(int16_t));
+    printf("Line %d in file %s\n", __LINE__, __FILE__);
     if (!pcm) {
         fprintf(stderr, "Failed to allocate pcm memory.\n");
         exit(1);
@@ -256,7 +274,6 @@ int retrieve_mic_string(char* mic_char_intent)
     }
 
     bool is_finalized = false;
-
     pv_recorder_status_t status = pv_rhino_process_func( rhino, pcm, &is_finalized);
 
     if (status != PV_STATUS_SUCCESS) {

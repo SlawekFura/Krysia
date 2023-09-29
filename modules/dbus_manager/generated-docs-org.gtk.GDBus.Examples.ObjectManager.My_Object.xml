@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+]>
+<refentry id="gdbus-org.gtk.GDBus.Examples.ObjectManager.My_Object">
+  <refmeta>    <refentrytitle role="top_of_page" id="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-My_Object.top_of_page">org.gtk.GDBus.Examples.ObjectManager.My_Object</refentrytitle>
+  <indexterm zone="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-My_Object.top_of_page"><primary sortas=".My_Object">org.gtk.GDBus.Examples.ObjectManager.My_Object</primary></indexterm>
+  </refmeta>  <refnamediv>    <refname>org.gtk.GDBus.Examples.ObjectManager.My_Object</refname>    <refpurpose></refpurpose>  </refnamediv>  <refsynopsisdiv role="synopsis">
+    <title role="synopsis.title">Methods</title>
+    <synopsis>
+<link linkend="gdbus-method-org-gtk-GDBus-Examples-ObjectManager-My_Object.MathOp">MathOp</link> (IN  b increment,
+        IN  b decrement);
+</synopsis>
+  </refsynopsisdiv>
+  <refsect1 role="signal_proto">
+    <title role="signal_proto.title">Signals</title>
+    <synopsis>
+<link linkend="gdbus-signal-org-gtk-GDBus-Examples-ObjectManager-My_Object.Inform_about_intent">Inform_about_intent</link> (s info);
+</synopsis>
+  </refsect1>
+  <refsect1 role="properties">
+    <title role="properties.title">Properties</title>
+    <synopsis>
+<link linkend="gdbus-property-org-gtk-GDBus-Examples-ObjectManager-My_Object.description">description</link>  readable   s
+<link linkend="gdbus-property-org-gtk-GDBus-Examples-ObjectManager-My_Object.Foo">Foo</link>          readable   s
+<link linkend="gdbus-property-org-gtk-GDBus-Examples-ObjectManager-My_Object.Bar">Bar</link>          readable   s
+</synopsis>
+  </refsect1>
+<refsect1 role="desc" id="gdbus-interface-org-gtk-GDBus-Examples-ObjectManager-My_Object">
+  <title role="desc.title">Description</title>
+  <para></para>
+</refsect1>
+<refsect1 role="details" id="gdbus-methods-org.gtk.GDBus.Examples.ObjectManager.My_Object">
+  <title role="details.title">Method Details</title>
+<refsect2 role="method" id="gdbus-method-org-gtk-GDBus-Examples-ObjectManager-My_Object.MathOp">
+  <title>The MathOp() method</title>
+  <indexterm zone="gdbus-method-org-gtk-GDBus-Examples-ObjectManager-My_Object.MathOp"><primary sortas=".My_Object.MathOp">org.gtk.GDBus.Examples.ObjectManager.My_Object.MathOp()</primary></indexterm>
+<programlisting>
+MathOp (IN  b increment,
+        IN  b decrement);
+</programlisting>
+<para></para>
+<variablelist role="params">
+<varlistentry>
+  <term><literal>IN b <parameter>increment</parameter></literal>:</term>
+  <listitem><para></para></listitem>
+</varlistentry>
+<varlistentry>
+  <term><literal>IN b <parameter>decrement</parameter></literal>:</term>
+  <listitem><para></para></listitem>
+</varlistentry>
+</variablelist>
+</refsect2>
+</refsect1>
+<refsect1 role="details" id="gdbus-signals-org.gtk.GDBus.Examples.ObjectManager.My_Object">
+  <title role="details.title">Signal Details</title>
+<refsect2 role="signal" id="gdbus-signal-org-gtk-GDBus-Examples-ObjectManager-My_Object.Inform_about_intent">
+  <title>The "Inform_about_intent" signal</title>
+  <indexterm zone="gdbus-signal-org-gtk-GDBus-Examples-ObjectManager-My_Object.Inform_about_intent"><primary sortas=".My_Object::Inform_about_intent">org.gtk.GDBus.Examples.ObjectManager.My_Object::Inform_about_intent</primary></indexterm>
+<programlisting>
+Inform_about_intent (s info);
+</programlisting>
+<para></para>
+<variablelist role="params">
+<varlistentry>
+  <term><literal>s <parameter>info</parameter></literal>:</term>
+  <listitem><para></para></listitem>
+</varlistentry>
+</variablelist>
+</refsect2>
+</refsect1>
+<refsect1 role="details" id="gdbus-properties-org.gtk.GDBus.Examples.ObjectManager.My_Object">
+  <title role="details.title">Property Details</title>
+<refsect2 role="property" id="gdbus-property-org-gtk-GDBus-Examples-ObjectManager-My_Object.description">
+  <title>The "description" property</title>
+  <indexterm zone="gdbus-property-org-gtk-GDBus-Examples-ObjectManager-My_Object.description"><primary sortas=".My_Object:description">org.gtk.GDBus.Examples.ObjectManager.My_Object:description</primary></indexterm>
+<programlisting>
+description  readable   s
+</programlisting>
+<para></para>
+</refsect2>
+<refsect2 role="property" id="gdbus-property-org-gtk-GDBus-Examples-ObjectManager-My_Object.Foo">
+  <title>The "Foo" property</title>
+  <indexterm zone="gdbus-property-org-gtk-GDBus-Examples-ObjectManager-My_Object.Foo"><primary sortas=".My_Object:Foo">org.gtk.GDBus.Examples.ObjectManager.My_Object:Foo</primary></indexterm>
+<programlisting>
+Foo  readable   s
+</programlisting>
+<para>        Property with no <quote>since</quote> annotation (should inherit the 2.30 from its containing interface).
+</para>
+</refsect2>
+<refsect2 role="property" id="gdbus-property-org-gtk-GDBus-Examples-ObjectManager-My_Object.Bar">
+  <title>The "Bar" property</title>
+  <indexterm zone="gdbus-property-org-gtk-GDBus-Examples-ObjectManager-My_Object.Bar"><primary sortas=".My_Object:Bar">org.gtk.GDBus.Examples.ObjectManager.My_Object:Bar</primary></indexterm>
+<programlisting>
+Bar  readable   s
+</programlisting>
+<para>        Property with a later <quote>since</quote> annotation.
+</para>
+<para role="since">Since 2.36</para>
+</refsect2>
+</refsect1>
+</refentry>
+

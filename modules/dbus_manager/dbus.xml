@@ -5,7 +5,7 @@
 
        This D-Bus interface is used test functionality.
     -->
-  <interface name="test.signal.ObjectManager.My_Object">
+  <interface name="org.gtk.GDBus.Examples.ObjectManager.MyObject">
     <!-- Mood: The mood of the animal.
          @since: 2.30
 
@@ -66,6 +66,6 @@
        implement the #org.gtk.GDBus.Example.ObjectManager.Animal
        interface.
     -->
-  <interface name="test.signal.ObjectManager.Another">
+  <interface name="org.gtk.GDBus.Examples.ObjectManager.Another">
   </interface>
 </node>
