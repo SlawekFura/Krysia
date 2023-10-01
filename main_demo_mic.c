@@ -30,7 +30,8 @@ int main(int argc, char *argv[])
         retrieve_mic_string(mic_string);
         if (mic_string[0] != '\0')
         {
-            process_intent(mic_string);
+            process_intent(&mic_string);
+            mic_string[0] = '\0';
         }
     }
     printf("\n");

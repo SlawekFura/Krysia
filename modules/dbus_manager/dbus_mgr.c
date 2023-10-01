@@ -1,4 +1,6 @@
+#include <unistd.h>
 #include "dbus_mgr_gen.h"
+#include <dbus/dbus.h>
 
 static void
 print_objects (GDBusObjectManager *manager)
@@ -103,73 +105,78 @@ on_interface_proxy_properties_changed (GDBusObjectManagerClient *manager,
     }
 }
 
+
+void send_signal();
+static DBusConnection* conn = NULL;
 int setup_gdbus()
 {
-    printf("Line %d in file %s\n", __LINE__, __FILE__);
-    GDBusObjectManager *manager;
-    GMainLoop *loop;
-    GError *error;
-    gchar *name_owner;
-
-    manager = NULL;
-    loop = NULL;
-
-    loop = g_main_loop_new(NULL, FALSE);
-
-    printf("Line %d in file %s\n", __LINE__, __FILE__);
-    error = NULL;
-    manager = my_namespace_object_manager_client_new_for_bus_sync(G_BUS_TYPE_SESSION,
-                                                              G_DBUS_OBJECT_MANAGER_CLIENT_FLAGS_NONE,
-                                                              "org.gtk.GDBus.Examples.ObjectManager",
-                                                              "/ex/MyObject",
-                                                              NULL, /* GCancellable */
-                                                              &error);
-    printf("Line %d in file %s\n", __LINE__, __FILE__);
-    if (manager == NULL)
+    DBusError err;
+    int ret;
+    // initialise the errors
+    dbus_error_init(&err);
+//  connect to the bus
+    conn = dbus_bus_get(DBUS_BUS_SESSION, &err);
+    if (dbus_error_is_set(&err))
     {
-        g_printerr ("Error getting object manager client: %s", error->message);
-        g_error_free (error);
-
-        if (manager != NULL)
-           g_object_unref (manager);
-        if (loop != NULL)
-           g_main_loop_unref (loop);
-        return -1;
+        printf("Connection Error (%s)\n", err.message);
+        dbus_error_free(&err);
+    }
+    if (NULL == conn)
+    {
+        exit(1);
+    }
+// request a name on the bus
+    ret = dbus_bus_request_name(conn, "test.method.server_1", DBUS_NAME_FLAG_REPLACE_EXISTING , &err);
+    if (dbus_error_is_set(&err))
+    {
+        fprintf("Name Error (%s)\n", err.message);
+        dbus_error_free(&err);
+    }
+    if (DBUS_REQUEST_NAME_REPLY_PRIMARY_OWNER != ret)
+    {
+        exit(1);
     }
 
-    name_owner = g_dbus_object_manager_client_get_name_owner(G_DBUS_OBJECT_MANAGER_CLIENT(manager));
-    //if (name_owner == NULL)
-    //{
-    //    printf("Name is NULL, error: %d\n", error);
-    //    g_object_unref (manager);
-    //    g_main_loop_unref (loop);
-    //    return -1;
-    //}
-
-    g_print ("name-owner: %s\n", name_owner);
-
-    g_free (name_owner);
-
-    print_objects (manager);
-
-    g_signal_connect (manager,
-                      "notify::name-owner",
-                      G_CALLBACK (on_notify_name_owner),
-                      NULL);
-    g_signal_connect (manager,
-                      "object-added",
-                      G_CALLBACK (on_object_added),
-                      NULL);
-    g_signal_connect (manager,
-                      "object-removed",
-                      G_CALLBACK (on_object_removed),
-                      NULL);
-    g_signal_connect (manager,
-                      "interface-proxy-properties-changed",
-                      G_CALLBACK (on_interface_proxy_properties_changed),
-                      NULL);
-
-    //g_main_loop_run(loop); we do not want to start endless loop, consider g_main_context_iteration
-
     return 0;
+}
+
+static char msg_interface[] = "test.signal.Type";
+static char msg_name[] = "Test";
+void send_signal(const char** intent)
+{
+    dbus_uint32_t serial = 0; // unique number to associate replies with requests
+    DBusMessage* msg;
+    DBusMessageIter args;
+
+    // create a signal and check for errors 
+    msg = dbus_message_new_signal("/test/signal/Type", // object name of the signal
+          msg_interface, // interface name of the signal
+          msg_name); // name of the signal
+    if (NULL == msg)
+    {
+       printf("Message Null\n");
+       exit(1);
+    }
+
+    // append arguments onto signal
+    dbus_message_iter_init_append(msg, &args);
+    if (!dbus_message_iter_append_basic(&args, DBUS_TYPE_STRING, &intent)) {
+       printf("Out Of Memory!\n");
+       exit(1);
+    }
+
+    // send the message and flush the connection
+    if (!dbus_connection_send(conn, msg, &serial)) {
+       printf("Out Of Memory!\n");
+       exit(1);
+    }
+    dbus_connection_flush(conn);
+
+    // free the message 
+    dbus_message_unref(msg);
+}
+
+void close_dbus_connection()
+{
+    dbus_connection_close(conn);
 }
